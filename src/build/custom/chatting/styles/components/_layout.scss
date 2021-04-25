@@ -1,0 +1,150 @@
+.holder {
+	display: flex;
+	flex-direction: row;
+}
+
+.wrapper {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	width: 100%;
+}
+
+.content {
+	flex: 1;
+	overflow: hidden;
+}
+
+.chat-row {
+	display: flex;
+	flex-direction: row;
+	height: 100%;
+	max-height: 100%;
+}
+
+.chat-conversation-col {
+	flex-grow: 1;
+}
+
+.chat-contact-col {
+	border-right-width: $column-border-width;
+	border-right-style: solid;
+	@include theme-variant("light") {
+		border-right-color: $column-border-color-light;
+	}
+	@include theme-variant("dark") {
+		border-right-color: $column-border-color-dark;
+	}
+}
+
+.chat-info-col {
+	border-left-width: $column-border-width;
+	border-left-style: solid;
+	@include theme-variant("light") {
+		border-left-color: $column-border-color-light;
+	}
+	@include theme-variant("dark") {
+		border-left-color: $column-border-color-dark;
+	}
+}
+
+@include media-breakpoint-down("sm") {
+	.chat-conversation-col { max-width: 100%; }
+
+	.chat-contact-col,
+	.chat-info-col {
+		position: fixed;
+		width: $column-collapsed-width;
+		height: 100%;
+		top: 0;
+		z-index: $zindex-column;
+		@include transition($column-transition);
+	}
+
+	.chat-contact-col { left: -100%; }
+	.chat-info-col { right: -100%; }
+
+	body.chat-contact-mobile-show .chat-contact-col {
+		left: 0;
+	}
+
+	body.chat-info-mobile-show .chat-info-col {
+		right: 0;
+	}
+
+	// Backdrop styles
+	#chat-backdrop {
+		position: fixed;
+		display: block;
+		width: 100vw;
+		height: 100vh;
+		background: $column-backdrop-bg;
+		top: 0;
+		left: 0;
+		opacity: 0;
+		z-index: $zindex-column-backdrop;
+	}
+}
+
+@include media-breakpoint-up("md") {
+	.chat-conversation-col { max-width: 100% }
+
+	.chat-contact-col,
+	.chat-info-col {
+		display: none;
+		flex-grow: 1;
+	    max-width: $column-side-width;
+		overflow: hidden;
+	}
+
+	body.chat-contact-desktop-show {
+		.chat-contact-col { display: block; }
+	}
+
+	body.chat-info-desktop-show {
+		.chat-info-col { display: block; }
+	}
+
+	body.chat-contact-desktop-show,
+	body.chat-info-desktop-show {
+		.chat-conversation-col { max-width: calc(100% - #{$column-side-width}) }
+	}
+
+	body.chat-contact-desktop-show.chat-info-desktop-show {
+		.chat-conversation-col { max-width: calc(100% - #{$column-side-width * 2}); }
+	}
+}
+
+@include media-breakpoint-up("lg") {
+	.chat-contact-col,
+	.chat-info-col {
+		max-width: $column-side-width-wide;
+	}
+
+	body.chat-contact-desktop-show,
+	body.chat-info-desktop-show {
+		.chat-conversation-col { max-width: calc(100% - #{$column-side-width-wide}) }
+	}
+
+	body.chat-contact-desktop-show.chat-info-desktop-show {
+		.chat-conversation-col { max-width: calc(100% - #{$column-side-width-wide * 2}); }
+	}
+
+}
+
+@include media-breakpoint-up("xl") {
+	.chat-contact-col,
+	.chat-info-col {
+		max-width: $column-side-width-wider;
+	}
+
+	body.chat-contact-desktop-show,
+	body.chat-info-desktop-show {
+		.chat-conversation-col { max-width: calc(100% - #{$column-side-width-wider}) }
+	}
+
+	body.chat-contact-desktop-show.chat-info-desktop-show {
+		.chat-conversation-col { max-width: calc(100% - #{$column-side-width-wider * 2}); }
+	}
+}

@@ -1,0 +1,99 @@
+{% extends "components/dashboard1/template.njk" %}
+
+{% set direction = "ltr" %}
+{% set page_title = "Input Mask" %}
+{% set breadcrumb = [
+    { text: "Dashboard", link: "dashboard1/ltr/index.html" | url, icon: '<i data-feather="home"></i>' },
+    { text: "Form" },
+    { text: "Advanced" },
+    { text: "Input mask", link: "dashboard1/ltr/form/advanced/inputmask.html" | url }
+] %}
+{% set js_links = [
+    "assets/app/dashboard1/form/inputmask.js" | url
+] %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+
+            <!-- BEGIN Portlet -->
+            <div class="portlet">
+                <div class="portlet-header portlet-header-bordered">
+                    <h3 class="portlet-title">Input mask</h3>
+                </div>
+                <div class="portlet-body">
+                    <p><strong>JQuery Inputmask</strong> is a jQuery plugin which create an input mask. An input mask helps the user with the input by ensuring a predefined format. This can be useful for dates, numerics, phone numbers, etc. Look <a href="http://robinherbots.github.io/Inputmask" target="_blank">the homepage</a> for more references.</p>
+                    <hr>
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Date format</label>
+                        <div class="col-sm-5 col-lg-4">
+                            <input type="text" class="form-control" id="inputmask-1">
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Phone number</label>
+                        <div class="col-sm-5 col-lg-4">
+                            <input type="text" class="form-control" id="inputmask-2">
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Expty format</label>
+                        <div class="col-sm-5 col-lg-4">
+                            <input type="text" class="form-control" id="inputmask-3">
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Repeating mask</label>
+                        <div class="col-sm-5 col-lg-4">
+                            <input type="text" class="form-control" id="inputmask-4">
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Currency</label>
+                        <div class="col-sm-5 col-lg-4">
+                            <input type="text" class="form-control" id="inputmask-5">
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">IP address</label>
+                        <div class="col-sm-5 col-lg-4">
+                            <input type="text" class="form-control" id="inputmask-6">
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row mb-0">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Email address</label>
+                        <div class="col-sm-5 col-lg-4">
+                            <input type="text" class="form-control" id="inputmask-7">
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                </div>
+            </div>
+            <!-- END Portlet -->
+
+        </div>
+    </div>
+</div>
+{% endblock %}

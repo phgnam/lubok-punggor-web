@@ -1,0 +1,1405 @@
+@import "../core/styles/functions";
+@import "../core/styles/variables";
+@import "../core/styles/mixins";
+@import "../core/styles/variables";
+
+$zindex-bs-select:                     $zindex-select-dropdown !default;
+$zindex-select2:                       $zindex-select-dropdown !default;
+$zindex-dt-btn-collection:             $zindex-dropdown !default;
+
+// Apex Charts
+$apexchart-scrollbar-width:            .45rem !default;
+$apexchart-scrollbar-color:            $gray-400 !default;
+$apexchart-scrollbar-opacity:          .65 !default;
+$apexchart-scrollbar-border-radius:    $apexchart-scrollbar-width !default;
+
+$apexchart-toolbar-padding-y:          .25rem !default;
+$apexchart-toolbar-padding-x:          .5rem !default;
+
+$apexchart-icon-dimension:             2rem !default;
+$apexchart-icon-size:                  65% !default;
+$apexchart-icon-color-light:           $gray-400 !default;
+$apexchart-icon-color-dark:            $gray-400 !default;
+$apexchart-icon-hover-color-light:     $text-level-1-light !default;
+$apexchart-icon-hover-color-dark:      $text-level-1-dark !default;
+$apexchart-icon-active-color-light:    $primary !default;
+$apexchart-icon-active-color-dark:     $primary !default;
+
+$apexchart-menu-bg-light:              $dropdown-bg-light !default;
+$apexchart-menu-bg-dark:               $dropdown-bg-dark !default;
+$apexchart-menu-min-width:             $dropdown-min-width !default;
+$apexchart-menu-padding-y:             $dropdown-padding-y !default;
+$apexchart-menu-border-width:          $dropdown-border-width !default;
+$apexchart-menu-border-color-light:    $dropdown-border-color-light !default;
+$apexchart-menu-border-color-dark:     $dropdown-border-color-dark !default;
+$apexchart-menu-border-radius:         $dropdown-border-radius !default;
+$apexchart-menu-transition:            all .15s ease-in-out !default;
+
+$apexchart-menu-item-color-light:      $dropdown-item-color-light !default;
+$apexchart-menu-item-color-dark:       $dropdown-item-color-dark !default;
+$apexchart-menu-item-hover-bg-light:   $dropdown-item-hover-bg-light !default;
+$apexchart-menu-item-hover-bg-dark:    $dropdown-item-hover-bg-dark !default;
+$apexchart-menu-item-hover-color-light:$dropdown-item-hover-color-light !default;
+$apexchart-menu-item-hover-color-dark: $dropdown-item-hover-color-dark !default;
+$apexchart-menu-item-font-size:        $dropdown-item-font-size !default;
+$apexchart-menu-item-font-weight:      $dropdown-item-font-weight !default;
+$apexchart-menu-item-padding-y:        $dropdown-item-padding-y !default;
+$apexchart-menu-item-padding-x:        $dropdown-item-padding-x !default;
+
+$apexchart-tooltip-bg-light:           $popover-bg-light !default;
+$apexchart-tooltip-bg-dark:            $popover-bg-dark !default;
+$apexchart-tooltip-color-light:        $popover-body-color-light !default;
+$apexchart-tooltip-color-dark:         $popover-body-color-dark !default;
+$apexchart-tooltip-offset:             5rem !default;
+$apexchart-tooltip-border-radius:      $popover-border-radius !default;
+$apexchart-tooltip-border-width:       $tooltip-border-width !default;
+$apexchart-tooltip-border-color-light: $tooltip-border-color-light !default;
+$apexchart-tooltip-border-color-dark:  $tooltip-border-color-dark !default;
+$apexchart-tooltip-padding-y:          $tooltip-padding-y !default;
+$apexchart-tooltip-padding-x:          $tooltip-padding-x !default;
+$apexchart-tooltip-transition:         all .15s ease-in-out !default;
+
+$apexchart-tooltip-header-bg-light:    $popover-header-bg-light !default;
+$apexchart-tooltip-header-bg-dark:     $popover-header-bg-dark !default;
+$apexchart-tooltip-header-color-light: $popover-header-color-light !default;
+$apexchart-tooltip-header-color-dark:  $popover-header-color-dark !default;
+$apexchart-tooltip-header-font-size:   $popover-header-font-size !default;
+$apexchart-tooltip-header-font-weight: $font-weight-bold !default;
+$apexchart-tooltip-header-padding-y:   $popover-header-padding-y !default;
+$apexchart-tooltip-header-padding-x:   $popover-header-padding-x !default;
+
+$apexchart-tooltip-arrow-height:             $tooltip-arrow-height !default;
+$apexchart-tooltip-arrow-color-light:        $tooltip-arrow-color-light !default;
+$apexchart-tooltip-arrow-color-dark:         $tooltip-arrow-color-dark !default;
+$apexchart-tooltip-arrow-outer-color-light:  $tooltip-arrow-outer-color-light !default;
+$apexchart-tooltip-arrow-outer-color-dark:   $tooltip-arrow-outer-color-dark !default;
+
+$apexchart-tooltip-marker-dimension:   .75rem !default;
+$apexchart-tooltip-marker-spacer:      .5rem !default;
+
+$apexchart-tooltip-group-padding-y:    .5rem !default;
+$apexchart-tooltip-group-padding-x:    .75rem !default;
+
+$apexchart-tooltip-value-font-size:    $font-size-md !default;
+$apexchart-tooltip-value-font-weight:  $font-weight-bold !default;
+$apexchart-tooltip-value-spacer:       .5rem !default;
+
+$apexchart-xytooltip-bg-light:         $tooltip-bg-light !default;
+$apexchart-xytooltip-bg-dark:          $tooltip-bg-dark !default;
+$apexchart-xytooltip-color-light:      $tooltip-color-light !default;
+$apexchart-xytooltip-color-dark:       $tooltip-color-dark !default;
+$apexchart-xytooltip-font-size:        $tooltip-font-size !default;
+$apexchart-xytooltip-padding-y:        $tooltip-padding-y !default;
+$apexchart-xytooltip-padding-x:        $tooltip-padding-x !default;
+$apexchart-xytooltip-border-radius:    $tooltip-border-radius !default;
+$apexchart-xytooltip-transition:       all .15s ease-in-out !default;
+
+$apexchart-crosshair-transition:       all .15s ease-in-out !default;
+
+$apexchart-legend-padding-y:           0 !default;
+$apexchart-legend-padding-x:           1rem !default;
+$apexchart-legend-disabled-opacity:    .45 !default;
+
+$apexchart-legend-marker-spacer:       .25rem !default;
+$apexchart-marker-transition:          all .15s ease-in-out !default;
+
+// Block UI
+$blockui-backdrop-bg:              $backdrop-bg !default;
+$blockui-backdrop-opacity:         $backdrop-opacity !default;
+
+$blockui-message-padding-y:        .5rem !default;
+$blockui-message-padding-x:        1rem !default;
+$blockui-message-bg-light:         $white !default;
+$blockui-message-bg-dark:          $gray-800 !default;
+$blockui-message-color-light:      $text-level-3-light !default;
+$blockui-message-color-dark:       $text-level-3-dark !default;
+$blockui-message-font-size:        $font-size-lg !default;
+$blockui-message-font-weight:      $font-weight-bold !default;
+$blockui-message-border-radius:    $border-radius !default;
+
+$blockui-spinner-spacer:           .75rem !default;
+
+// Date Picker
+$datepicker-min-width:             17.5rem !default;
+$datepicker-bg-light:              $white !default;
+$datepicker-bg-dark:               $gray-800 !default;
+$datepicker-color-light:           $text-level-2-light !default;
+$datepicker-color-dark:            $text-level-2-dark !default;
+$datepicker-font-size:             $font-size-md !default;
+$datepicker-padding:               .5rem !default;
+$datepicker-border-width:          $border-width !default;
+$datepicker-border-color-light:    $border-color-light !default;
+$datepicker-border-color-dark:     $border-color-dark !default;
+$datepicker-border-radius:         $border-radius-lg !default;
+
+$datepicker-pick-width:            8px !default;
+$datepicker-pick-offset:           2px !default;
+$datepicker-pick-color:            $white !default;
+
+$datepicker-cell-dimension:              2.5rem !default;
+$datepicker-cell-border-radius:          $border-radius !default;
+$datepicker-cell-hover-bg-light:         $component-hover-bg-light !default;
+$datepicker-cell-hover-bg-dark:          $component-hover-bg-dark !default;
+$datepicker-cell-hover-color-light:      $component-hover-color-light !default;
+$datepicker-cell-hover-color-dark:       $component-hover-color-dark !default;
+$datepicker-cell-highlight-bg-light:     $gray-100 !default;
+$datepicker-cell-highlight-bg-dark:      $gray-700 !default;
+$datepicker-cell-highlight-color-light:  $datepicker-color-light !default;
+$datepicker-cell-highlight-color-dark:   $datepicker-color-dark !default;
+$datepicker-cell-today-bg-light:         rgba($primary, .1) !default;
+$datepicker-cell-today-bg-dark:          rgba($primary, .1) !default;
+$datepicker-cell-today-color-light:      $primary !default;
+$datepicker-cell-today-color-dark:       $primary !default;
+$datepicker-cell-range-bg-light:         $gray-200 !default;
+$datepicker-cell-range-bg-dark:          $gray-600 !default;
+$datepicker-cell-range-color-light:      $datepicker-color-light !default;
+$datepicker-cell-range-color-dark:       $datepicker-color-dark !default;
+$datepicker-cell-off-bg-light:           transparent !default;
+$datepicker-cell-off-bg-dark:            transparent !default;
+$datepicker-cell-off-color-light:        $gray-400 !default;
+$datepicker-cell-off-color-dark:         $gray-400 !default;
+$datepicker-cell-disabled-bg-light:      transparent !default;
+$datepicker-cell-disabled-bg-dark:       transparent !default;
+$datepicker-cell-disabled-color-light:   $gray-300 !default;
+$datepicker-cell-disabled-color-dark:    $gray-500 !default;
+$datepicker-cell-active-bg-light:        $component-active-bg-light !default;
+$datepicker-cell-active-bg-dark:         $component-active-bg-dark !default;
+$datepicker-cell-active-color-light:     $component-active-color-light !default;
+$datepicker-cell-active-color-dark:      $component-active-color-dark !default;
+
+$datepicker-block-height:                4rem !default;
+$datepicker-block-col:                   4 !default;
+$datepicker-block-col-margin:            1% !default;
+$datepicker-block-hover-bg-light:        $datepicker-cell-hover-bg-light !default;
+$datepicker-block-hover-bg-dark:         $datepicker-cell-hover-bg-dark !default;
+$datepicker-block-hover-color-light:     $datepicker-cell-hover-color-light !default;
+$datepicker-block-hover-color-dark:      $datepicker-cell-hover-color-dark !default;
+$datepicker-block-disabled-bg-light:     $gray-200 !default;
+$datepicker-block-disabled-bg-dark:      $gray-600 !default;
+$datepicker-block-disabled-color-light:  $datepicker-cell-disabled-color-light !default;
+$datepicker-block-disabled-color-dark:   $datepicker-cell-disabled-color-dark !default;
+$datepicker-block-active-bg-light:       $datepicker-cell-active-bg-light !default;
+$datepicker-block-active-bg-dark:        $datepicker-cell-active-bg-dark !default;
+$datepicker-block-active-color-light:    $datepicker-cell-active-color-light !default;
+$datepicker-block-active-color-dark:     $datepicker-cell-active-color-dark !default;
+$datepicker-block-off-bg-light:          $datepicker-cell-off-bg-light !default;
+$datepicker-block-off-bg-dark:           $datepicker-cell-off-bg-dark !default;
+$datepicker-block-off-color-light:       $datepicker-cell-off-color-light !default;
+$datepicker-block-off-color-dark:        $datepicker-cell-off-color-dark !default;
+
+$datepicker-nav-dimension:               $datepicker-cell-dimension !default;
+$datepicker-nav-hover-bg-light:          $datepicker-cell-hover-bg-light !default;
+$datepicker-nav-hover-bg-dark:           $datepicker-cell-hover-bg-dark !default;
+$datepicker-nav-hover-color-light:       $datepicker-cell-hover-color-light !default;
+$datepicker-nav-hover-color-dark:        $datepicker-cell-hover-color-dark !default;
+$datepicker-switch-width:                $datepicker-min-width - ($datepicker-cell-dimension * 2) !default;
+
+$datepicker-week-bg-light:               transparent !default;
+$datepicker-week-bg-dark:                transparent !default;
+$datepicker-week-color-light:            $gray-400 !default;
+$datepicker-week-color-dark:             $gray-400 !default;
+$datepicker-week-font-size:              $font-size-sm !default;
+
+// Date Time Picker
+$datetimepicker-legend-height:           $datepicker-cell-dimension !default;
+$datetimepicker-legend-color-light:      $text-level-1-light !default;
+$datetimepicker-legend-color-dark:       $text-level-1-dark !default;
+$datetimepicker-legend-font-size:        $font-size-xl !default;
+$datetimepicker-legend-font-weight:      $font-weight-bolder !default;
+
+$datetimepicker-hour-col:          6 !default;
+$datetimepicker-hour-margin:       1% !default;
+
+// Date Range Picker
+$daterangepicker-input-spacer:        .5rem !default;
+
+$daterangepicker-menu-padding-y:      $dropdown-padding-y !default;
+$daterangepicker-menu-width:          12rem !default;
+
+$daterangepicker-item-color-light:        $dropdown-item-color-light !default;
+$daterangepicker-item-color-dark:         $dropdown-item-color-dark !default;
+$daterangepicker-item-hover-bg-light:     $dropdown-item-hover-bg-light !default;
+$daterangepicker-item-hover-bg-dark:      $dropdown-item-hover-bg-dark !default;
+$daterangepicker-item-hover-color-light:  $dropdown-item-hover-color-light !default;
+$daterangepicker-item-hover-color-dark:   $dropdown-item-hover-color-dark !default;
+$daterangepicker-item-active-bg-light:    $dropdown-item-active-bg-light !default;
+$daterangepicker-item-active-bg-dark:     $dropdown-item-active-bg-dark !default;
+$daterangepicker-item-active-color-light: $dropdown-item-active-color-light !default;
+$daterangepicker-item-active-color-dark:  $dropdown-item-active-color-dark !default;
+$daterangepicker-item-padding-y:          $dropdown-item-padding-y !default;
+$daterangepicker-item-padding-x:          $dropdown-item-padding-x !default;
+
+// Simplebar
+$simplebar-width:                 1.25rem !default;
+$simplebar-padding:               .4rem !default;
+$simplebar-bg-light:              $gray-100 !default;
+$simplebar-bg-dark:               $gray-700 !default;
+$simplebar-color:                 $gray-400 !default;
+$simplebar-opacity:               .65 !default;
+$simplebar-border-radius:         $border-radius !default;
+$simplebar-transition:            opacity 0.2s linear !default;
+
+// Select 2
+$select2-height:                      $custom-select-height !default;
+$select2-padding-x:                   $custom-select-padding-x !default;
+$select2-padding-y:                   $custom-select-padding-y !default;
+$select2-bg-light:                    $custom-select-bg-light !default;
+$select2-bg-dark:                     $custom-select-bg-dark !default;
+$select2-color-light:                 $custom-select-color-light !default;
+$select2-color-dark:                  $custom-select-color-dark !default;
+$select2-disabled-bg-light:           $custom-select-disabled-bg-light !default;
+$select2-disabled-bg-dark:            $custom-select-disabled-bg-dark !default;
+$select2-disabled-color-light:        $select2-color-light !default;
+$select2-disabled-color-dark:         $select2-color-dark !default;
+$select2-disabled-opacity:            .65 !default;
+$select2-placeholder-color-light:     $input-placeholder-color-light !default;
+$select2-placeholder-color-dark:      $input-placeholder-color-dark !default;
+$select2-border-width:                $custom-select-border-width !default;
+$select2-border-color-light:          $input-border-color-light !default;
+$select2-border-color-dark:           $input-border-color-dark !default;
+$select2-active-border-color-light:   $custom-select-focus-border-color-light !default;
+$select2-active-border-color-dark:    $custom-select-focus-border-color-dark !default;
+$select2-disabled-border-color-light: $select2-disabled-bg-light !default;
+$select2-disabled-border-color-dark:  $select2-disabled-bg-dark !default;
+$select2-border-radius:               $border-radius !default;
+
+$select2-dropdown-bg-light:           $dropdown-bg-light !default;
+$select2-dropdown-bg-dark:            $dropdown-bg-dark !default;
+$select2-dropdown-border-width:       $select2-border-width !default;
+$select2-dropdown-border-color-light: $select2-border-color-light !default;
+$select2-dropdown-border-color-dark:  $select2-border-color-dark !default;
+$select2-dropdown-max-height:         15rem !default;
+$select2-dropdown-input-padding:      .75rem !default;
+
+$select2-group-bg-light:              $select2-dropdown-bg-light !default;
+$select2-group-bg-dark:               $select2-dropdown-bg-dark !default;
+$select2-group-color-light:           $text-level-3-light !default;
+$select2-group-color-dark:            $text-level-3-dark !default;
+$select2-group-font-size:             $font-size-md !default;
+$select2-group-font-weight:           $font-weight-bold !default;
+
+$select2-item-font-size:              $font-size-md !default;
+$select2-item-font-weight:            $font-weight-normal !default;
+$select2-item-padding-y:              $dropdown-item-padding-y !default;
+$select2-item-padding-x:              $dropdown-item-padding-x !default;
+$select2-item-child-spacer:           $select2-item-padding-x + .5rem !default;
+$select2-item-bg-light:               $select2-dropdown-bg-light !default;
+$select2-item-bg-dark:                $select2-dropdown-bg-dark !default;
+$select2-item-color-light:            $text-level-1-light !default;
+$select2-item-color-dark:             $text-level-1-dark !default;
+$select2-item-hover-bg-light:         $dropdown-item-hover-bg-light !default;
+$select2-item-hover-bg-dark:          $dropdown-item-hover-bg-dark !default;
+$select2-item-hover-color-light:      $dropdown-item-hover-color-light !default;
+$select2-item-hover-color-dark:       $dropdown-item-hover-color-dark !default;
+$select2-item-active-bg-light:        $dropdown-item-active-bg-light !default;
+$select2-item-active-bg-dark:         $dropdown-item-active-bg-dark !default;
+$select2-item-active-color-light:     $dropdown-item-active-color-light !default;
+$select2-item-active-color-dark:      $dropdown-item-active-color-dark !default;
+$select2-item-disabled-bg-light:      $component-disabled-bg-light !default;
+$select2-item-disabled-bg-dark:       $component-disabled-bg-dark !default;
+$select2-item-disabled-color-light:   $component-disabled-color-light !default;
+$select2-item-disabled-color-dark:    $component-disabled-color-dark !default;
+$select2-item-disabled-opacity:       .65 !default;
+
+$select2-choice-bg-light:             $gray-100 !default;
+$select2-choice-bg-dark:              $gray-700 !default;
+$select2-choice-color-light:          $text-level-1-light !default;
+$select2-choice-color-dark:           $text-level-1-dark !default;
+$select2-choice-font-size:            $font-size-md !default;
+$select2-choice-font-weight:          $font-weight-normal !default;
+$select2-choice-padding-x:            .5rem !default;
+$select2-choice-padding-y:            .25rem !default;
+$select2-choice-border-width:         $select2-border-width !default;
+$select2-choice-border-color-light:   $select2-border-color-light !default;
+$select2-choice-border-color-dark:    $select2-border-color-dark !default;
+$select2-choice-spacer-x:             .5rem !default;
+$select2-choice-spacer-y:             .25rem !default;
+$select2-choice-icon-spacer:          .25rem !default;
+
+$select2-icon-width:              2rem !default;
+$select2-icon-size:               $font-size-md !default;
+$select2-icon-spacer:             .75rem !default;
+
+$select2-clear-color-light:       $gray-300 !default;
+$select2-clear-color-dark:        $gray-500 !default;
+$select2-clear-hover-color-light: $gray-400 !default;
+$select2-clear-hover-color-dark:  $gray-400 !default;
+
+// Ion Range Slider
+$irs-height:                      4rem !default;
+$irs-disabled-opacity:            .35 !default;
+
+$irs-line-top:                    3rem !default;
+$irs-line-height:                 $custom-range-track-height !default;
+$irs-line-color-light:            $custom-range-track-bg-light !default;
+$irs-line-color-dark:             $custom-range-track-bg-dark !default;
+$irs-line-active-color-light:     $primary !default;
+$irs-line-active-color-dark:      $primary !default;
+$irs-line-border-radius:          $custom-range-track-border-radius !default;
+
+$irs-handle-dimension:            $custom-range-thumb-width !default;
+$irs-handle-color-light:          $custom-range-thumb-bg-light !default;
+$irs-handle-color-dark:           $custom-range-thumb-bg-dark !default;
+$irs-handle-active-color-light:   $custom-range-thumb-active-bg-light !default;
+$irs-handle-active-color-dark:    $custom-range-thumb-active-bg-dark !default;
+$irs-handle-border-radius:        $custom-range-thumb-border-radius !default;
+
+$irs-tooltip-font-size:           $font-size-md !default;
+$irs-tooltip-font-weight:         $font-weight-bold !default;
+$irs-tooltip-padding-y:           .5rem !default;
+$irs-tooltip-padding-x:           .75rem !default;
+$irs-tooltip-border-radius:       $border-radius !default;
+
+$irs-tooltip-arrow-width:         .4rem !default;
+$irs-tooltip-arrow-color:         $primary !default;
+
+$irs-minmax-color-light:          $text-level-1-light !default;
+$irs-minmax-color-dark:           $text-level-1-dark !default;
+$irs-minmax-bg-light:             $gray-200 !default;
+$irs-minmax-bg-dark:              $gray-600 !default;
+
+$irs-label-bg:                    $primary !default;
+$irs-label-color:                 color-yiq($irs-label-bg) !default;
+
+$irs-grid-height:                 2rem !default;
+$irs-grid-pol-width:              $border-width !default;
+$irs-grid-pol-height-lg:          0.75rem !default;
+$irs-grid-pol-height-sm:          0.5rem !default;
+$irs-grid-pol-color-light:        $gray-300 !default;
+$irs-grid-pol-color-dark:         $gray-500 !default;
+$irs-grid-text-font-size:         $font-size-md !default;
+$irs-grid-text-font-weight:       $font-weight-normal !default;
+$irs-grid-text-color-light:       $text-level-1-light !default;
+$irs-grid-text-color-dark:        $text-level-1-dark !default;
+$irs-grid-text-spacer:            .75rem !default;
+
+// Slick
+$slick-nav-icon-size:             $btn-icon-font-size !default;
+$slick-nav-offset:                .75rem !default;
+
+$slick-nav2-height:               3.75rem !default;
+$slick-nav3-dimension:            $btn-icon-dimension !default;
+$slick-nav3-spacer:               .75rem !default;
+
+$slick-dot-dimension:             65% !default;
+$slick-dot-bg-light:              $white !default;
+$slick-dot-bg-dark:               $gray-800 !default;
+$slick-dot-offset:                $slick-nav-offset !default;
+$slick-dot-padding:               .5rem !default;
+$slick-dot-border-radius:         2rem !default;
+$slick-dot-transition:            $transition-base !default;
+
+$slick-dot-item-dimension:        1.25rem !default;
+$slick-dot-item-spacer:           .5rem !default;
+$slick-dot-item-bg-light:         $gray-300 !default;
+$slick-dot-item-bg-dark:          $gray-600 !default;
+$slick-dot-item-hover-bg-light:   $gray-400 !default;
+$slick-dot-item-hover-bg-dark:    $gray-500 !default;
+$slick-dot-item-active-bg-light:  $component-active-bg-light !default;
+$slick-dot-item-active-bg-dark:   $component-active-bg-dark !default;
+
+// Context Menu
+$context-menu-bg-light:                 $dropdown-bg-light !default;
+$context-menu-bg-dark:                  $dropdown-bg-dark !default;
+$context-menu-padding-y:                $dropdown-padding-y !default;
+$context-menu-min-width:                12.5rem !default;
+$context-menu-max-width:                $context-menu-min-width * 2 !default;
+$context-menu-border-width:             $dropdown-border-width !default;
+$context-menu-border-color-light:       $dropdown-border-color-light !default;
+$context-menu-border-color-dark:        $dropdown-border-color-dark !default;
+$context-menu-border-radius:            $dropdown-border-radius !default;
+$context-menu-animation-offset:         $dropdown-animation-offset !default;
+$context-menu-animation-duration:       .25s !default;
+
+$context-menu-item-font-size:           $dropdown-item-font-size !default;
+$context-menu-item-font-weight:         $font-weight-normal !default;
+$context-menu-item-line-height:         $line-height-base !default;
+$context-menu-item-padding-y:           $dropdown-item-padding-y !default;
+$context-menu-item-padding-x:           $dropdown-item-padding-x !default;
+$context-menu-item-color-light:         $dropdown-item-color-light !default;
+$context-menu-item-color-dark:          $dropdown-item-color-dark !default;
+$context-menu-item-hover-bg-light:      $dropdown-item-hover-bg-light !default;
+$context-menu-item-hover-bg-dark:       $dropdown-item-hover-bg-dark !default;
+$context-menu-item-hover-color-light:   $dropdown-item-hover-color-light !default;
+$context-menu-item-hover-color-dark:    $dropdown-item-hover-color-dark !default;
+$context-menu-item-disabled-bg-light:   $dropdown-item-disabled-bg-light !default;
+$context-menu-item-disabled-bg-dark:    $dropdown-item-disabled-bg-dark !default;
+$context-menu-item-disabled-color-light:$dropdown-item-disabled-color-light !default;
+$context-menu-item-disabled-color-dark: $dropdown-item-disabled-color-dark !default;
+$context-menu-item-disabled-opacity:    $dropdown-item-disabled-opacity !default;
+
+$context-menu-icon-dimension:           $dropdown-icon-dimension !default;
+$context-menu-icon-size:                $dropdown-icon-size !default;
+$context-menu-icon-spacer:              .5rem !default;
+$context-menu-icon-loading-duration:    .75s !default;
+
+$context-menu-divider-width:            $border-width !default;
+$context-menu-divider-color-light:      $dropdown-divider-color-light !default;
+$context-menu-divider-color-dark:       $dropdown-divider-color-dark !default;
+$context-menu-divider-spacer:           $dropdown-divider-margin-y !default;
+
+$context-menu-input-color-light:        $context-menu-item-color-light !default;
+$context-menu-input-color-dark:         $context-menu-item-color-dark !default;
+$context-menu-input-switch-dimension:   1.25rem !default;
+$context-menu-input-switch-top:         .25rem !default;
+$context-menu-input-switch-spacer:      .5rem !default;
+$context-menu-input-textarea-height:    7rem !default;
+
+$context-menu-access-text-decoration:   underline !default;
+
+$context-menu-icons: (
+    add: "\f067",
+    copy: "\f0c5",
+    cut: "\f0c4",
+    delete: "\f55a",
+    edit: "\f044",
+    loading: "\f1ce",
+    paste: "\f0ea",
+    quit: "\f2f5",
+);
+$context-menu-icons: () !default;
+
+// Sweet Alert 2
+$swal2-container-padding:    0.75rem !default;
+
+$swal2-width:                32rem !default;
+$swal2-padding:              1rem !default;
+$swal2-border-width:         $modal-border-width !default;
+$swal2-border-color-light:   $modal-border-color-light !default;
+$swal2-border-color-dark:    $modal-border-color-dark !default;
+$swal2-border-radius:        $modal-border-radius !default;
+
+$swal2-show-animation:       swal2-show 0.3s !default;
+$swal2-hide-animation:       swal2-hide 0.15s forwards !default;
+
+$swal2-background-light:     $white !default;
+$swal2-background-dark:      $gray-800 !default;
+
+$swal2-font:                 $font-family-base !default;
+$swal2-font-size:            $font-size-md !default;
+
+$swal2-backdrop-bg:          $modal-backdrop-bg !default;
+$swal2-backdrop-opacity:     $modal-backdrop-opacity !default;
+$swal2-backdrop-transition:  background-color 0.1s !default;
+
+$swal2-icon-size:            5em !default;
+$swal2-icon-animations:      true !default;
+$swal2-icon-margin:          1.25em auto 1.75em !default;
+$swal2-icon-zoom:            null !default;
+$swal2-success:              $success !default;
+$swal2-error:                $danger !default;
+$swal2-warning:              $warning !default;
+$swal2-info:                 $info !default;
+$swal2-question:             $primary !default;
+$swal2-icon-font-family:     inherit !default;
+
+$swal2-image-margin:         1.25em auto !default;
+
+$swal2-title-margin:         0.5rem 0 !default;
+$swal2-title-color-light:    $text-level-3-light !default;
+$swal2-title-color-dark:     $text-level-3-dark !default;
+$swal2-title-font-size:      1.75rem !default;
+$swal2-title-font-weight:    $font-weight-bolder !default;
+
+$swal2-content-justify-content: center !default;
+$swal2-content-margin:          0 !default;
+$swal2-content-pading:          0 !default;
+$swal2-content-color-light:     $text-level-1-light !default;
+$swal2-content-color-dark:      $text-level-1-dark !default;
+$swal2-content-font-size:       $font-size-lg !default;
+$swal2-content-font-weight:     normal !default;
+$swal2-content-line-height:     normal !default;
+$swal2-content-text-align:      center !default;
+$swal2-content-word-wrap:       break-word !default;
+
+$swal2-input-margin:                     1rem auto !default;
+$swal2-input-padding:                    $input-padding-y-lg $input-padding-x-lg !default;
+$swal2-input-border-width:               $input-border-width !default;
+$swal2-input-border-color-light:         $input-border-color-light !default;
+$swal2-input-border-color-dark:          $input-border-color-dark !default;
+$swal2-input-border-radius:              $input-border-radius-lg !default;
+$swal2-input-focus-border-color-light:   $input-focus-border-color-light !default;
+$swal2-input-focus-border-color-dark:    $input-focus-border-color-dark !default;
+$swal2-input-font-size:                  $input-font-size-lg !default;
+$swal2-input-background-light:           $input-bg-light !default;
+$swal2-input-background-dark:            $input-bg-dark !default;
+$swal2-input-color-light:                $input-color-light !default;
+$swal2-input-color-dark:                 $input-color-dark !default;
+$swal2-input-transition:                 $input-transition !default;
+
+$swal2-textarea-height:          6.75em !default;
+$swal2-textarea-padding:         $input-padding-y $input-padding-x !default;
+
+$swal2-validation-message-justify-content: center !default;
+$swal2-validation-message-padding:         0.625em !default;
+$swal2-validation-message-background:      lighten($black, 94) !default;
+$swal2-validation-message-color:           lighten($black, 40) !default;
+$swal2-validation-message-font-size:       1em !default;
+$swal2-validation-message-font-weight:     300 !default;
+$swal2-validation-message-icon-background: $swal2-error !default;
+$swal2-validation-message-icon-color:      $white !default;
+$swal2-validation-message-icon-zoom:       null !default;
+
+$swal2-progress-steps-background:         inherit !default;
+$swal2-progress-steps-margin:             0 0 1.25em !default;
+$swal2-progress-steps-padding:            0 !default;
+$swal2-progress-steps-font-weight:        $font-weight-bolder !default;
+$swal2-progress-steps-distance:           2.5em !default;
+$swal2-progress-step-width:               2em;
+$swal2-progress-step-height:              $swal2-progress-step-width;
+$swal2-progress-step-border-radius:       $swal2-progress-step-width;
+$swal2-progress-step-background:          rgba($primary, .1) !default;
+$swal2-progress-step-color:               $primary !default;
+$swal2-active-step-background:            $primary !default;
+$swal2-active-step-color:                 color-yiq($swal2-active-step-background) !default;
+
+$swal2-footer-margin:                     1.25rem 0 0 !default;
+$swal2-footer-padding:                    1rem 0 0 !default;
+$swal2-footer-border-width:               $border-width !default;
+$swal2-footer-border-color-light:         $border-color-light !default;
+$swal2-footer-border-color-dark:          $border-color-dark !default;
+$swal2-footer-color-light:                $text-level-1-light !default;
+$swal2-footer-color-dark:                 $text-level-1-dark !default;
+$swal2-footer-font-size:                  $font-size-md !default;
+
+$swal2-timer-progress-bar-height:             .25rem;
+$swal2-timer-progress-bar-background-light:   $progress-bg-light !default;
+$swal2-timer-progress-bar-background-dark:    $progress-bg-dark !default;
+
+$swal2-close-button-width:                $btn-icon-dimension-lg !default;
+$swal2-close-button-height:               $btn-icon-dimension-lg !default;
+$swal2-close-button-line-height:          1.2 !default;
+$swal2-close-button-position:             absolute !default;
+$swal2-close-button-gap:                  0 !default;
+$swal2-close-button-transition:           color 0.1s ease-out !default;
+$swal2-close-button-border:               none !default;
+$swal2-close-button-border-radius:        0 !default;
+$swal2-close-button-outline:              0 !default;
+$swal2-close-button-background:           transparent !default;
+$swal2-close-button-color:                $gray-400 !default;
+$swal2-close-button-font-size:            2rem !default;
+$swal2-close-button-font-weight:          $font-weight-bolder !default;
+$swal2-close-button-align-items:          center !default;
+$swal2-close-button-justify-content:      center !default;
+
+$swal2-close-button-hover-transform:      none !default;
+$swal2-close-button-hover-color:          $danger !default;
+$swal2-close-button-hover-background:     transparent !default;
+
+$swal2-actions-flex-wrap:                 wrap !default;
+$swal2-actions-align-items:               center !default;
+$swal2-actions-justify-content:           center !default;
+$swal2-actions-width:                     100% !default;
+$swal2-actions-margin:                    0.75rem auto 0 !default;
+
+$swal2-confirm-button-border:             0 !default;
+$swal2-confirm-button-background-color:   $primary !default;
+$swal2-confirm-button-color:              color-yiq($swal2-confirm-button-background-color) !default;
+
+$swal2-cancel-button-border:              0 !default;
+$swal2-cancel-button-background-color:    $danger !default;
+$swal2-cancel-button-color:               color-yiq($swal2-cancel-button-background-color) !default;
+
+$swal2-button-darken-hover:               rgba($black, .1) !default;
+$swal2-button-darken-active:              rgba($black, .2) !default;
+$swal2-button-focus-outline:              none !default;
+$swal2-button-focus-background-color:     null !default;
+$swal2-button-margin:                     0.25rem !default;
+$swal2-button-padding:                    $btn-padding-y $btn-padding-x !default;
+$swal2-button-font-size:                  $btn-font-size !default;
+$swal2-button-font-weight:                $btn-font-weight !default;
+$swal2-button-border-radius:              $btn-border-radius !default;
+
+$swal2-toast-show-animation:             swal2-toast-show 0.5s !default;
+$swal2-toast-hide-animation:             swal2-toast-hide 0.1s forwards !default;
+$swal2-toast-background:                 $white !default;
+$swal2-toast-close-button-width:         0.8rem !default;
+$swal2-toast-close-button-height:        0.8rem !default;
+$swal2-toast-close-button-line-height:   0.8 !default;
+$swal2-toast-width:                      auto !default;
+$swal2-toast-padding:                    .75rem !default;
+$swal2-toast-title-margin:               0 .75rem !default;
+$swal2-toast-title-font-size:            $font-size-md !default;
+$swal2-toast-content-font-size:          $font-size-md !default;
+$swal2-toast-input-font-size:            $font-size-md !default;
+$swal2-toast-validation-font-size:       $font-size-md !default;
+$swal2-toast-buttons-font-size:          $font-size-md !default;
+$swal2-toast-footer-margin:              .5rem 0 0 !default;
+$swal2-toast-footer-padding:             .5rem 0 0 !default;
+$swal2-toast-footer-font-size:           $font-size-sm !default;
+
+// JSTree
+$jstree-base-height:                  2rem !default;
+$jstree-bg:                           transparent !default;
+$jstree-stripe-bg:                    linear-gradient(to bottom, $gray-400 50%, transparent 50%) !default;
+$jstree-border-radius:                $border-radius !default;
+$jstree-transition:                   $btn-transition !default;
+
+$jstree-line-width:                   2px !default;
+$jstree-line-color-light:             $gray-300 !default;
+$jstree-line-color-dark:              $gray-500 !default;
+
+$jstree-anchor-bg-light:              $white !default;
+$jstree-anchor-bg-dark:               $gray-800 !default;
+$jstree-anchor-color-light:           $text-level-3-light !default;
+$jstree-anchor-color-dark:            $text-level-3-dark !default;
+$jstree-anchor-hover-bg-light:        $component-hover-bg-light !default;
+$jstree-anchor-hover-bg-dark:         $component-hover-bg-dark !default;
+$jstree-anchor-hover-color-light:     $component-hover-color-light !default;
+$jstree-anchor-hover-color-dark:      $component-hover-color-dark !default;
+$jstree-anchor-active-bg-light:       $component-active-bg-light !default;
+$jstree-anchor-active-bg-dark:        $component-active-bg-dark !default;
+$jstree-anchor-active-color-light:    $component-active-color-light !default;
+$jstree-anchor-active-color-dark:     $component-active-color-dark !default;
+$jstree-anchor-disabled-bg-light:     $component-disabled-bg-light !default;
+$jstree-anchor-disabled-bg-dark:      $component-disabled-bg-dark !default;
+$jstree-anchor-disabled-color-light:  $component-disabled-color-light !default;
+$jstree-anchor-disabled-color-dark:   $component-disabled-color-dark !default;
+$jstree-anchor-disabled-opacity:      $btn-disabled-opacity !default;
+$jstree-anchor-padding-x:             .5rem;
+
+$jstree-search-font-style:        italic !default;
+$jstree-search-font-weight:       $font-weight-bold !default;
+
+$jstree-icon-size:                $font-size-lg !default;
+$jstree-icon-default:             "\f07b" !default;
+
+$jstree-tool-bg-light:            $jstree-anchor-bg-light !default;
+$jstree-tool-bg-dark:             $jstree-anchor-bg-dark !default;
+$jstree-tool-color-light:         $text-level-1-light !default;
+$jstree-tool-color-dark:          $text-level-1-dark !default;
+$jstree-tool-icon-open:           "\f150" !default;
+$jstree-tool-icon-close:          "\f152" !default;
+$jstree-tool-icon-uncheck:        "\f0c8" !default;
+$jstree-tool-icon-check:          "\f14a" !default;
+$jstree-tool-icon-undetermined:   "\f146" !default;
+$jstree-tool-spinner-width:       2px !default;
+
+$jstree-menu-min-width:           12rem !default;
+$jstree-menu-submenu-offset-y:    2.5rem !default;
+$jstree-menu-bg-light:            $dropdown-bg-light !default;
+$jstree-menu-bg-dark:             $dropdown-bg-dark !default;
+$jstree-menu-padding-y:           $dropdown-padding-y !default;
+$jstree-menu-border-width:        $dropdown-border-width !default;
+$jstree-menu-border-color-light:  $dropdown-border-color-light !default;
+$jstree-menu-border-color-dark:   $dropdown-border-color-dark !default;
+$jstree-menu-border-radius:       $dropdown-border-radius !default;
+
+$jstree-menu-icon-dimension:           $dropdown-icon-dimension !default;
+$jstree-menu-icon-size:                $dropdown-icon-size !default;
+$jstree-menu-icon-spacer:              .75rem !default;
+$jstree-menu-caret-spacer:             $dropdown-caret-spacer !default;
+$jstree-menu-separator-width:          $border-width !default;
+$jstree-menu-separator-color-light:    $border-color-light !default;
+$jstree-menu-separator-color-dark:     $border-color-dark !default;
+
+$jstree-menu-item-padding-y:           $dropdown-item-padding-y !default;
+$jstree-menu-item-padding-x:           $dropdown-item-padding-x !default;
+$jstree-menu-item-color-light:         $dropdown-item-color-light !default;
+$jstree-menu-item-color-dark:          $dropdown-item-color-dark !default;
+$jstree-menu-item-hover-bg-light:      $dropdown-item-hover-bg-light !default;
+$jstree-menu-item-hover-bg-dark:       $dropdown-item-hover-bg-dark !default;
+$jstree-menu-item-hover-color-light:   $dropdown-item-hover-color-light !default;
+$jstree-menu-item-hover-color-dark:    $dropdown-item-hover-color-dark !default;
+$jstree-menu-item-disabled-color-light:$dropdown-item-disabled-bg-light !default;
+$jstree-menu-item-disabled-color-dark: $dropdown-item-disabled-bg-dark !default;
+$jstree-menu-item-disabled-bg-light:   $dropdown-item-disabled-color-light !default;
+$jstree-menu-item-disabled-bg-dark:    $dropdown-item-disabled-color-dark !default;
+$jstree-menu-item-disabled-opacity:    $dropdown-item-disabled-opacity !default;
+
+$jstree-drag-marker-width:             .5rem !default;
+$jstree-drag-marker-color-light:       $jstree-tool-color-light !default;
+$jstree-drag-marker-color-dark:        $jstree-tool-color-dark !default;
+
+$jstree-drag-label-height:             $jstree-base-height !default;
+$jstree-drag-label-padding-x:          $tooltip-padding-x !default;
+$jstree-drag-label-bg-light:           $tooltip-bg-light !default;
+$jstree-drag-label-bg-dark:            $tooltip-bg-dark !default;
+$jstree-drag-label-color-light:        $tooltip-color-light !default;
+$jstree-drag-label-color-dark:         $tooltip-color-dark !default;
+$jstree-drag-label-border-width:       $tooltip-border-width !default;
+$jstree-drag-label-border-color-light: $tooltip-border-color-light !default;
+$jstree-drag-label-border-color-dark:  $tooltip-border-color-dark !default;
+$jstree-drag-label-border-radius:      $tooltip-border-radius !default;
+
+$jstree-drag-label-icon-ok:           "\f00c" !default;
+$jstree-drag-label-icon-ok-color:     $success !default;
+$jstree-drag-label-icon-error:        "\f00d" !default;
+$jstree-drag-label-icon-error-color:  $danger !default;
+$jstree-drag-label-icon-spacer:       .25rem !default;
+
+// Toastr
+$toastr-width:                    25rem !default;
+$toastr-fluid-width:              96% !default;
+$toastr-padding-y:                1.25rem !default;
+$toastr-padding-x:                .5rem !default;
+$toastr-spacer:                   .75rem !default;
+$toastr-border-radius:            $border-radius !default;
+$toastr-opacity:                  0.8 !default;
+$toastr-hover-opacity:            1 !default;
+$toastr-position-offset:          1rem !default;
+
+$toastr-title-font-size:          $font-size-lg !default;
+$toastr-title-font-weight:        $font-weight-bold !default;
+$toastr-message-font-size:        $font-size-md !default;
+$toastr-message-font-weight:      $font-weight-normal !default
+$toastr-link-font-weight:         $font-weight-bold !default
+
+$toastr-close-dimension:          $btn-icon-dimension-sm !default;
+$toastr-close-font-size:          $font-size-xl !default;
+$toastr-close-font-weight:        $font-weight-bolder !default;
+$toastr-close-offset:             $toastr-padding-x !default;
+
+$toastr-icon-dimension:           4rem !default;
+$toastr-icon-size:                1.8rem !default;
+
+$toastr-progress-height:          .35rem !default;
+$toastr-progress-color:           $gray-600 !default;
+$toastr-progress-opacity:         .65 !default;
+
+$toastr-colors: () !default;
+$toastr-colors: map-merge(
+    (
+        "success":    $success,
+        "info":       $info,
+        "warning":    $warning,
+        "error":      $danger,
+      ),
+      $toastr-colors
+);
+
+$toastr-icons: () !default;
+$toastr-icons: map-merge(
+    (
+        "success":    "\f00c",
+        "info":       "\f0a1",
+        "warning":    "\f129",
+        "error":      "\f00d",
+    ),
+    $toastr-icons
+);
+
+// Full Calendar
+$fc-bg-light:                      $white !default;
+$fc-bg-dark:                       $gray-800 !default;
+$fc-font-size:                     $font-size-md !default;
+$fc-border-width:                  $border-width !default;
+$fc-border-style:                  solid !default;
+$fc-border-color-light:            $border-color-light !default;
+$fc-border-color-dark:             $border-color-dark !default;
+$fc-border-radius:                 $border-radius !default;
+
+$fc-today-bg-light:                $gray-100 !default;
+$fc-today-bg-dark:                 $gray-700 !default;
+$fc-highlight-bg-light:            $gray-100 !default;
+$fc-highlight-bg-dark:             $gray-700 !default;
+$fc-highlight-opacity:             1 !default;
+$fc-bgevent-bg:                    $primary !default;
+$fc-bgevent-nonbusiness-bg-light:  $gray-200 !default;
+$fc-bgevent-nonbusiness-bg-dark:   $gray-600 !default;
+$fc-bgevent-opacity:               .45 !default;
+
+$fc-title-color-light:             $text-level-3-light !default;
+$fc-title-color-dark:              $text-level-3-dark !default;
+$fc-title-font-size:               1.75rem !default;
+$fc-title-font-weight:             $font-weight-bold !default;
+
+$fc-header-color-light:            $text-level-3-light !default;
+$fc-header-color-dark:             $text-level-3-dark !default;
+$fc-header-font-weight:            $font-weight-bold !default;
+$fc-header-padding-y:              .5rem !default;
+
+$fc-content-color-light:           $text-level-1-light !default;
+$fc-content-color-dark:            $text-level-1-dark !default;
+
+$fc-toolbar-spacer-y:              1rem !default;
+$fc-toolbar-spacer-x:              .75rem !default;
+
+$fc-event-bg-light:                 $white !default;
+$fc-event-bg-dark:                  $gray-800 !default;
+$fc-event-color-light:              color-yiq($fc-event-bg-light) !default;
+$fc-event-color-dark:               color-yiq($fc-event-bg-dark) !default;
+$fc-event-font-size:                $font-size-md !default;
+$fc-event-font-weight:              $font-weight-base !default;
+$fc-event-line-height:              1 !default;
+$fc-event-padding:                  .5rem .75rem !default;
+$fc-event-spacer:                   .25rem !default;
+$fc-event-time-color-light:         $text-level-2-light !default;
+$fc-event-time-color-dark:          $text-level-2-dark !default;
+$fc-event-time-font-size:           $font-size-md !default;
+$fc-event-time-font-weight:         $font-weight-normal !default;
+$fc-event-title-color-light:        $text-level-3-light !default;
+$fc-event-title-color-dark:         $text-level-3-dark !default;
+$fc-event-title-link-color-light:   $primary !default;
+$fc-event-title-link-color-dark:    $primary !default;
+$fc-event-title-font-size:          $font-size-md !default;
+$fc-event-title-font-weight:        $font-weight-bold !default;
+$fc-event-description-color-light:  $text-level-1-light !default;
+$fc-event-description-color-dark:   $text-level-1-dark !default;
+$fc-event-description-font-size:    $font-size-md !default;
+$fc-event-description-font-weight:  $font-weight-normal !default;
+
+$fc-more-spacer:                   $fc-event-spacer !default;
+$fc-more-font-size:                $font-size-sm !default;
+
+$fc-resizer-h-width:               .5rem !default;
+$fc-resizer-h-height:              $fc-resizer-h-width * 3 !default;
+$fc-resizer-h-border-radius:       $fc-resizer-h-width / 2 !default;
+$fc-resizer-v-height:              .5rem !default;
+$fc-resizer-v-width:               $fc-resizer-v-height * 4 !default;
+$fc-resizer-v-padding-y:           .25rem !default;
+$fc-resizer-v-border-radius:       $fc-resizer-v-height / 2 !default;
+$fc-resizer-color-light:           $gray-100 !default;
+$fc-resizer-color-dark:            $gray-700 !default;
+$fc-resizer-trigger-dimension:     3rem !default;
+$fc-resizer-touch-offset:          .75rem !default;
+
+$fc-popover-width:                 20rem !default;
+$fc-popover-header-bg:             $popover-header-bg-light !default;
+$fc-popover-header-color:          $popover-header-color-light !default;
+$fc-popover-header-padding:        $popover-header-padding-y $popover-header-padding-x !default;
+$fc-popover-title-font-size:       $font-size-md !default;
+$fc-popover-title-font-weight:     $font-weight-bold !default;
+$fc-popover-close-offset:          $popover-header-padding-x !default;
+
+$fc-basic-bottom-spacer:           1rem !default;
+$fc-basic-row-min-height:          4rem !default;
+$fc-basic-off-opacity:             .3 !default;
+$fc-basic-number-padding:          .25rem !default;
+$fc-basic-week-min-width:          1.5rem !default;
+$fc-basic-week-font-weight:        $font-weight-bold !default;
+$fc-basic-week-color-light:        $text-level-2-light !default;
+$fc-basic-week-color-dark:         $text-level-2-dark !default;
+$fc-basic-week-bg-light:           $gray-200 !default;
+$fc-basic-week-bg-dark:            $gray-600 !default;
+
+$fc-list-item-padding:             .75rem 1rem !default;
+$fc-list-heading-bg-light:         $gray-100 !default;
+$fc-list-heading-bg-dark:          $gray-700 !default;
+$fc-list-heading-color-light:      $text-level-3-light !default;
+$fc-list-heading-color-dark:       $text-level-3-dark !default;
+$fc-list-heading-font-weight:      $font-weight-bold !default;
+$fc-list-heading-font-size:        $font-size-md !default;
+$fc-list-empty-color-light:        $text-level-2-light !default;
+$fc-list-empty-color-dark:         $text-level-2-dark !default;
+$fc-list-empty-font-size:          $font-size-lg !default;
+$fc-list-empty-font-weight:        $font-weight-bold !default;
+
+$fc-agenda-header-row-min-height:   4rem !default;
+$fc-agenda-header-row-spacer:       1.5rem !default;
+$fc-agenda-body-row-height:         2rem !default;
+$fc-agenda-minor-border-style:      dotted !default;
+$fc-agenda-axis-padding-x:          .5rem !default;
+$fc-agenda-content-padding-y:       .25rem !default;
+
+$fc-indicator-arrow-width:         .5rem !default;
+$fc-indicator-arrow-color:         $danger !default;
+
+$fc-dot-dimension:                 .75rem !default;
+$fc-dot-color-light:               $gray-300 !default;
+$fc-dot-color-dark:                $gray-500 !default;
+$fc-dot-spacer:                    .5rem !default;
+
+// Quill
+$quill-font-family-monospace:      $font-family-monospace !default;
+$quill-font-family-sans-serif:     $font-family-sans-serif !default;
+$quill-font-family:                $font-family-base !default;
+$quill-font-size:                  $font-size-md !default;
+$quill-font-size-sm:               .8rem !default;
+$quill-font-size-lg:               1.6rem !default;
+$quill-font-size-xl:               2.4rem !default;
+
+$quill-link-color:                 $primary !default;
+$quill-placeholder-color-light:    $input-placeholder-color-light !default;
+$quill-placeholder-color-dark:     $input-placeholder-color-dark !default;
+
+$quill-table-border-width:         $table-border-width !default;
+$quill-table-border-color-light:   $table-border-color-light !default;
+$quill-table-border-color-dark:    $table-border-color-dark !default;
+$quill-table-cell-padding:         $table-cell-padding !default;
+
+$quill-list-spacer:                1.5em !default;
+$quill-list-margin:                .25em !default;
+$quill-list-width:                 1.25em !default;
+$quill-list-outer-width:           $quill-list-width + $quill-list-margin !default;
+$quill-list-max-indent:            9 !default;
+$quill-list-bullet-color-light:    $text-level-1-light !default;
+$quill-list-bullet-color-dark:     $text-level-1-dark !default;
+
+$quill-list-styles: (
+    decimal,
+    lower-alpha,
+    lower-roman
+) !default;
+
+$quill-blockquote-margin-y:            .5rem !default;
+$quill-blockquote-padding-left:        .75rem !default;
+$quill-blockquote-border-width:        .25rem !default;
+$quill-blockquote-border-color:        $gray-400 !default;
+
+$quill-code-block-bg:                  $gray-900 !default;
+$quill-code-block-padding-y:           .25rem !default;
+$quill-code-block-padding-x:           .5rem !default;
+$quill-code-block-margin-y:            .5rem !default;
+$quill-code-block-border-radius:       $border-radius !default;
+$quill-code-block-addon-offset:        .5rem !default;
+
+$quill-editor-line-height:                  $line-height-base !default;
+$quill-editor-padding-y:                    1rem !default;
+$quill-editor-padding-x:                    1.25rem !default;
+$quill-editor-tab-size:                     4 !default;
+$quill-editor-border-width:                 $border-width !default;
+$quill-editor-border-color-light:           $border-color-light !default;
+$quill-editor-border-color-dark:            $border-color-dark !default;
+$quill-editor-border-radius:                $border-radius-lg !default;
+
+$quill-control-dimension:                   $btn-icon-dimension !default;
+$quill-control-wide-width:                  8rem !default;
+$quill-control-padding-x:                   .5rem !default;
+$quill-control-bg-light:                    transparent !default;
+$quill-control-bg-dark:                     transparent !default;
+$quill-control-color-light:                 $text-level-1-light !default;
+$quill-control-color-dark:                  $text-level-1-dark !default;
+$quill-control-hover-bg-light:              $component-hover-bg-light !default;
+$quill-control-hover-bg-dark:               $component-hover-bg-dark !default;
+$quill-control-hover-color-light:           $component-hover-color-light !default;
+$quill-control-hover-color-dark:            $component-hover-color-dark !default;
+$quill-control-active-bg-light:             $component-active-bg-light !default;
+$quill-control-active-bg-dark:              $component-active-bg-dark !default;
+$quill-control-active-color-light:          $component-active-color-light !default;
+$quill-control-active-color-dark:           $component-active-color-dark !default;
+$quill-control-font-size:                   $btn-font-size !default;
+$quill-control-font-weight:                 $btn-font-weight !default;
+$quill-control-border-radius:               $btn-border-radius !default;
+$quill-control-spacer:                      .125rem !default;
+
+$quill-control-color-margin:                .25rem !default;
+$quill-control-color-dimension:             1.25rem !default;
+$quill-control-color-num-per-row:           8 !default;
+
+$quill-control-group-spacer:                .5rem !default;
+
+$quill-icon-size:                           60% !default;
+
+$quill-dropdown-bg-light:                   $dropdown-bg-light !default;
+$quill-dropdown-bg-dark:                    $dropdown-bg-dark !default;
+$quill-dropdown-padding-x:                  .5rem !default;
+$quill-dropdown-padding-y:                  $dropdown-padding-y !default;
+$quill-dropdown-border-width:               $dropdown-border-width !default;
+$quill-dropdown-border-color-light:         $dropdown-border-color-light !default;
+$quill-dropdown-border-color-dark:          $dropdown-border-color-dark !default;
+$quill-dropdown-border-radius:              $dropdown-border-radius !default;
+
+$quill-dropdown-item-color-light:           $dropdown-item-color-light !default;
+$quill-dropdown-item-color-dark:            $dropdown-item-color-dark !default;
+$quill-dropdown-item-hover-bg-light:        $dropdown-item-hover-bg-light !default;
+$quill-dropdown-item-hover-bg-dark:         $dropdown-item-hover-bg-dark !default;
+$quill-dropdown-item-hover-color-light:     $dropdown-item-hover-color-light !default;
+$quill-dropdown-item-hover-color-dark:      $dropdown-item-hover-color-dark !default;
+$quill-dropdown-item-padding-y:             $dropdown-item-padding-y !default;
+$quill-dropdown-item-padding-x:             $dropdown-item-padding-x !default;
+
+$quill-tooltip-bg-light:                    $tooltip-bg-light !default;
+$quill-tooltip-bg-dark:                     $tooltip-bg-dark !default;
+$quill-tooltip-color-light:                 $tooltip-color-light !default;
+$quill-tooltip-color-dark:                  $tooltip-color-dark !default;
+$quill-tooltip-content-spacer:              .5rem !default;
+$quill-tooltip-padding-y:                   .5rem !default;
+$quill-tooltip-padding-x:                   .75rem !default;
+$quill-tooltip-border-width:                $tooltip-border-width !default;
+$quill-tooltip-border-color-light:          $tooltip-border-color-light !default;
+$quill-tooltip-border-color-dark:           $tooltip-border-color-dark !default;
+$quill-tooltip-border-radius:               $tooltip-border-radius !default;
+$quill-tooltip-preview-width:               20rem !default;
+$quill-tooltip-offset:                      1rem !default;
+
+$quill-tooltip-arrow-width:                 6px !default;
+$quill-tooltip-arrow-color-light:           $gray-100 !default;
+$quill-tooltip-arrow-color-dark:            $gray-700 !default;
+
+$quill-input-width:                         15rem !default;
+$quill-input-height:                        $input-height !default;
+$quill-input-padding-y:                     $input-padding-y !default;
+$quill-input-padding-x:                     $input-padding-x !default;
+$quill-input-bg-light:                      $input-bg-light !default;
+$quill-input-bg-dark:                       $input-bg-dark !default;
+$quill-input-color-light:                   $input-color-light !default;
+$quill-input-color-dark:                    $input-color-dark !default;
+$quill-input-focus-border-color-light:      $input-focus-border-color-light !default;
+$quill-input-focus-border-color-dark:       $input-focus-border-color-dark !default;
+$quill-input-placeholder-color-light:       $input-placeholder-color-light !default;
+$quill-input-placeholder-color-dark:        $input-placeholder-color-dark !default;
+$quill-input-font-size:                     $input-font-size !default;
+$quill-input-border-width:                  $input-border-width !default;
+$quill-input-border-color-light:            $input-border-color-light !default;
+$quill-input-border-color-dark:             $input-border-color-dark !default;
+$quill-input-border-radius:                 $input-border-radius !default;
+
+$quill-snow-toolbar-padding-y:              .5rem !default;
+$quill-snow-toolbar-padding-x:              .5rem !default;
+$quill-snow-toolbar-border-width:           $border-width !default;
+$quill-snow-toolbar-border-color-light:     $border-color-light !default;
+$quill-snow-toolbar-border-color-dark:      $border-color-dark !default;
+$quill-snow-toolbar-border-radius:          $border-radius-lg !default;
+
+$quill-bubble-link-tooltip-font-size:        $font-size-md !default;
+$quill-bubble-link-tooltip-font-weight:      $font-weight-normal !default;
+$quill-bubble-link-tooltip-arrow-width:      .5rem !default;
+$quill-bubble-link-tooltip-arrow-color-light:$quill-tooltip-arrow-color-light !default;
+$quill-bubble-link-tooltip-arrow-color-dark: $quill-tooltip-arrow-color-dark !default;
+
+// Bootstrap Select
+$bs-select-bg-light:                   $custom-select-bg-light !default;
+$bs-select-bg-dark:                    $custom-select-bg-dark !default;
+$bs-select-color-light:                $custom-select-color-light !default;
+$bs-select-color-dark:                 $custom-select-color-dark !default;
+$bs-select-border-color-light:         $input-border-color-light !default;
+$bs-select-border-color-dark:          $input-border-color-dark !default;
+$bs-select-disabled-bg-light:          $custom-select-disabled-bg-light !default;
+$bs-select-disabled-bg-dark:           $custom-select-disabled-bg-dark !default;
+$bs-select-disabled-color-light:       $custom-select-disabled-color-light !default;
+$bs-select-disabled-color-dark:        $custom-select-disabled-color-dark !default;
+$bs-select-disabled-border-color-light:$bs-select-disabled-bg-light !default;
+$bs-select-disabled-border-color-dark: $bs-select-disabled-bg-dark !default;
+$bs-select-disabled-opacity:           $btn-disabled-opacity !default;
+$bs-select-active-border-color-light:  $custom-select-focus-border-color-light !default;
+$bs-select-active-border-color-dark:   $custom-select-focus-border-color-dark !default;
+$bs-select-invalid-border-color:       $form-feedback-invalid-color !default;
+$bs-select-valid-border-color:         $form-feedback-valid-color !default;
+
+$bs-select-item-padding-y:             $dropdown-item-padding-y !default;
+$bs-select-item-padding-x:             $dropdown-item-padding-x !default;
+$bs-select-item-option-spacer:         $dropdown-item-padding-x + .5rem !default;
+
+$bs-select-empty-color-light:          $text-level-1-light !default;
+$bs-select-empty-color-dark:           $text-level-1-dark !default;
+$bs-select-empty-font-size:            $font-size-md !default;
+$bs-select-empty-font-weight:          $font-weight-bold !default;
+
+$bs-select-notify-bg-light:            $tooltip-bg-light !default;
+$bs-select-notify-bg-dark:             $tooltip-bg-dark !default;
+$bs-select-notify-color-light:         $tooltip-color-light !default;
+$bs-select-notify-color-dark:          $tooltip-color-dark !default;
+$bs-select-notify-font-size:           $font-size-md !default;
+$bs-select-notify-font-weight:         $font-weight-bold !default;
+$bs-select-notify-padding-y:           $tooltip-padding-y !default;
+$bs-select-notify-padding-x:           $tooltip-padding-x !default;
+$bs-select-notify-border-width:        $tooltip-border-width !default;
+$bs-select-notify-border-color-light:  $tooltip-border-color-light !default;
+$bs-select-notify-border-color-dark:   $tooltip-border-color-dark !default;
+$bs-select-notify-border-radius:       $tooltip-border-radius !default;
+$bs-select-notify-offset:              .5rem !default;
+
+$bs-select-icon-width:                 $dropdown-icon-dimension !default;
+$bs-select-icon-size:                  $dropdown-icon-size !default;
+$bs-select-icon-spacer:                .5rem !default;
+
+$bs-select-icon-width-sm:              $dropdown-icon-dimension - .25rem !default;
+$bs-select-icon-size-sm:               $dropdown-icon-size - .2rem !default;
+$bs-select-icon-spacer-sm:             $bs-select-icon-spacer - .25rem !default;
+
+$bs-select-icon-width-lg:              $dropdown-icon-dimension + .25rem !default;
+$bs-select-icon-size-lg:               $dropdown-icon-size + .2rem !default;
+$bs-select-icon-spacer-lg:             $bs-select-icon-spacer + .25rem !default;
+
+$bs-select-subtext-spacer:             .5rem !default;
+
+$bs-select-btngroup-padding-y:         .75rem !default;
+$bs-select-btngroup-padding-x:         .75rem !default;
+
+// JQVmap
+$jqvmap-width:                     100% !default;
+$jqvmap-height:                    50vh !default;
+$jqvmap-border-width:              $border-width !default;
+$jqvmap-border-color-light:        $border-color-light !default;
+$jqvmap-border-color-dark:         $border-color-dark !default;
+$jqvmap-border-radius:             $border-radius-lg !default;
+
+$jqvmap-pin-dimension:             2rem !default;
+$jqvmap-pin-color-light:           $text-level-1-light !default;
+$jqvmap-pin-color-dark:            $text-level-1-dark !default;
+$jqvmap-pin-font-size:             $font-size-md !default;
+$jqvmap-pin-font-weight:           $font-weight-bolder !default;
+$jqvmap-pin-icon-size:             1.6rem !default;
+$jqvmap-pin-tool-offset:           .75rem !default;
+$jqvmap-pin-tool-spacer:           .5rem !default;
+
+$jqvmap-label-bg-light:            $tooltip-bg-light !default;
+$jqvmap-label-bg-dark:             $tooltip-bg-dark !default;
+$jqvmap-label-color-light:         $tooltip-color-light !default;
+$jqvmap-label-color-dark:          $tooltip-color-dark !default;
+$jqvmap-label-font-size:           $tooltip-font-size !default;
+$jqvmap-label-padding-y:           $tooltip-padding-y !default;
+$jqvmap-label-padding-x:           $tooltip-padding-x !default;
+$jqvmap-label-border-width:        $tooltip-border-width !default;
+$jqvmap-label-border-color-light:  $tooltip-border-color-light !default;
+$jqvmap-label-border-color-dark:   $tooltip-border-color-dark !default;
+$jqvmap-label-border-radius:       $tooltip-border-radius !default;
+
+// Datatable
+$datatable-spacer:                .5rem !default;
+$datatable-selected-bg-light:     $gray-300 !default;
+$datatable-selected-bg-dark:      $gray-500 !default;
+
+$datatable-sorting-space:         2rem !default;
+$datatable-sorting-space-sm:      1rem !default;
+$datatable-sorting-offset:        .75rem !default;
+$datatable-sorting-offset-sm:     .25rem !default;
+$datatable-sorting-color-light:   $gray-300 !default;
+$datatable-sorting-color-dark:    $gray-500 !default;
+
+$datatable-input-spacer:          .5rem !default;
+$datatable-info-spacer:           .75rem !default;
+$datatable-pagination-margin-y:   2px !default;
+
+$datatable-process-width:         17.5rem !default;
+$datatable-process-padding-y:     1rem !default;
+$datatable-process-padding-x:     1rem !default;
+
+$datatable-responsive-icon-collapsed:              "\f0fe" !default;
+$datatable-responsive-icon-expand:                 "\f146" !default;
+$datatable-responsive-icon-size:                   $font-size-lg !default;
+$datatable-responsive-icon-color-light:            $text-level-1-light !default;
+$datatable-responsive-icon-color-dark:             $text-level-1-dark !default;
+$datatable-responsive-icon-active-color-light:     $primary !default;
+$datatable-responsive-icon-active-color-dark:      $primary !default;
+$datatable-responsive-icon-spacer:                 .5rem !default;
+
+$datatable-responsive-list-padding-y:              .5rem !default;
+$datatable-responsive-list-border-width:           $border-width !default;
+$datatable-responsive-list-border-color-light:     $border-color-light !default;
+$datatable-responsive-list-border-color-dark:      $border-color-dark !default;
+
+$datatable-responsive-title-min-width:     8rem !default;
+$datatable-responsive-title-color-light:   $text-level-3-light !default;
+$datatable-responsive-title-color-dark:    $text-level-3-dark !default;
+$datatable-responsive-title-font-size:     $font-size-md !default;
+$datatable-responsive-title-font-weight:   $font-weight-bold !default;
+
+$datatable-responsive-data-color-light:    $text-level-1-light !default;
+$datatable-responsive-data-color-dark:     $text-level-1-dark !default;
+$datatable-responsive-data-font-size:      $font-size-md !default;
+$datatable-responsive-data-font-weight:    $font-weight-normal !default;
+
+$datatable-responsive-modal-width:             50% !default;
+$datatable-responsive-modal-width-sm:          95% !default;
+$datatable-responsive-modal-height:            50% !default;
+$datatable-responsive-modal-bg-light:          $modal-content-bg-light !default;
+$datatable-responsive-modal-bg-dark:           $modal-content-bg-dark !default;
+$datatable-responsive-modal-color-light:       $modal-content-color-light !default;
+$datatable-responsive-modal-color-dark:        $modal-content-color-dark !default;
+$datatable-responsive-modal-padding:           1rem !default;
+$datatable-responsive-modal-border-width:      $modal-border-width !default;
+$datatable-responsive-modal-border-color-light:$modal-border-color-light !default;
+$datatable-responsive-modal-border-color-dark: $modal-border-color-dark !default;
+$datatable-responsive-modal-border-radius:     $modal-border-radius !default;
+$datatable-responsive-modal-backdrop-bg:       rgba($modal-backdrop-bg, $modal-backdrop-opacity) !default;
+
+$datatable-responsive-modal-close-dimension:        $btn-icon-dimension !default;
+$datatable-responsive-modal-close-bg-light:         $gray-100 !default;
+$datatable-responsive-modal-close-bg-dark:          $gray-700 !default;
+$datatable-responsive-modal-close-color-light:      $text-level-3-light !default;
+$datatable-responsive-modal-close-color-dark:       $text-level-3-dark !default;
+$datatable-responsive-modal-close-hover-bg-light:   $component-active-bg-light !default;
+$datatable-responsive-modal-close-hover-bg-dark:    $component-active-bg-dark !default;
+$datatable-responsive-modal-close-hover-color-light:$component-active-color-light !default;
+$datatable-responsive-modal-close-hover-color-dark: $component-active-color-dark !default;
+$datatable-responsive-modal-close-border-radius:    $btn-border-radius !default;
+$datatable-responsive-modal-close-offset:           .5rem !default;
+
+$datatable-autofill-handle-color-light:             $primary !default;
+$datatable-autofill-handle-color-dark:              $primary !default;
+$datatable-autofill-handle-size:                    .75rem !default;
+
+$datatable-autofill-select-color-light:             $datatable-autofill-handle-color-light !default;
+$datatable-autofill-select-color-dark:              $datatable-autofill-handle-color-dark !default;
+$datatable-autofill-select-width:                   2px !default;
+
+$datatable-autofill-input-spacer:                   .5rem !default;
+$datatable-autofill-input-width:                     5rem !default;
+
+$datatable-autofill-list-width:                      45rem !default;
+$datatable-autofill-list-bg-light:                   $modal-content-bg-light !default;
+$datatable-autofill-list-bg-dark:                    $modal-content-bg-dark !default;
+$datatable-autofill-list-padding:                    $modal-inner-padding !default;
+$datatable-autofill-list-border-width:               $modal-border-width !default;
+$datatable-autofill-list-border-color-light:         $modal-border-color-light !default;
+$datatable-autofill-list-border-color-dark:          $modal-border-color-dark !default;
+$datatable-autofill-list-border-radius:              $modal-border-radius !default;
+$datatable-autofill-list-backdrop-bg:                $modal-backdrop-bg !default;
+$datatable-autofill-list-backdrop-opacity:           $modal-backdrop-opacity !default;
+
+$datatable-autofill-list-item-color-light:           $text-level-1-light !default;
+$datatable-autofill-list-item-color-dark:            $text-level-1-dark !default;
+$datatable-autofill-list-item-font-size:             $font-size-md !default;
+$datatable-autofill-list-item-font-weight:           $font-weight-bold !default;
+$datatable-autofill-list-item-padding:               .5rem 1rem !default;
+$datatable-autofill-list-item-border-width:          $border-width !default;
+$datatable-autofill-list-item-border-color-light:    $border-color-light !default;
+$datatable-autofill-list-item-border-color-dark:     $border-color-dark !default;
+
+$datatable-btn-collection-bg-light:                  $dropdown-bg-light !default;
+$datatable-btn-collection-bg-dark:                   $dropdown-bg-dark !default;
+$datatable-btn-collection-border-width:              $dropdown-border-width !default;
+$datatable-btn-collection-border-color-light:        $dropdown-border-color-light !default;
+$datatable-btn-collection-border-color-dark:         $dropdown-border-color-dark !default;
+$datatable-btn-collection-border-radius:             $dropdown-border-radius !default;
+$datatable-btn-collection-padding-y:                 .5rem !default;
+$datatable-btn-collection-padding-x:                 0 !default;
+
+$datatable-btn-collection-2col-width:                25rem !default;
+$datatable-btn-collection-3col-width:                30rem !default;
+$datatable-btn-collection-4col-width:                35rem !default;
+
+$datatable-btn-collection-spinner-color-light:   rgba($text-level-1-light, 0.35) !default;
+$datatable-btn-collection-spinner-color-dark:    rgba($text-level-1-dark, 0.35) !default;
+$datatable-btn-collection-spinner-dimension:     1.25rem !default;
+$datatable-btn-collection-spinner-border-width:  2px !default;
+$datatable-btn-collection-spinner-border-color:  $primary !default;
+$datatable-btn-collection-spinner-animation:     dtb-spinner 1.25s infinite linear !default;
+
+$datatable-btn-collection-title-padding-y:    .75rem !default;
+$datatable-btn-collection-title-padding-x:    1rem !default;
+$datatable-btn-collection-title-color-light:  $text-level-3-light !default;
+$datatable-btn-collection-title-color-dark:   $text-level-3-dark !default;
+$datatable-btn-collection-title-font-size:    $font-size-md !default;
+$datatable-btn-collection-title-font-weight:  $font-weight-bold !default;
+
+$datatable-order-pointer-width:               $border-width !default;
+$datatable-order-pointer-color-light:         $primary !default;
+$datatable-order-pointer-color-dark:          $primary !default;
+$datatable-order-drag-opacity:                .65 !default;
+
+$datatable-fixed-element-bg-light:            $white !default;
+$datatable-fixed-element-bg-dark:             $gray-800 !default;
+
+$datatable-pane-font-size:               $font-size-md !default;
+$datatable-pane-padding-y:               1rem !default;
+$datatable-pane-padding-x:               1rem !default;
+$datatable-pane-border-width:            $border-width !default;
+$datatable-pane-border-color-light:      $border-color-light !default;
+$datatable-pane-border-color-dark:       $border-color-dark !default;
+$datatable-pane-border-radius:           $border-radius-lg !default;
+$datatable-pane-spacer:                  1rem !default;
+
+$datatable-pane-title-color-light:       $text-level-3-light !default;
+$datatable-pane-title-color-dark:        $text-level-3-dark !default;
+$datatable-pane-title-font-size:         $font-size-lg !default;
+$datatable-pane-title-font-weight:       $font-weight-bold !default;
+
+$datatable-pane-body-padding-y:                  .25rem !default;
+$datatable-pane-body-padding-x:                  .25rem !default;
+$datatable-pane-body-border-width:               $border-width !default;
+$datatable-pane-body-border-color-light:         $border-color-light !default;
+$datatable-pane-body-border-color-dark:          $border-color-dark !default;
+$datatable-pane-body-active-border-color-light:  $primary !default;
+$datatable-pane-body-active-border-color-dark:   $primary !default;
+$datatable-pane-body-border-radius:              $border-radius !default;
+
+$datatable-pane-badge-min-width:         2.5rem !default;
+
+$datatable-group-bg-light:               $gray-100 !default;
+$datatable-group-bg-dark:                $gray-700 !default;
+$datatable-group-color-light:            $text-level-3-light !default;
+$datatable-group-color-dark:             $text-level-3-dark !default;
+$datatable-group-font-size:              $font-size-md !default;
+$datatable-group-font-weight:            $font-weight-bold !default;
+$datatable-group-padding-y-sm:           .25rem !default;
+
+$datatable-group-level-1-bg-light:       $gray-200 !default;
+$datatable-group-level-1-bg-dark:        $gray-600 !default;
+$datatable-group-level-1-spacer:         2rem !default;
+$datatable-group-level-2-bg-light:       $gray-300 !default;
+$datatable-group-level-2-bg-dark:        $gray-500 !default;
+$datatable-group-level-2-spacer:         $datatable-group-level-1-spacer * 2 !default;
+
+$datatable-scroller-label-padding:               $tooltip-padding-y $tooltip-padding-x !default;
+$datatable-scroller-label-font-size:             $font-size-md !default;
+$datatable-scroller-label-border-width:          $tooltip-border-width !default;
+$datatable-scroller-label-border-radius:         $tooltip-border-radius !default;
+$datatable-scroller-label-bg-light:              $tooltip-bg-light !default;
+$datatable-scroller-label-bg-dark:               $tooltip-bg-dark !default;
+$datatable-scroller-label-color-light:           $tooltip-color-light !default;
+$datatable-scroller-label-color-dark:            $tooltip-color-dark !default;
+$datatable-scroller-label-border-color-light:    $tooltip-border-color-light !default;
+$datatable-scroller-label-border-color-dark:     $tooltip-border-color-dark !default;
+$datatable-scroller-label-offset:                .5rem !default;
+
+$datatable-key-outline-width:            2px !default;
+$datatable-key-outline-color-light:      $primary !default;
+$datatable-key-outline-color-dark:       $primary !default;
+
+// Typeahead
+$typeahead-hint-color-light:                 $input-placeholder-color-light !default;
+$typeahead-hint-color-dark:                  $input-placeholder-color-dark !default;
+
+$typeahead-menu-bg-light:                    $dropdown-bg-light !default;
+$typeahead-menu-bg-dark:                     $dropdown-bg-dark !default;
+$typeahead-menu-border-width:                $border-width !default;
+$typeahead-menu-border-color-light:          $input-border-color-light !default;
+$typeahead-menu-border-color-dark:           $input-border-color-dark !default;
+$typeahead-menu-active-border-color-light:   $input-focus-border-color-light !default;
+$typeahead-menu-active-border-color-dark:    $input-focus-border-color-dark !default;
+$typeahead-menu-border-radius:               $input-border-radius !default;
+
+$typeahead-menu-item-color-light:        $text-level-1-light !default;
+$typeahead-menu-item-color-dark:         $text-level-1-dark !default;
+$typeahead-menu-item-hover-bg-light:     $component-hover-bg-light !default;
+$typeahead-menu-item-hover-bg-dark:      $component-hover-bg-dark !default;
+$typeahead-menu-item-hover-color-light:  $component-hover-color-light !default;
+$typeahead-menu-item-hover-color-dark:   $component-hover-color-dark !default;
+$typeahead-menu-item-active-bg-light:    $gray-200 !default;
+$typeahead-menu-item-active-bg-dark:     $gray-600 !default;
+$typeahead-menu-item-active-color-light: $typeahead-menu-item-hover-color-light !default;
+$typeahead-menu-item-active-color-dark:  $typeahead-menu-item-hover-color-dark !default;
+$typeahead-menu-item-disabled-bg-light:  $component-disabled-bg-light !default;
+$typeahead-menu-item-disabled-bg-dark:   $component-disabled-bg-dark !default;
+$typeahead-menu-item-disabled-opacity:   .65 !default;
+$typeahead-menu-item-font-size:          $font-size-md !default;
+$typeahead-menu-item-font-weight:        $font-weight-normal !default;
+$typeahead-menu-item-padding-y:          .5rem !default;
+$typeahead-menu-item-padding-x:          .75rem !default;
+$typeahead-menu-item-child-spacer:       1.25rem !default;
+
+$typeahead-menu-content-line-height:    $line-height-base !default;
+$typeahead-menu-content-font-size:      $font-size-md !default;
+
+$typeahead-menu-title-color-light:      $text-level-3-light !default;
+$typeahead-menu-title-color-dark:       $text-level-3-dark !default;
+$typeahead-menu-title-font-weight:      $font-weight-bold !default;
+$typeahead-menu-subtitle-color-light:   $text-level-1-light !default;
+$typeahead-menu-subtitle-color-dark:    $text-level-1-dark !default;
+$typeahead-menu-subtitle-font-weight:   $font-weight-normal !default;
+
+$typeahead-menu-addon-spacer:           .5rem !default;
+
+$typeahead-menu-empty-color-light:       $text-level-2-light !default;
+$typeahead-menu-empty-color-dark:        $text-level-2-dark !default;
+$typeahead-menu-empty-font-size:         $font-size-md !default;
+$typeahead-menu-empty-font-weight:       $font-weight-bold !default;
+
+$typeahead-menu-header-color-light:      $text-level-3-light !default;
+$typeahead-menu-header-color-dark:       $text-level-3-dark !default;
+$typeahead-menu-header-font-size:        $font-size-md !default;
+$typeahead-menu-header-font-weight:      $font-weight-bold !default;
+
+$typeahead-menu-highlight-color:         $primary !default;
+
+// Sortable
+$sortable-handle-padding:                .25rem !default;
+$sortable-handle-icon-size:              $font-size-lg !default;
+
+$sortable-drag-opacity:                  .65 !default;
+$sortable-menu-spacer:                   1.25rem !default;
+
+// Touchspin
+$touchspin-btn-dimension:                $btn-icon-dimension !default;
+$touchspin-btn-dimension-lg:             $btn-icon-dimension-lg !default;
+$touchspin-btn-dimension-sm:             $btn-icon-dimension-sm !default;
+$touchspin-btn-font-size:                $font-size-md !default;
+$touchspin-btn-font-size-lg:             $touchspin-btn-font-size + .2rem !default;
+$touchspin-btn-font-size-sm:             $touchspin-btn-font-size - .2rem !default;
+$touchspin-btn-font-weight:              $font-weight-bolder !default;
+$touchspin-btn-border-radius:            $btn-border-radius !default;
+$touchspin-btn-border-radius-lg:         $btn-border-radius-lg !default;
+$touchspin-btn-border-radius-sm:         $btn-border-radius-sm !default;

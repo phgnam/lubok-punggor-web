@@ -1,0 +1,197 @@
+@import "../../../variables";
+
+.dataTable {
+    &.dtr-inline.collapsed {
+        tbody tr {
+            &[role="row"] > *:first-child {
+                white-space: nowrap;
+                cursor: pointer;
+
+                @include icon {
+                    content: $datatable-responsive-icon-collapsed;
+                    font-size: $datatable-responsive-icon-size;
+                    margin-right: $datatable-responsive-icon-spacer;
+                    @include theme-variant("light") {
+                        color: $datatable-responsive-icon-color-light;
+                    }
+                    @include theme-variant("dark") {
+                        color: $datatable-responsive-icon-color-dark;
+                    }
+                }
+            }
+
+            &.parent > *:first-child:before {
+                content: $datatable-responsive-icon-expand;
+                @include theme-variant("light") {
+                    color: $datatable-responsive-icon-active-color-light;
+                }
+                @include theme-variant("dark") {
+                    color: $datatable-responsive-icon-active-color-dark;
+                }
+            }
+        }
+    }
+
+    &.dtr-column {
+        tbody tr {
+            .control {
+                cursor: pointer;
+
+                @include icon {
+                    content: $datatable-responsive-icon-collapsed;
+                    font-size: $datatable-responsive-icon-size;
+                    margin-right: $datatable-responsive-icon-spacer;
+                    @include theme-variant("light") {
+                        color: $datatable-responsive-icon-color-light;
+                    }
+                    @include theme-variant("dark") {
+                        color: $datatable-responsive-icon-color-dark;
+                    }
+                }
+            }
+
+            &.parent .control:before {
+                content: $datatable-responsive-icon-expand;
+                @include theme-variant("light") {
+                    color: $datatable-responsive-icon-active-color-light;
+                }
+                @include theme-variant("dark") {
+                    color: $datatable-responsive-icon-active-color-dark;
+                }
+            }
+        }
+    }
+
+    .child {
+        .dtr-details {
+            display: inline-block;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+
+            > li {
+                padding: $datatable-responsive-list-padding-y 0;
+                border-bottom-width: $datatable-responsive-list-border-width;
+                border-bottom-style: solid;
+                @include theme-variant("light") {
+                    border-bottom-color: $datatable-responsive-list-border-color-light;
+                }
+                @include theme-variant("dark") {
+                    border-bottom-color: $datatable-responsive-list-border-color-dark;
+                }
+
+                &:last-child { border-bottom: none; }
+            }
+        }
+
+        .dtr-title {
+            display: inline-block;
+            min-width: $datatable-responsive-title-min-width;
+            font-size: $datatable-responsive-title-font-size;
+            font-weight: $datatable-responsive-title-font-weight;
+            @include theme-variant("light") {
+                color: $datatable-responsive-title-color-light;
+            }
+            @include theme-variant("dark") {
+                color: $datatable-responsive-title-color-dark;
+            }
+        }
+
+        .dtr-data {
+            display: inline-block;
+            font-size: $datatable-responsive-data-font-size;
+            font-weight: $datatable-responsive-data-font-weight;
+            @include theme-variant("light") {
+                color: $datatable-responsive-data-color-light;
+            }
+            @include theme-variant("dark") {
+                color: $datatable-responsive-data-color-dark;
+            }
+        }
+    }
+}
+
+.dtr-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: $zindex-modal;
+}
+
+.dtr-modal-display {
+    position: absolute;
+    width: $datatable-responsive-modal-width;
+    height: $datatable-responsive-modal-height;
+    border-width: $datatable-responsive-modal-border-width;
+    border-style: solid;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: $zindex-modal + 1;
+    @include border-radius($datatable-responsive-modal-border-radius);
+    @include theme-variant("light") {
+        color: $datatable-responsive-modal-color-light;
+        background: $datatable-responsive-modal-bg-light;
+        border-color: $datatable-responsive-modal-border-color-light;
+    }
+    @include theme-variant("dark") {
+        color: $datatable-responsive-modal-color-dark;
+        background: $datatable-responsive-modal-bg-dark;
+        border-color: $datatable-responsive-modal-border-color-dark;
+    }
+}
+
+.dtr-modal-content {
+    position: relative;
+    padding: $datatable-responsive-modal-padding;
+}
+
+.dtr-modal-close {
+    position: absolute;
+    width: $datatable-responsive-modal-close-dimension;
+    height: $datatable-responsive-modal-close-dimension;
+    text-align: center;
+    top: $datatable-responsive-modal-close-offset;
+    right: $datatable-responsive-modal-close-offset;
+    cursor: pointer;
+    @include border-radius($datatable-responsive-modal-close-border-radius);
+    @include theme-variant("light") {
+        color: $datatable-responsive-modal-close-color-light;
+        background: $datatable-responsive-modal-close-bg-light;
+    }
+    @include theme-variant("dark") {
+        color: $datatable-responsive-modal-close-color-dark;
+        background: $datatable-responsive-modal-close-bg-dark;
+    }
+
+    &:hover {
+        @include theme-variant("light") {
+            color: $datatable-responsive-modal-close-hover-color-light;
+            background: $datatable-responsive-modal-close-hover-bg-light;
+        }
+        @include theme-variant("dark") {
+            color: $datatable-responsive-modal-close-hover-color-dark;
+            background: $datatable-responsive-modal-close-hover-bg-dark;
+        }
+    }
+}
+
+.dtr-modal-background {
+    position: fixed;
+    background: $datatable-responsive-modal-backdrop-bg;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: $zindex-modal;
+}
+
+.dtr-bs-modal .table tr:first-child td { border-top: none; }
+
+@include media-breakpoint-down("md") {
+    .dtr-modal-display { width: $datatable-responsive-modal-width-sm; }
+}

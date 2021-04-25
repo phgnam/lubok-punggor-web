@@ -1,0 +1,61 @@
+// Base styles
+.header {
+	position: relative;
+	display: block;
+	height: auto !important;
+	z-index: $zindex-header;
+}
+
+.header-holder {
+	border-bottom-width: $header-border-width;
+	border-bottom-style: solid;
+	@include theme-variant("light") {
+		background: $header-bg-light;
+		border-bottom-color: $header-border-color-light;
+	}
+	@include theme-variant("dark") {
+		background: $header-bg-dark;
+		border-bottom-color: $header-border-color-dark;
+	}
+}
+
+.header-container {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	width: 100%;
+	padding-top: $header-container-padding-y;
+	padding-bottom: $header-container-padding-y;
+}
+
+.header-wrap {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	white-space: nowrap;
+
+	// Fit wrapper to empty space
+	&.header-wrap-block { flex: 1; }
+}
+
+// Sticky JS support
+.sticky-wrapper.is-sticky {
+	z-index: inherit;
+
+	.sticky-header {
+                z-index: 9999 !important;
+		width: auto !important;
+		right: 0;
+		left: 0;
+	}
+}
+
+// Breakpoints for hiding .header-holder element
+@include media-breakpoint-down("md") {
+	.header-holder-desktop { display: none; }
+}
+
+@include media-breakpoint-up("lg") {
+	.header-holder-mobile { display: none; }
+}

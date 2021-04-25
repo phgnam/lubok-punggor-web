@@ -1,0 +1,75 @@
+// Header
+$header-bg-light:					 $white !default;
+$header-bg-dark:					 $gray-800 !default;
+$header-bg-main-light:			     $primary !default;
+$header-bg-main-dark:			     $primary !default;
+$header-border-width:                $border-width !default;
+$header-border-color-light:          $border-color-light !default;
+$header-border-color-dark:           $border-color-dark !default;
+$header-transition:					 $transition-base !default;
+
+$header-container-padding-y:         1rem !default;
+
+$header-nav-spacer:                  1.75rem !default;
+$header-nav-color-light:             $gray-200 !default;
+$header-nav-color-dark:              $gray-200 !default;
+$header-nav-hover-bg-light:          rgba($header-nav-color-light, 0.1) !default;
+$header-nav-hover-bg-dark:           rgba($header-nav-color-dark, 0.1) !default;
+$header-nav-hover-color-light:       $header-nav-color-light !default;
+$header-nav-hover-color-dark:        $header-nav-color-dark !default;
+$header-nav-active-bg-light:         $header-bg-light !default;
+$header-nav-active-bg-dark:          $header-bg-dark !default;
+$header-nav-active-color-light:      $primary !default;
+$header-nav-active-color-dark:       $primary !default;
+
+$header-brand-color-light:           $white !default;
+$header-brand-color-dark:            $white !default;
+$header-brand-font-size:             1.6rem !default;
+$header-brand-font-weight:           $font-weight-bolder !default;
+
+// Footer
+$footer-bg-light:                    $white !default;
+$footer-bg-dark:                     $gray-800 !default;
+$footer-color-light:                 $text-level-3-light !default;
+$footer-color-dark:                  $text-level-3-dark !default;
+$footer-border-width:			     $border-width !default;
+$footer-border-color-light:			 $border-color-light !default;
+$footer-border-color-dark:			 $border-color-dark !default;
+$footer-padding-y:                   1rem !default;
+
+// Menu
+$menu-link-height:             3rem !default;
+$menu-link-padding-x:          .5rem !default;
+$menu-link-bg-light:           transparent !default;
+$menu-link-bg-dark:            transparent !default;
+$menu-link-color-light:        $text-level-1-light !default;
+$menu-link-color-dark:         $text-level-1-dark !default;
+$menu-link-hover-bg-light:     rgba($gray-200, .5) !default;
+$menu-link-hover-bg-dark:      rgba($gray-600, .5) !default;
+$menu-link-hover-color-light:  $menu-link-color-light !default;
+$menu-link-hover-color-dark:   $menu-link-color-dark !default;
+$menu-link-active-bg-light:    $component-active-bg-light !default;
+$menu-link-active-bg-dark:     $component-active-bg-dark !default;
+$menu-link-active-color-light: $component-active-color-light !default;
+$menu-link-active-color-dark:  $component-active-color-dark !default;
+$menu-link-font-size:          $font-size-md !default;
+$menu-link-font-weight:        $font-weight-normal !default;
+$menu-link-icon-dimension:     2.5rem !default;
+$menu-link-icon-size:          $font-size-lg !default;
+$menu-link-text-spacer:        .5rem !default;
+$menu-link-addon-spacer:       .5rem !default;
+$menu-link-caret-spacer:       .25rem !default;
+
+$menu-submenu-bg-light:        rgba($gray-200, .35) !default;
+$menu-submenu-bg-dark:         rgba($gray-600, .35) !default;
+$menu-submenu-transition:      $transition-base !default;
+
+$menu-section-height:          $menu-link-height !default;
+$menu-section-spacer:          .5rem !default;
+$menu-section-text-spacer:     $menu-link-padding-x !default;
+$menu-section-color-light:     $text-level-1-light !default;
+$menu-section-color-dark:      $text-level-1-dark !default;
+$menu-section-font-size:       $font-size-md !default;
+$menu-section-font-weight:     $font-weight-bold !default;
+
+$menu-bullet-dimension:        4px !default;

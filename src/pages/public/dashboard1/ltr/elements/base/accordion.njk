@@ -1,0 +1,218 @@
+{% extends "components/dashboard1/template.njk" %}
+
+{% set direction = "ltr" %}
+{% set page_title = "Accordion" %}
+{% set breadcrumb = [
+    { text: "Dashboard", link: "dashboard1/ltr/index.html" | url, icon: '<i data-feather="home"></i>' },
+    { text: "Elements" },
+    { text: "Base" },
+    { text: "Accordion", link: "dashboard1/ltr/elements/base/accordion.html" | url }
+] %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+
+            <!-- BEGIN Portlet -->
+            <div class="portlet">
+                <div class="portlet-header portlet-header-bordered">
+                    <h3 class="portlet-title">Accordion</h3>
+                </div>
+                <div class="portlet-body">
+                    <p><strong>Accordion</strong> is collapsible elements extended from <a href="{{ 'dashboard1/ltr/elements/base/card.html' | url }}">card</a>, inside accordion you can put any elements. We have two versions of the accordion, like examples below. The first one is the default accordion appearance. To appear your accordion like the second one, you just need to add .accordion-flush to default accordion.</p>
+
+                    <div class="row">
+                        <div class="col-sm-6 mb-3 mb-sm-0">
+
+                            <!-- BEGIN Accordion -->
+                            <div class="accordion" id="accordion1">
+
+                                <!-- BEGIN Card -->
+                                <div class="card">
+                                    <div class="card-header collapsed" data-toggle="collapse" data-target="#accordion1-collapse1">
+                                        <h3 class="card-title">Home</h3>
+                                    </div>
+                                    <div id="accordion1-collapse1" class="collapse" data-parent="#accordion1">
+                                        <div class="card-body">
+                                            <p class="mb-0">It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- END Card -->
+
+                                <!-- BEGIN Card -->
+                                <div class="card">
+                                    <div class="card-header" data-toggle="collapse" data-target="#accordion1-collapse2">
+                                        <h3 class="card-title">Profile</h3>
+                                        <div class="card-addon">
+                                            <i class="caret accordion-caret"></i>
+                                        </div>
+                                    </div>
+                                    <div id="accordion1-collapse2" class="collapse show" data-parent="#accordion1">
+                                        <div class="card-body">
+                                            <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- END Card -->
+
+                                <!-- BEGIN Card -->
+                                <div class="card">
+                                    <div class="card-header collapsed" data-toggle="collapse" data-target="#accordion1-collapse3">
+                                        <div class="card-icon">
+                                            <i class="fa fa-newspaper"></i>
+                                        </div>
+                                        <h3 class="card-title">Blog</h3>
+                                    </div>
+                                    <div id="accordion1-collapse3" class="collapse" data-parent="#accordion1">
+                                        <div class="card-body">
+                                            <p class="mb-0">It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- END Card -->
+
+                                <!-- BEGIN Card -->
+                                <div class="card">
+                                    <div class="card-header collapsed" data-toggle="collapse" data-target="#accordion1-collapse4">
+                                        <div class="card-icon">
+                                            <i class="fa fa-cog"></i>
+                                        </div>
+                                        <h3 class="card-title">Settings</h3>
+                                        <div class="card-addon">
+                                            <span class="badge badge-warning badge-pill">9+</span>
+                                        </div>
+                                    </div>
+                                    <div id="accordion1-collapse4" class="collapse" data-parent="#accordion1">
+                                        <div class="card-body">
+                                            <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- END Card -->
+
+                                <!-- BEGIN Card -->
+                                <div class="card">
+                                    <div class="card-header collapsed" data-toggle="collapse" data-target="#accordion1-collapse5">
+                                        <div class="card-icon">
+                                            <i class="fa fa-bullhorn"></i>
+                                        </div>
+                                        <h3 class="card-title">Contact</h3>
+                                        <div class="card-addon">
+                                            <i class="caret accordion-caret"></i>
+                                        </div>
+                                    </div>
+                                    <div id="accordion1-collapse5" class="collapse" data-parent="#accordion1">
+                                        <div class="card-body">
+                                            <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containLorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- END Card -->
+
+                            </div>
+                            <!-- END Accordion -->
+
+                        </div>
+                        <div class="col-sm-6">
+
+                            <!-- BEGIN Accordion -->
+                            <div class="accordion accordion-flush" id="accordion2">
+
+                                <!-- BEGIN Card -->
+                                <div class="card">
+                                    <div class="card-header collapsed" data-toggle="collapse" data-target="#accordion2-collapse1">
+                                        <h3 class="card-title">Home</h3>
+                                    </div>
+                                    <div id="accordion2-collapse1" class="collapse" data-parent="#accordion2">
+                                        <div class="card-body">
+                                            <p class="mb-0">It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- END Card -->
+
+                                <!-- BEGIN Card -->
+                                <div class="card">
+                                    <div class="card-header" data-toggle="collapse" data-target="#accordion2-collapse2">
+                                        <h3 class="card-title">Profile</h3>
+                                        <div class="card-addon">
+                                            <i class="caret accordion-caret"></i>
+                                        </div>
+                                    </div>
+                                    <div id="accordion2-collapse2" class="collapse show" data-parent="#accordion2">
+                                        <div class="card-body">
+                                            <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- END Card -->
+
+                                <!-- BEGIN Card -->
+                                <div class="card">
+                                    <div class="card-header collapsed" data-toggle="collapse" data-target="#accordion2-collapse3">
+                                        <div class="card-icon">
+                                            <i class="fa fa-newspaper"></i>
+                                        </div>
+                                        <h3 class="card-title">Blog</h3>
+                                    </div>
+                                    <div id="accordion2-collapse3" class="collapse" data-parent="#accordion2">
+                                        <div class="card-body">
+                                            <p class="mb-0">It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- END Card -->
+
+                                <!-- BEGIN Card -->
+                                <div class="card">
+                                    <div class="card-header collapsed" data-toggle="collapse" data-target="#accordion2-collapse4">
+                                        <div class="card-icon">
+                                            <i class="fa fa-cog"></i>
+                                        </div>
+                                        <h3 class="card-title">Settings</h3>
+                                        <div class="card-addon">
+                                            <span class="badge badge-warning badge-pill">9+</span>
+                                        </div>
+                                    </div>
+                                    <div id="accordion2-collapse4" class="collapse" data-parent="#accordion2">
+                                        <div class="card-body">
+                                            <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- END Card -->
+
+                                <!-- BEGIN Card -->
+                                <div class="card">
+                                    <div class="card-header collapsed" data-toggle="collapse" data-target="#accordion2-collapse5">
+                                        <div class="card-icon">
+                                            <i class="fa fa-bullhorn"></i>
+                                        </div>
+                                        <h3 class="card-title">Contact</h3>
+                                        <div class="card-addon">
+                                            <i class="caret accordion-caret"></i>
+                                        </div>
+                                    </div>
+                                    <div id="accordion2-collapse5" class="collapse" data-parent="#accordion2">
+                                        <div class="card-body">
+                                            <p class="mb-0">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containLorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- END Card -->
+
+                            </div>
+                            <!-- END Accordion -->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END Portlet -->
+
+        </div>
+    </div>
+</div>
+{% endblock %}

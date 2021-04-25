@@ -1,0 +1,41 @@
+.holder {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+}
+
+.wrapper {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	padding-top: $grid-gutter-width;
+	@include theme-variant("light") {
+		background: $wrapper-bg-light;
+	}
+	@include theme-variant("dark") {
+		background: $wrapper-bg-dark;
+	}
+}
+
+.content {
+	flex: 1;
+	position: relative;
+	padding-bottom: $grid-gutter-width;
+
+	> [class*="container"] {
+		height: 100%;
+		padding-top: $grid-gutter-width;
+		border-width: $content-border-width;
+		border-style: solid;
+		@include border-radius($content-border-radius);
+		@include theme-variant("light") {
+			background: $content-bg-light;
+			border-color: $content-border-color-light;
+	    }
+	    @include theme-variant("dark") {
+			background: $content-bg-dark;
+			border-color: $content-border-color-dark;
+	    }
+	}
+}

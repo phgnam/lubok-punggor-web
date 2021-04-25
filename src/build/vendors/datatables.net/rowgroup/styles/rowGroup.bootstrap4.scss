@@ -1,0 +1,47 @@
+@import "../../../variables";
+
+.dataTable {
+    .dtrg-group {
+        // Default group styles
+        td {
+            font-size: $datatable-group-font-size;
+            font-weight: $datatable-group-font-weight;
+            @include theme-variant("light") {
+                color: $datatable-group-color-light;
+                background: $datatable-group-bg-light;
+            }
+            @include theme-variant("dark") {
+                color: $datatable-group-color-dark;
+                background: $datatable-group-bg-dark;
+            }
+        }
+
+        // Decrease group y-axis padding for group level 1 and 2
+        &.dtrg-level-1 td,
+        &.dtrg-level-2 td {
+            padding-top: $datatable-group-padding-y-sm;
+            padding-bottom: $datatable-group-padding-y-sm;
+        }
+
+        // Styling group leveling
+        &.dtrg-level-1 td {
+            padding-left: $datatable-group-level-1-spacer;
+            @include theme-variant("light") {
+                background: $datatable-group-level-1-bg-light;
+            }
+            @include theme-variant("dark") {
+                background: $datatable-group-level-1-bg-dark;
+            }
+        }
+
+        &.dtrg-level-2 td {
+            padding-left: $datatable-group-level-2-spacer;
+            @include theme-variant("light") {
+                background: $datatable-group-level-2-bg-light;
+            }
+            @include theme-variant("dark") {
+                background: $datatable-group-level-2-bg-dark;
+            }
+        }
+    }
+}

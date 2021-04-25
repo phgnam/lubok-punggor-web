@@ -1,0 +1,178 @@
+.mail-list {
+    position: relative;
+	display: flex;
+	flex-direction: column;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.mail-list-action {
+    .mail-list-item {
+        &:hover {
+            @include theme-variant("light") {
+                background: $mail-list-hover-bg-light;
+            }
+            @include theme-variant("dark") {
+                background: $mail-list-hover-bg-dark;
+            }
+        }
+
+        &:active,
+        &.active {
+            @include theme-variant("light") {
+                background: $mail-list-active-bg-light;
+            }
+            @include theme-variant("dark") {
+                background: $mail-list-active-bg-dark;
+            }
+        }
+    }
+}
+
+.mail-list-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: $mail-list-item-padding-y $mail-list-item-padding-x;
+    margin: 0;
+
+    + #{&} {
+        border-top-width: $mail-list-item-border-width;
+        border-top-style: solid;
+        @include theme-variant("light") {
+            border-top-color: $mail-list-item-border-color-light;
+        }
+        @include theme-variant("dark") {
+            border-top-color: $mail-list-item-border-color-dark;
+        }
+    }
+}
+
+.mail-list-item-prepend {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.mail-list-item-append {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.mail-list-item-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 0 $mail-list-item-content-padding-x;
+}
+
+.mail-list-item-title,
+.mail-list-item-subtitle,
+.mail-list-item-time {
+    margin: 0;
+    padding: $mail-list-item-content-spacer 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.mail-list-item-title {
+    font-size: $mail-list-title-font-size;
+    font-weight: $mail-list-title-font-weight;
+    @include theme-variant("light") {
+        color: $mail-list-title-color-light;
+    }
+    @include theme-variant("dark") {
+        color: $mail-list-title-color-dark;
+    }
+}
+
+.mail-list-item-subtitle {
+    font-size: $mail-list-subtitle-font-size;
+    font-weight: $mail-list-subtitle-font-weight;
+    @include theme-variant("light") {
+        color: $mail-list-subtitle-color-light;
+    }
+    @include theme-variant("dark") {
+        color: $mail-list-subtitle-color-dark;
+    }
+}
+
+.mail-list-item-time {
+    padding: $mail-list-time-padding-y $mail-list-time-padding-x;
+    font-size: $mail-list-time-font-size;
+    font-weight: $mail-list-time-font-weight;
+    @include theme-variant("light") {
+        color: $mail-list-time-color-light;
+    }
+    @include theme-variant("dark") {
+        color: $mail-list-time-color-dark;
+    }
+}
+
+.mail-file {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+}
+
+.mail-file-item {
+    display: flex;
+    flex-direction: row;
+    padding: $mail-file-padding-y $mail-file-padding-x;
+    border-width: $mail-file-border-width;
+    border-style: solid;
+    @include border-radius($mail-file-border-radius);
+    @include theme-variant("light") {
+        color: $mail-list-time-color-light;
+        border-color: $mail-file-border-color-light;
+    }
+    @include theme-variant("dark") {
+        color: $mail-list-time-color-dark;
+        border-color: $mail-file-border-color-dark;
+    }
+
+    &:hover {
+        @include theme-variant("light") {
+            background: $mail-file-hover-bg-light;
+        }
+        @include theme-variant("dark") {
+            background: $mail-file-hover-bg-dark;
+        }
+    }
+
+    + #{&} {
+        margin-left: $mail-file-spacer;
+    }
+}
+
+.mail-file-item-icon {
+    width: $mail-file-icon-dimension;
+    text-align: center;
+    margin-right: $mail-file-icon-spacer;
+    @include icon-size($mail-file-icon-size);
+    @include theme-variant("light") {
+        color: $mail-file-icon-color-light;
+    }
+    @include theme-variant("dark") {
+        color: $mail-file-icon-color-dark;
+    }
+}
+
+.mail-file-item-text {
+    font-size: $mail-file-text-font-size;
+    font-weight: $mail-file-text-font-weight;
+    @include theme-variant("light") {
+        color: $mail-file-text-color-light;
+    }
+    @include theme-variant("dark") {
+        color: $mail-file-text-color-dark;
+    }
+}
+
+.mail-content {
+    padding: $mail-content-padding-y 0;
+}

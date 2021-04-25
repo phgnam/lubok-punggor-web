@@ -1,0 +1,103 @@
+// Aside
+$aside-width:                         25rem !default;
+$aside-width-wide:                    30rem !default;
+$aside-bg-light:                      $white !default;
+$aside-bg-dark:                       $gray-800 !default;
+$aside-border-width:                  $border-width !default;
+$aside-border-radius:                 $border-radius-lg !default;
+$aside-border-color-light:            $border-color-light !default;
+$aside-border-color-dark:             $border-color-dark !default;
+$aside-border-radius:                 $border-radius-lg !default;
+$aside-transition:                    $transition-base !default;
+$aside-backdrop-bg:                   rgba($backdrop-bg, $backdrop-opacity) !default;
+
+$aside-body-padding-y:                $grid-gutter-width !default;
+$aside-body-padding-x:                $grid-gutter-width !default;
+
+// Sidebar
+$sidebar-width:                       4.5rem !default;
+$sidebar-bg-light:                    $primary !default;
+$sidebar-bg-dark:                     $primary !default;
+$sidebar-padding-y:                   .75rem !default;
+$sidebar-padding-x:                   .75rem !default;
+$sidebar-border-radius:               $border-radius-lg !default;
+$sidebar-transition:                  $transition-base !default;
+
+// Header
+$header-bg-light:					 $white !default;
+$header-bg-dark:					 $gray-800 !default;
+$header-border-width:			     $border-width !default;
+$header-border-color-light:			 $border-color-light !default;
+$header-border-color-dark:			 $border-color-dark !default;
+
+$header-container-padding-y:         1rem !default;
+
+$header-brand-color-light:           $text-level-3-light !default;
+$header-brand-color-dark:            $text-level-3-dark !default;
+$header-brand-font-size:             1.6rem !default;
+$header-brand-font-weight:           $font-weight-bolder !default;
+
+// Footer
+$footer-bg-light:                    $white !default;
+$footer-bg-dark:                     $gray-800 !default;
+$footer-color-light:                 $text-level-3-light !default;
+$footer-color-dark:                  $text-level-3-dark !default;
+$footer-border-width:			     $border-width !default;
+$footer-border-color-light:			 $border-color-light !default;
+$footer-border-color-dark:			 $border-color-dark !default;
+$footer-padding-y:                   1rem !default;
+
+// Mail
+$mail-list-hover-bg-light:           $gray-100 !default;
+$mail-list-hover-bg-dark:            $gray-700 !default;
+$mail-list-active-bg-light:          $gray-200 !default;
+$mail-list-active-bg-dark:           $gray-600 !default;
+
+$mail-list-item-padding-y:           .5rem !default;
+$mail-list-item-padding-x:           1rem !default;
+$mail-list-item-border-width:        $border-width !default;
+$mail-list-item-border-color-light:  $border-color-light !default;
+$mail-list-item-border-color-dark:   $border-color-dark !default;
+
+$mail-list-item-content-padding-x:   .5rem !default;
+$mail-list-item-content-spacer:      .25rem !default;
+
+$mail-list-title-color-light:        $text-level-3-light !default;
+$mail-list-title-color-dark:         $text-level-3-dark !default;
+$mail-list-title-font-size:          $font-size-md !default;
+$mail-list-title-font-weight:        $font-weight-bold !default;
+
+$mail-list-subtitle-color-light:     $text-level-1-light !default;
+$mail-list-subtitle-color-dark:      $text-level-1-dark !default;
+$mail-list-subtitle-font-size:       $font-size-md !default;
+$mail-list-subtitle-font-weight:     $font-weight-normal !default;
+
+$mail-list-time-color-light:         $text-level-2-light !default;
+$mail-list-time-color-dark:          $text-level-2-dark !default;
+$mail-list-time-font-size:           $font-size-md !default;
+$mail-list-time-font-weight:         $font-weight-normal !default;
+$mail-list-time-padding-y:           .5rem !default;
+$mail-list-time-padding-x:           .75rem !default;
+
+$mail-file-hover-bg-light:           $gray-100 !default;
+$mail-file-hover-bg-dark:            $gray-700 !default;
+$mail-file-padding-y:                .5rem !default;
+$mail-file-padding-x:                .75rem !default;
+$mail-file-border-width:             $border-width !default;
+$mail-file-border-radius:            $border-radius !default;
+$mail-file-border-color-light:       $border-color-light !default;
+$mail-file-border-color-dark:        $border-color-dark !default;
+$mail-file-spacer:                   .5rem !default;
+
+$mail-file-icon-color-light:         $primary !default;
+$mail-file-icon-color-dark:          $primary !default;
+$mail-file-icon-size:                1.2rem !default;
+$mail-file-icon-spacer:              .5rem !default;
+$mail-file-icon-dimension:           1.5rem !default;
+
+$mail-file-text-color-light:         $text-level-1-light !default;
+$mail-file-text-color-dark:          $text-level-1-dark !default;
+$mail-file-text-font-size:           $font-size-md !default;
+$mail-file-text-font-weight:         $font-weight-normal !default;
+
+$mail-content-padding-y:             .5rem !default;

@@ -1,0 +1,353 @@
+{% extends "components/dashboard1/template.njk" %}
+
+{% set direction = "ltr" %}
+{% set page_title = "Base Form" %}
+{% set breadcrumb = [
+    { text: "Dashboard", link: "dashboard1/ltr/index.html" | url, icon: '<i data-feather="home"></i>' },
+    { text: "Form" },
+    { text: "Basic" },
+    { text: "Base", link: "dashboard1/ltr/form/basic/base.html" | url }
+] %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6">
+
+            <!-- BEGIN Portlet -->
+            <div class="portlet">
+                <div class="portlet-header portlet-header-bordered">
+                    <h3 class="portlet-title">Base</h3>
+                </div>
+                <div class="portlet-body">
+                    <p>Textual form controls—like <code>{{ "<input>" }}</code>s, <code>{{ "<select>" }}</code>s, and <code>{{ "<textarea>" }}</code>s—are styled with the <code>.form-control</code> class. Included are styles for general appearance, focus state, sizing, and more.</p>
+                    <hr>
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">Email address</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1">Example select</label>
+                        <select class="form-control" id="exampleFormControlSelect1">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect2">Example multiple select</label>
+                        <select multiple="multiple" class="form-control" id="exampleFormControlSelect2">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group mb-0">
+                        <label for="exampleFormControlTextarea1">Example textarea</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                    <!-- END Form Group -->
+
+                </div>
+            </div>
+            <!-- END Portlet -->
+
+            <!-- BEGIN Portlet -->
+            <div class="portlet">
+                <div class="portlet-header portlet-header-bordered">
+                    <h3 class="portlet-title">File</h3>
+                </div>
+                <div class="portlet-body">
+                    <p>For file inputs, swap the <code>.form-control</code> for <code>.form-control-file</code>.</p>
+                    <hr>
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group mb-0">
+                        <label for="exampleFormControlFile1">Example file input</label>
+                        <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                    </div>
+                    <!-- END Form Group -->
+
+                </div>
+            </div>
+            <!-- END Portlet -->
+
+            <!-- BEGIN Portlet -->
+            <div class="portlet">
+                <div class="portlet-header portlet-header-bordered">
+                    <h3 class="portlet-title">Range</h3>
+                </div>
+                <div class="portlet-body">
+                    <p>Set horizontally scrollable range inputs using <code>.form-control-range</code>.</p>
+                    <hr>
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group mb-0">
+                        <label for="formControlRange">Example Range input</label>
+                        <input type="range" class="form-control-range" id="formControlRange">
+                    </div>
+                    <!-- END Form Group -->
+
+                </div>
+            </div>
+            <!-- END Portlet -->
+
+            <!-- BEGIN Portlet -->
+            <div class="portlet">
+                <div class="portlet-header portlet-header-bordered">
+                    <h3 class="portlet-title">Readonly</h3>
+                </div>
+                <div class="portlet-body">
+                    <p>Add the <code>readonly</code> boolean attribute on an input to prevent modification of the input’s value. Read-only inputs appear darker (just like disabled inputs), but retain the standard cursor.</p>
+                    <hr>
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group mb-0">
+                        <input class="form-control" type="text" placeholder="Readonly input here..." readonly="readonly">
+                    </div>
+                    <!-- END Form Group -->
+
+                </div>
+            </div>
+            <!-- END Portlet -->
+
+            <!-- BEGIN Portlet -->
+            <div class="portlet">
+                <div class="portlet-header portlet-header-bordered">
+                    <h3 class="portlet-title">Readonly plain text</h3>
+                </div>
+                <div class="portlet-body">
+                    <p>If you want to have <code>{{ "<input readonly>" }}</code> elements in your form styled as plain text, use the <code>.form-control-plaintext</code> class to remove the default form field styling and preserve the correct margin and padding..</p>
+                    <hr>
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group mb-0">
+                        <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="email@example.com">
+                    </div>
+                    <!-- END Form Group -->
+
+                </div>
+            </div>
+            <!-- END Portlet -->
+
+        </div>
+        <div class="col-md-6">
+
+            <!-- BEGIN Portlet -->
+            <div class="portlet">
+                <div class="portlet-header portlet-header-bordered">
+                    <h3 class="portlet-title">Sizing</h3>
+                </div>
+                <div class="portlet-body">
+                    <p>Set heights using classes like <code>.form-control-lg</code> and <code>.form-control-sm</code>.</p>
+                    <hr>
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group">
+                        <input class="form-control form-control-lg" type="text" placeholder=".form-control-lg">
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group">
+                        <input class="form-control" type="text" placeholder="Default input">
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group">
+                        <input class="form-control form-control-sm" type="text" placeholder=".form-control-sm">
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group">
+                        <select class="form-control form-control-lg">
+                            <option>Large select</option>
+                        </select>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group">
+                        <select class="form-control">
+                            <option>Default select</option>
+                        </select>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group mb-0">
+                        <select class="form-control form-control-sm">
+                            <option>Small select</option>
+                        </select>
+                    </div>
+                    <!-- END Form Group -->
+
+                </div>
+            </div>
+            <!-- END Portlet -->
+
+            <!-- BEGIN Portlet -->
+            <div class="portlet">
+                <div class="portlet-header">
+                    <h3 class="portlet-title">Checkbox and Radio</h3>
+                </div>
+                <div class="portlet-body">
+
+                    <!-- BEGIN Portlet -->
+                    <div class="portlet">
+                        <div class="portlet-header portlet-header-bordered">
+                            <h3 class="portlet-title">Default</h3>
+                        </div>
+                        <div class="portlet-body">
+                            <p>By default, any number of checkboxes and radios that are immediate sibling will be vertically stacked and appropriately spaced with <code>.form-check</code>.</p>
+                            <hr>
+
+                            <!-- BEGIN Form Check -->
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                <label class="form-check-label" for="defaultCheck1">Default checkbox</label>
+                            </div>
+                            <!-- END Form Check -->
+
+                            <!-- BEGIN Form Check -->
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" disabled="disabled">
+                                <label class="form-check-label" for="defaultCheck2">Disabled checkbox</label>
+                            </div>
+                            <!-- END Form Check -->
+
+                            <!-- BEGIN Form Check -->
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked="checked">
+                                <label class="form-check-label" for="exampleRadios1">Default radio</label>
+                            </div>
+                            <!-- END Form Check -->
+
+                            <!-- BEGIN Form Check -->
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                                <label class="form-check-label" for="exampleRadios2">Second default radio</label>
+                            </div>
+                            <!-- END Form Check -->
+
+                            <!-- BEGIN Form Check -->
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" disabled="disabled">
+                                <label class="form-check-label" for="exampleRadios3">Disabled radio</label>
+                            </div>
+                            <!-- END Form Check -->
+
+                        </div>
+                    </div>
+                    <!-- END Portlet -->
+
+                    <!-- BEGIN Portlet -->
+                    <div class="portlet">
+                        <div class="portlet-header portlet-header-bordered">
+                            <h3 class="portlet-title">Without labels</h3>
+                        </div>
+                        <div class="portlet-body">
+                            <p>Add <code>.position-static</code> to inputs within <code>.form-check</code> that don’t have any label text. Remember to still provide some form of label for assistive technologies.</p>
+                            <hr>
+
+                            <!-- BEGIN Form Check -->
+                            <div class="form-check">
+                                <input class="form-check-input position-static" type="checkbox" id="blankCheckbox" value="option1">
+                            </div>
+                            <!-- END Form Check -->
+
+                            <!-- BEGIN Form Check -->
+                            <div class="form-check">
+                                <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio1" value="option1">
+                            </div>
+                            <!-- END Form Check -->
+
+                            <!-- BEGIN Form Check -->
+                            <div class="form-check">
+                                <input class="form-check-input position-static" type="radio" name="blankRadio" id="blankRadio2" value="option1">
+                            </div>
+                            <!-- END Form Check -->
+
+                        </div>
+                    </div>
+                    <!-- END Portlet -->
+
+                    <!-- BEGIN Portlet -->
+                    <div class="portlet mb-0">
+                        <div class="portlet-header portlet-header-bordered">
+                            <h3 class="portlet-title">Inline</h3>
+                        </div>
+                        <div class="portlet-body">
+                            <p>Group checkboxes or radios on the same horizontal row by adding <code>.form-check-inline</code> to any <code>.form-check</code>.</p>
+                            <hr>
+
+                            <!-- BEGIN Form Check -->
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                <label class="form-check-label" for="inlineCheckbox1">1</label>
+                            </div>
+                            <!-- END Form Check -->
+
+                            <!-- BEGIN Form Check -->
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                                <label class="form-check-label" for="inlineCheckbox2">2</label>
+                            </div>
+                            <!-- END Form Check -->
+
+                            <!-- BEGIN Form Check -->
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled="disabled">
+                                <label class="form-check-label" for="inlineCheckbox3">3 (disabled)</label>
+                            </div>
+                            <!-- END Form Check -->
+
+                        </div>
+                    </div>
+                    <!-- END Portlet -->
+
+                </div>
+            </div>
+            <!-- END Portlet -->
+
+            <!-- BEGIN Portlet -->
+            <div class="portlet">
+                <div class="portlet-header portlet-header-bordered">
+                    <h3 class="portlet-title">Disabled state</h3>
+                </div>
+                <div class="portlet-body">
+                    <p>Add the <code>disabled</code> boolean attribute on an input to prevent user interactions and make it appear darker.</p>
+                    <hr>
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group mb-0">
+                        <label for="disabledTextInput">Disabled input</label>
+                        <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input" disabled="disabled">
+                    </div>
+                    <!-- END Form Group -->
+
+                </div>
+            </div>
+            <!-- END Portlet -->
+
+        </div>
+    </div>
+</div>
+{% endblock %}

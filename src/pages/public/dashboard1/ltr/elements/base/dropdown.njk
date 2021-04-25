@@ -1,0 +1,525 @@
+{% extends "components/dashboard1/template.njk" %}
+
+{% set direction = "ltr" %}
+{% set page_title = "Dropdown" %}
+{% set breadcrumb = [
+    { text: "Dashboard", link: "dashboard1/ltr/index.html" | url, icon: '<i data-feather="home"></i>' },
+    { text: "Elements" },
+    { text: "Base" },
+    { text: "Dropdown", link: "dashboard1/ltr/elements/base/dropdown.html" | url }
+] %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+
+            <!-- BEGIN Portlet -->
+            <div class="portlet">
+                <div class="portlet-header portlet-header-bordered">
+                    <h3 class="portlet-title">Dropdown examples</h3>
+                </div>
+                <div class="portlet-body">
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Basic demo</label>
+                        <div class="col-sm-8 col-lg-9">
+
+                            <!-- BEGIN Dropdown -->
+                            <div class="dropdown">
+                                <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Click me</button>
+                                <div class="dropdown-menu dropdown-menu-left">
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                </div>
+                            </div>
+                            <!-- END Dropdown -->
+
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Animated dropdown</label>
+                        <div class="col-sm-8 col-lg-9">
+
+                            <!-- BEGIN Dropdown -->
+                            <div class="dropdown">
+                                <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Click me</button>
+                                <div class="dropdown-menu dropdown-menu-left dropdown-menu-animated">
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                </div>
+                            </div>
+                            <!-- END Dropdown -->
+
+                            <p class="mt-2 mb-0">Extend <code>.dropdown-menu</code> with <code>.dropdown-menu-animated</code> to apply animation when dropdown opened</p>
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Icons</label>
+                        <div class="col-sm-8 col-lg-9">
+
+                            <!-- BEGIN Dropdown -->
+                            <div class="dropdown">
+                                <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Click me</button>
+                                <div class="dropdown-menu dropdown-menu-left dropdown-menu-animated">
+                                    <a class="dropdown-item" href="#">
+                                        <div class="dropdown-icon">
+                                            <i class="fa fa-rocket"></i>
+                                        </div>
+                                        <span class="dropdown-content">Action</span>
+                                    </a>
+                                    <a class="dropdown-item" href="#">
+                                        <div class="dropdown-icon">
+                                            <i class="fa fa-comments"></i>
+                                        </div>
+                                        <span class="dropdown-content">Another action</span>
+                                    </a>
+                                    <a class="dropdown-item" href="#">
+                                        <div class="dropdown-icon">
+                                            <i class="fa fa-paper-plane"></i>
+                                        </div>
+                                        <span class="dropdown-content">Something else here</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- END Dropdown -->
+
+                            <p class="mt-2 mb-0">Use <code>.dropdown-icon</code> class with an icon inside to add an icon before the content</p>
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Bullet</label>
+                        <div class="col-sm-8 col-lg-9">
+
+                            <!-- BEGIN Dropdown -->
+                            <div class="dropdown">
+                                <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Click me</button>
+                                <div class="dropdown-menu dropdown-menu-left dropdown-menu-animated">
+                                    <a class="dropdown-item" href="#">
+                                        <i class="dropdown-bullet"></i>
+                                        <span class="dropdown-content">Action</span>
+                                    </a>
+                                    <a class="dropdown-item" href="#">
+                                        <i class="dropdown-bullet"></i>
+                                        <span class="dropdown-content">Another action</span>
+                                    </a>
+                                    <a class="dropdown-item" href="#">
+                                        <i class="dropdown-bullet"></i>
+                                        <span class="dropdown-content">Something else here</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- END Dropdown -->
+
+                            <p class="mt-2 mb-0">You can add circle bullet by using <code>.dropdown-bullet</code> with <code>{{ "<i>" }}</code> tag</p>
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Header</label>
+                        <div class="col-sm-8 col-lg-9">
+
+                            <!-- BEGIN Dropdown -->
+                            <div class="dropdown d-inline mr-2">
+                                <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Normal header</button>
+                                <div class="dropdown-menu dropdown-menu-left dropdown-menu-animated">
+                                    <h6 class="dropdown-header">Header</h6>
+                                    <a class="dropdown-item" href="#">
+                                        <div class="dropdown-icon">
+                                            <i class="fa fa-rocket"></i>
+                                        </div>
+                                        <span class="dropdown-content">Action</span>
+                                    </a>
+                                    <a class="dropdown-item" href="#">
+                                        <div class="dropdown-icon">
+                                            <i class="fa fa-comments"></i>
+                                        </div>
+                                        <span class="dropdown-content">Another action</span>
+                                    </a>
+                                    <a class="dropdown-item" href="#">
+                                        <div class="dropdown-icon">
+                                            <i class="fa fa-paper-plane"></i>
+                                        </div>
+                                        <span class="dropdown-content">Something else here</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- END Dropdown -->
+
+                            <!-- BEGIN Dropdown -->
+                            <div class="dropdown d-inline">
+                                <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Large header</button>
+                                <div class="dropdown-menu dropdown-menu-left dropdown-menu-animated">
+                                    <h6 class="dropdown-header dropdown-header-lg">Header</h6>
+                                    <a class="dropdown-item" href="#">
+                                        <div class="dropdown-icon">
+                                            <i class="fa fa-rocket"></i>
+                                        </div>
+                                        <span class="dropdown-content">Action</span>
+                                    </a>
+                                    <a class="dropdown-item" href="#">
+                                        <div class="dropdown-icon">
+                                            <i class="fa fa-comments"></i>
+                                        </div>
+                                        <span class="dropdown-content">Another action</span>
+                                    </a>
+                                    <a class="dropdown-item" href="#">
+                                        <div class="dropdown-icon">
+                                            <i class="fa fa-paper-plane"></i>
+                                        </div>
+                                        <span class="dropdown-content">Something else here</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- END Dropdown -->
+
+                            <p class="mt-2 mb-0">Insert header to a dropdown menu with <code>.dropdown-header</code> and apply the class with <code>{{ "<h*>" }}</code> tag. If you want to make dropdown header larger, you must extend the class with <code>.dropdown-header-lg</code></p>
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Divider</label>
+                        <div class="col-sm-8 col-lg-9">
+
+                            <!-- BEGIN Dropdown -->
+                            <div class="dropdown">
+                                <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Click me</button>
+                                <div class="dropdown-menu dropdown-menu-left dropdown-menu-animated">
+                                    <h6 class="dropdown-header">Header</h6>
+                                    <a class="dropdown-item" href="#">
+                                        <div class="dropdown-icon">
+                                            <i class="fa fa-rocket"></i>
+                                        </div>
+                                        <span class="dropdown-content">Action</span>
+                                    </a>
+                                    <a class="dropdown-item" href="#">
+                                        <div class="dropdown-icon">
+                                            <i class="fa fa-comments"></i>
+                                        </div>
+                                        <span class="dropdown-content">Another action</span>
+                                    </a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">
+                                        <div class="dropdown-icon">
+                                            <i class="fa fa-paper-plane"></i>
+                                        </div>
+                                        <span class="dropdown-content">Something else here</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- END Dropdown -->
+
+                            <p class="mt-2 mb-0">Dividing your dropdown items with <code>.dropdown-divider</code> class</p>
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Orientation</label>
+                        <div class="col-sm-8 col-lg-9">
+
+                            <!-- BEGIN Dropdown -->
+                            <div class="dropdown d-inline mr-2">
+                                <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Dropdown</button>
+                                <div class="dropdown-menu dropdown-menu-left dropdown-menu-animated">
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                </div>
+                            </div>
+                            <!-- END Dropdown -->
+
+                            <!-- BEGIN Dropdown -->
+                            <div class="dropdown dropup d-inline mr-2">
+                                <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Dropup</button>
+                                <div class="dropdown-menu dropdown-menu-left dropdown-menu-animated">
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                </div>
+                            </div>
+                            <!-- END Dropdown -->
+
+                            <!-- BEGIN Dropdown -->
+                            <div class="dropdown dropright d-inline mr-2">
+                                <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Dropright</button>
+                                <div class="dropdown-menu dropdown-menu-left dropdown-menu-animated">
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                </div>
+                            </div>
+                            <!-- END Dropdown -->
+
+                            <!-- BEGIN Dropdown -->
+                            <div class="dropdown dropleft d-inline">
+                                <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Dropleft</button>
+                                <div class="dropdown-menu dropdown-menu-left dropdown-menu-animated">
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                </div>
+                            </div>
+                            <!-- END Dropdown -->
+
+                            <p class="mt-2 mb-0">Change dropdown menu orientation by applying <code>.dropleft|.dropright|.dropup</code> classes to <code>.dropdown</code> elements</p>
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Menu alignment</label>
+                        <div class="col-sm-8 col-lg-9">
+
+                            <!-- BEGIN Dropdown -->
+                            <div class="dropdown d-inline mr-2">
+                                <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Right</button>
+                                <div class="dropdown-menu dropdown-menu-right dropdown-menu-animated">
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                </div>
+                            </div>
+                            <!-- END Dropdown -->
+
+                            <!-- BEGIN Dropdown -->
+                            <div class="dropdown d-inline">
+                                <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Left</button>
+                                <div class="dropdown-menu dropdown-menu-left dropdown-menu-animated">
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                </div>
+                            </div>
+                            <!-- END Dropdown -->
+
+                            <p class="mt-2 mb-0">Apply <code>.dropdown-menu-{right|left}</code> to <code>.dropdown-menu</code> elements to change alignment</p>
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Text</label>
+                        <div class="col-sm-8 col-lg-9">
+
+                            <!-- BEGIN Dropdown -->
+                            <div class="dropdown">
+                                <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Click me</button>
+                                <div class="dropdown-menu dropdown-menu-left dropdown-menu-animated p-4 text-muted">
+                                    <p>Some example text that's free-flowing within the dropdown menu.</p>
+                                    <p class="mb-0">And this is more example text.</p>
+                                </div>
+                            </div>
+                            <!-- END Dropdown -->
+
+                            <p class="mt-2 mb-0">You can insert any elements into dropdown menu</p>
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Form</label>
+                        <div class="col-sm-8 col-lg-9">
+
+                            <!-- BEGIN Dropdown -->
+                            <div class="dropdown">
+                                <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Click me</button>
+                                <div class="dropdown-menu dropdown-menu-left dropdown-menu-animated">
+                                    <form class="px-4 py-3">
+                                        <div class="form-group">
+                                            <label for="exampleDropdownFormEmail1">Email address</label>
+                                            <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="exampleDropdownFormPassword1">Password</label>
+                                            <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password">
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">Sign in</button>
+                                    </form>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">New around here? Sign up</a>
+                                    <a class="dropdown-item" href="#">Forgot password?</a>
+                                </div>
+                            </div>
+                            <!-- END Dropdown -->
+
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Submenu</label>
+                        <div class="col-sm-8 col-lg-9">
+
+                            <!-- BEGIN Dropdown -->
+                            <div class="dropdown">
+                                <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Click me</button>
+                                <div class="dropdown-menu dropdown-menu-left dropdown-menu-animated">
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+
+                                    <!-- BEGIN Dropdown Submenu -->
+                                    <div class="dropdown-submenu">
+                                        <button class="dropdown-item">
+                                            <span class="dropdown-content">Submenu</span>
+                                            <div class="dropdown-addon">
+                                                <i class="caret"></i>
+                                            </div>
+                                        </button>
+                                        <div class="dropdown-submenu-menu dropdown-submenu-left">
+                                            <a class="dropdown-item" href="#">Item 1</a>
+                                            <a class="dropdown-item" href="#">Item 2</a>
+
+                                            <!-- BEGIN Dropdown Submenu -->
+                                            <div class="dropdown-submenu">
+                                                <button class="dropdown-item">
+                                                    <span class="dropdown-content">Submenu</span>
+                                                    <div class="dropdown-addon">
+                                                        <i class="caret"></i>
+                                                    </div>
+                                                </button>
+                                                <div class="dropdown-submenu-menu dropdown-submenu-left">
+                                                    <a class="dropdown-item" href="#">Item 1</a>
+                                                    <a class="dropdown-item" href="#">Item 2</a>
+
+                                                    <!-- BEGIN Dropdown Submenu -->
+                                                    <div class="dropdown-submenu">
+                                                        <button class="dropdown-item">
+                                                            <div class="dropdown-addon">
+                                                                <i class="caret caret-left"></i>
+                                                            </div>
+                                                            <span class="dropdown-content">Another submenu</span>
+                                                        </button>
+                                                        <div class="dropdown-submenu-menu dropdown-submenu-right">
+                                                            <a class="dropdown-item" href="#">Item 1</a>
+                                                            <a class="dropdown-item" href="#">Item 2</a>
+                                                            <a class="dropdown-item" href="#">Item 3</a>
+                                                        </div>
+                                                    </div>
+                                                    <!-- END Dropdown Submenu -->
+
+                                                    <div class="dropdown-divider"></div>
+                                                    <a class="dropdown-item" href="#">Item 3</a>
+                                                </div>
+                                            </div>
+                                            <!-- END Dropdown Submenu -->
+
+                                            <a class="dropdown-item" href="#">Item 4</a>
+                                        </div>
+                                    </div>
+                                    <!-- END Dropdown Submenu -->
+
+                                    <!-- BEGIN Dropdown Submenu -->
+                                    <div class="dropdown-submenu">
+                                        <button class="dropdown-item">
+                                            <span class="dropdown-content">Another submenu</span>
+                                            <div class="dropdown-addon">
+                                                <i class="caret"></i>
+                                            </div>
+                                        </button>
+                                        <div class="dropdown-submenu-menu dropdown-submenu-left">
+                                            <a class="dropdown-item" href="#">Item 1</a>
+                                            <a class="dropdown-item" href="#">Item 2</a>
+                                            <a class="dropdown-item" href="#">Item 3</a>
+                                            <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item" href="#">Item 4</a>
+                                            <a class="dropdown-item" href="#">Item 5</a>
+                                        </div>
+                                    </div>
+                                    <!-- END Dropdown Submenu -->
+
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">Something else here</a>
+                                </div>
+                            </div>
+                            <!-- END Dropdown -->
+
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row mb-0">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Grid</label>
+                        <div class="col-sm-8 col-lg-9">
+
+                            <!-- BEGIN Dropdown -->
+                            <div class="dropdown">
+                                <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Click me</button>
+                                <div class="dropdown-menu dropdown-menu-left dropdown-menu-animated">
+                                    <div class="dropdown-row">
+                                        <div class="dropdown-col">
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <a class="dropdown-item" href="#">Something else here</a>
+                                        </div>
+                                        <div class="dropdown-col">
+                                            <a class="dropdown-item" href="#">
+                                                <div class="dropdown-icon">
+                                                    <i class="fa fa-rocket"></i>
+                                                </div>
+                                                <span class="dropdown-content">Action</span>
+                                            </a>
+                                            <a class="dropdown-item" href="#">
+                                                <div class="dropdown-icon">
+                                                    <i class="fa fa-comments"></i>
+                                                </div>
+                                                <span class="dropdown-content">Another action</span>
+                                            </a>
+                                            <a class="dropdown-item" href="#">
+                                                <div class="dropdown-icon">
+                                                    <i class="fa fa-paper-plane"></i>
+                                                </div>
+                                                <span class="dropdown-content">Something else here</span>
+                                            </a>
+                                        </div>
+                                        <div class="dropdown-col">
+                                            <h6 class="dropdown-header">Header</h6>
+                                            <a class="dropdown-item" href="#">
+                                                <i class="dropdown-bullet"></i>
+                                                <span class="dropdown-content">Action</span>
+                                            </a>
+                                            <a class="dropdown-item" href="#">
+                                                <i class="dropdown-bullet"></i>
+                                                <span class="dropdown-content">Another action</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- END Dropdown -->
+
+                            <p class="mb-0 mt-2">Combine <code>.dropdown-row</code> and <code>.dropdown-col</code> to make the grid</p>
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                </div>
+            </div>
+            <!-- END Portlet -->
+
+        </div>
+    </div>
+</div>
+{% endblock %}

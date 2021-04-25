@@ -1,0 +1,73 @@
+// Base styles
+.aside {
+	position: fixed;
+	width: $aside-width;
+	height: 100%;
+	max-height: calc(100vh - #{$grid-gutter-width * 2});
+	top: $grid-gutter-width;
+	right: $grid-gutter-width;
+	z-index: $zindex-aside;
+	border-width: $aside-border-width;
+	border-style: solid;
+	@include border-radius($aside-border-radius);
+	@include theme-variant("light") {
+		background: $aside-bg-light;
+		border-color: $aside-border-color-light;
+	}
+	@include theme-variant("dark") {
+		background: $aside-bg-dark;
+		border-color: $aside-border-color-dark;
+	}
+}
+
+.aside-body {
+	height: 100%;
+	overflow-y: auto;
+	padding: $aside-body-padding-y $aside-body-padding-x;
+}
+
+// Styling for desktop viewport
+@include media-breakpoint-up("lg") {
+	body.aside-active {
+		// Pushing wrapper, header and footer to fit body
+		.wrapper { padding-right: $aside-width + $grid-gutter-width; }
+	}
+}
+
+@include media-breakpoint-up("xl") {
+	.aside { width: $aside-width-wide; }
+
+	body.aside-active {
+		// Pushing wrapper, header and footer to fit body
+		.wrapper { padding-right: $aside-width-wide + $grid-gutter-width; }
+	}
+}
+
+// Styling for mobile viewport
+@include media-breakpoint-down("md") {
+	.aside {
+		right: -100%;
+		@include transition($aside-transition);
+	}
+
+	body.aside-show {
+		overflow: hidden;
+
+		.aside {
+			right: $grid-gutter-width;
+		}
+	}
+
+	// Backdrop styles
+	#aside-backdrop {
+		position: fixed;
+		display: block;
+		width: 100vw;
+		height: 100vh;
+		background: $aside-backdrop-bg;
+		top: 0;
+		left: 0;
+		opacity: 0;
+		z-index: $zindex-aside-backdrop;
+	}
+}

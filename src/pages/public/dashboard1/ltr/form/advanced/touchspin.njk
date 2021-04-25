@@ -1,0 +1,135 @@
+{% extends "components/dashboard1/template.njk" %}
+
+{% set direction = "ltr" %}
+{% set page_title = "Touchspin" %}
+{% set breadcrumb = [
+    { text: "Dashboard", link: "dashboard1/ltr/index.html" | url, icon: '<i data-feather="home"></i>' },
+    { text: "Form" },
+    { text: "Advanced" },
+    { text: "Touchspin", link: "dashboard1/ltr/form/advanced/touchspin.html" | url }
+] %}
+{% set js_links = [
+    "assets/app/dashboard1/form/touchspin.js" | url
+] %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+
+            <!-- BEGIN Portlet -->
+            <div class="portlet">
+                <div class="portlet-header portlet-header-bordered">
+                    <h3 class="portlet-title">Touchspin</h3>
+                </div>
+                <div class="portlet-body">
+                    <p><strong>Bootstrap Touchspin</strong> is mobile and touch friendly input spinner component for Bootstrap. It supports the mousewheel and the up/down keys. Visit <a href="http://www.virtuosoft.eu/code/bootstrap-touchspin" target="_blank">the page</a> for examples.</p>
+                    <hr>
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Basic</label>
+                        <div class="col-sm-3 col-lg-2">
+                            <input class="form-control" id="touchspin-1" type="text" value="55">
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Steps</label>
+                        <div class="col-sm-3 col-lg-2">
+                            <input class="form-control" id="touchspin-2" type="text" value="55">
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Decimal</label>
+                        <div class="col-sm-3 col-lg-2">
+                            <input class="form-control" id="touchspin-3" type="text" value="55">
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Postfix</label>
+                        <div class="col-sm-3 col-lg-2">
+                            <input class="form-control" id="touchspin-4" type="text" value="55">
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Prefix</label>
+                        <div class="col-sm-3 col-lg-2">
+                            <input class="form-control" id="touchspin-5" type="text" value="20">
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Vertical</label>
+                        <div class="col-sm-3 col-lg-2">
+                            <input class="form-control" id="touchspin-6" type="text" value="55">
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Custom button class</label>
+                        <div class="col-sm-3 col-lg-2">
+                            <div class="form-group">
+                                <input class="form-control" id="touchspin-7" type="text" value="55">
+                            </div>
+                            <div class="form-group mb-0">
+                                <input class="form-control" id="touchspin-8" type="text" value="55">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Custom icons</label>
+                        <div class="col-sm-3 col-lg-2">
+                            <div class="form-group">
+                                <input class="form-control" id="touchspin-9" type="text" value="55">
+                            </div>
+                            <div class="form-group mb-0">
+                                <input class="form-control" id="touchspin-10" type="text" value="55">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row mb-0">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Sizing</label>
+                        <div class="col-sm-3 col-lg-2">
+                            <div class="form-group">
+                                <input class="form-control input-sm touchspin-11" type="text" value="55">
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control touchspin-11" type="text" value="55">
+                            </div>
+                            <div class="form-group mb-0">
+                                <input class="form-control input-lg touchspin-11" type="text" value="55">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                </div>
+            </div>
+            <!-- END Portlet -->
+
+        </div>
+    </div>
+</div>
+{% endblock %}

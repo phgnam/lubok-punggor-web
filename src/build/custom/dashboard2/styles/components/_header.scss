@@ -1,0 +1,136 @@
+// Base styles
+.header {
+	position: relative;
+	display: block;
+	height: auto !important;
+	z-index: $zindex-header;
+}
+
+.header-holder {
+	position: relative;
+	border-bottom-width: $header-border-width;
+	border-bottom-style: solid;
+	@include transition($header-transition);
+	@include theme-variant("light") {
+		background: $header-bg-light;
+		border-bottom-color: $header-border-color-light;
+	}
+	@include theme-variant("dark") {
+		background: $header-bg-dark;
+		border-bottom-color: $header-border-color-dark;
+	}
+}
+
+.header-holder-main {
+	@include theme-variant("light") {
+		background: $header-bg-main-light;
+		border-bottom-color: $header-bg-main-light;
+	}
+	@include theme-variant("dark") {
+		background: $header-bg-main-dark;
+		border-bottom-color: $header-bg-main-dark;
+	}
+}
+
+.header-container {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	width: 100%;
+	padding-top: $header-container-padding-y;
+	padding-bottom: $header-container-padding-y;
+}
+
+.header-wrap {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	white-space: nowrap;
+
+	// Fit wrapper to empty space
+	&.header-wrap-block { flex: 1; }
+}
+
+.header-brand {
+	font-size: $header-brand-font-size;
+	font-weight: $header-brand-font-weight;
+	padding: 0;
+	margin: 0;
+	@include theme-variant("light") {
+		color: $header-brand-color-light;
+	}
+	@include theme-variant("dark") {
+		color: $header-brand-color-dark;
+	}
+}
+
+// Override .nav-tabs element
+.header-nav {
+	position: absolute;
+	margin-right: $header-nav-spacer;
+	margin-left: $header-nav-spacer;
+	bottom: 0;
+
+	.nav-link {
+		border-width: 0 !important;
+		padding-bottom: $nav-link-padding-y + $header-container-padding-y;
+
+		&,
+		&:focus,
+	    &:hover,
+	    &.active {
+			@include theme-variant("light") {
+				color: $header-nav-color-light;
+			}
+			@include theme-variant("dark") {
+				color: $header-nav-color-dark;
+			}
+	    }
+
+		&:hover {
+			@include theme-variant("light") {
+				color: $header-nav-hover-color-light;
+				background: $header-nav-hover-bg-light;
+			}
+			@include theme-variant("dark") {
+				color: $header-nav-hover-color-dark;
+				background: $header-nav-hover-bg-dark;
+			}
+        }
+    }
+
+    .nav-link.active,
+    .show > .nav-link {
+		@include theme-variant("light") {
+			color: $header-nav-active-color-light;
+			background: $header-nav-active-bg-light;
+		}
+		@include theme-variant("dark") {
+			color: $header-nav-active-color-dark;
+			background: $header-nav-active-bg-dark;
+		}
+    }
+}
+
+// Sticky JS support
+.sticky-wrapper.is-sticky {
+	z-index: inherit;
+
+	.sticky-header {
+		width: auto !important;
+		right: 0;
+		left: 0;
+                z-index: 9999 !important;
+		@include transition($header-transition);
+	}
+}
+
+// Breakpoints for hiding .header-holder element
+@include media-breakpoint-down("md") {
+	.header-holder-desktop { display: none; }
+}
+
+@include media-breakpoint-up("lg") {
+	.header-holder-mobile { display: none; }
+}

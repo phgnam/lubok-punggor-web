@@ -1,0 +1,130 @@
+.irs--flat {
+    height: $irs-height;
+
+    &.irs-with-grid { height: $irs-height + $irs-grid-height; }
+
+    // Slider line
+    .irs-line,
+    .irs-bar {
+        top: $irs-line-top;
+    }
+
+    .irs-line {
+        height: $irs-line-height;
+        @include border-radius($irs-line-border-radius);
+        @include theme-variant("light") {
+            background: $irs-line-color-light;
+        }
+        @include theme-variant("dark") {
+            background: $irs-line-color-dark;
+        }
+    }
+
+    .irs-bar {
+        height: $irs-line-height;
+        @include theme-variant("light") {
+            background: $irs-line-active-color-light;
+        }
+        @include theme-variant("dark") {
+            background: $irs-line-active-color-dark;
+        }
+    }
+
+    .irs-bar--single { @include border-left-radius($irs-line-border-radius); }
+
+    // Slider handle styles
+    .irs-handle {
+        width: $irs-handle-dimension;
+        height: $irs-handle-dimension;
+        top: $irs-line-top - (($irs-handle-dimension - $irs-line-height) / 2);
+        @include border-radius($irs-handle-border-radius);
+        @include theme-variant("light") {
+            background: $irs-handle-color-light;
+        }
+        @include theme-variant("dark") {
+            background: $irs-handle-color-dark;
+        }
+
+        &.state_hover,
+        &:hover {
+            @include theme-variant("light") {
+                background: $irs-handle-active-color-light;
+            }
+            @include theme-variant("dark") {
+                background: $irs-handle-active-color-dark;
+            }
+        }
+    }
+
+    // Tooltip label styles
+    .irs-max,
+    .irs-min,
+    .irs-from,
+    .irs-single,
+    .irs-to {
+        font-size: $irs-tooltip-font-size;
+        font-weight: $irs-tooltip-font-weight;
+        line-height: 1;
+        padding: $irs-tooltip-padding-y $irs-tooltip-padding-x;
+        @include border-radius($irs-tooltip-border-radius);
+    }
+
+    .irs-max,
+    .irs-min {
+        top: 0;
+        @include theme-variant("light") {
+            color: $irs-minmax-color-light;
+            background: $irs-minmax-bg-light;
+        }
+        @include theme-variant("dark") {
+            color: $irs-minmax-color-dark;
+            background: $irs-minmax-bg-dark;
+        }
+    }
+
+    .irs-from,
+    .irs-single,
+    .irs-to {
+        color: $irs-label-color;
+        background: $irs-label-bg;
+
+        // Arrow below label tooltip
+        &:before {
+            content: "";
+            position: absolute;
+            display: block;
+            width: 0;
+            height: 0;
+            border: $irs-tooltip-arrow-width solid transparent;
+            border-top-color: $irs-tooltip-arrow-color;
+            bottom: -#{$irs-tooltip-arrow-width * 1.5};
+            left: 50%;
+            transform: translateX(-50%);
+            overflow: hidden;
+        }
+    }
+
+    // Grid elements styles
+    .irs-grid { height: $irs-grid-height; }
+
+    .irs-grid-pol {
+        @include theme-variant("light") {
+            background: $irs-grid-pol-color-light;
+        }
+        @include theme-variant("dark") {
+            background: $irs-grid-pol-color-dark;
+        }
+    }
+
+    .irs-grid-text {
+        font-size: $irs-grid-text-font-size;
+        font-weight: $irs-grid-text-font-weight;
+        top: $irs-grid-text-spacer;
+        @include theme-variant("light") {
+            color: $irs-grid-text-color-light;
+        }
+        @include theme-variant("dark") {
+            color: $irs-grid-text-color-dark;
+        }
+    }
+}

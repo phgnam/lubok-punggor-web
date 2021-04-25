@@ -1,0 +1,35 @@
+// Layout
+$zindex-column:                      $zindex-sidemenu !default;
+$zindex-column-backdrop:             $zindex-aside-backdrop !default;
+
+$column-side-width:                  100% / 3 !default;
+$column-side-width-wide:             100% / 4 !default;
+$column-side-width-wider:            100% / 5 !default;
+$column-collapsed-width:             $sidemenu-width-widest !default;
+$column-border-width:                $border-width !default;
+$column-border-color-light:          $border-color-light !default;
+$column-border-color-dark:           $border-color-dark !default;
+$column-backdrop-bg:                 rgba($backdrop-bg, $backdrop-opacity) !default;
+$column-transition:                  $transition-base !default;
+
+// Header
+$header-bg-light:					 $white !default;
+$header-bg-dark:					 $gray-800 !default;
+$header-border-width:                $border-width !default;
+$header-border-color-light:          $border-color-light !default;
+$header-border-color-dark:           $border-color-dark !default;
+
+$header-container-padding-y:         1rem !default;
+$header-container-padding-x:         1rem !default;
+
+$header-brand-color-light:           $text-level-4-light !default;
+$header-brand-color-dark:            $text-level-4-dark !default;
+$header-brand-font-size:             1.6rem !default;
+$header-brand-font-weight:           $font-weight-bolder !default;
+
+// Chat
+$chat-wrapper-bg-light:              $body-bg-light !default;
+$chat-wrapper-bg-dark:               $body-bg-dark !default;
+
+$chat-favorites-padding:             1rem !default;
+$chat-favorites-spacer:              .75rem !default;

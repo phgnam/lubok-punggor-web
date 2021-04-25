@@ -1,0 +1,90 @@
+{% extends "components/dashboard1/template.njk" %}
+
+{% set direction = "ltr" %}
+{% set page_title = "Login 2" %}
+{% set enable_aside = false %}
+{% set enable_header = false %}
+{% set enable_footer = false %}
+{% set enable_scrolltop = false %}
+{% set js_links = [
+    "assets/app/dashboard1/pages/login.js" | url
+] %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row no-gutters align-items-center justify-content-center h-100">
+        <div class="col-lg-8 col-xl-6">
+
+            <!-- BEGIN Portlet -->
+            <div class="portlet overflow-hidden">
+                <div class="row no-gutters">
+                    <div class="col-md-6">
+                        <div class="portlet-body d-flex flex-column justify-content-center align-items-start h-100 bg-primary text-white">
+                            <h2>Welcome back!</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, temporibus, repudiandae. Voluptate tempore, expedita placeat rem labore iste eveniet ratione.</p>
+                            <a href="{{ 'dashboard1/ltr/pages/register/register-2.html' | url }}" class="btn btn-outline-light btn-lg btn-widest btn-pill">Register</a>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="portlet-body h-100">
+                            <div class="d-flex justify-content-center mb-4">
+                                <button class="btn btn-label-primary btn-pill">
+                                    <i class="fab fa-facebook mr-2"></i> Facebook
+                                </button>
+                                <button class="btn btn-label-info btn-pill mx-2">
+                                    <i class="fab fa-google mr-2"></i> Google
+                                </button>
+                                <button class="btn btn-label-danger btn-pill">
+                                    <i class="fab fa-pinterest mr-2"></i> Pinterest
+                                </button>
+                            </div>
+
+                            <!-- BEGIN Form -->
+                            <form id="login-form">
+
+                                <!-- BEGIN Form Group -->
+                                <div class="form-group">
+                                    <div class="float-label float-label-lg">
+                                        <input class="form-control form-control-lg" type="email" id="email" name="email" placeholder="Please insert your email">
+                                        <label for="email">Email</label>
+                                    </div>
+                                </div>
+                                <!-- END Form Group -->
+
+                                <!-- BEGIN Form Group -->
+                                <div class="form-group">
+                                    <div class="float-label float-label-lg">
+                                        <input class="form-control form-control-lg" type="password" id="password" name="password" placeholder="Please provide your password">
+                                        <label for="password">Password</label>
+                                    </div>
+                                </div>
+                                <!-- END Form Group -->
+
+                                <div class="d-flex align-items-center justify-content-between mb-4">
+
+                                    <!-- BEGIN Form Group -->
+                                    <div class="form-group mb-0">
+                                        <div class="custom-control custom-control-lg custom-switch">
+                                            <input type="checkbox" class="custom-control-input" id="remember" name="remember">
+                                            <label class="custom-control-label" for="remember">Remember me</label>
+                                        </div>
+                                    </div>
+                                    <!-- END Form Group -->
+
+                                    <a href="#">Forgot password?</a>
+                                </div>
+
+                                <button type="submit" class="btn btn-label-primary btn-lg btn-block btn-pill">Login</button>
+                            </form>
+                            <!-- END Form -->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END Portlet -->
+
+        </div>
+    </div>
+</div>
+{% endblock %}

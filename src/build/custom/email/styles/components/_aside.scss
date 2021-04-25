@@ -1,0 +1,78 @@
+// Base styles
+.aside {
+	position: absolute;
+	z-index: $zindex-aside !important;
+	height: 80vh;
+	min-width: $aside-width;
+	max-width: $aside-width;
+	margin: $grid-gutter-width;
+	border-width: $aside-border-width;
+	border-style: solid;
+	@include border-radius($aside-border-radius);
+	@include theme-variant("light") {
+		background: $aside-bg-light;
+		border-color: $aside-border-color-light;
+	}
+	@include theme-variant("dark") {
+		background: $aside-bg-dark;
+		border-color: $aside-border-color-dark;
+	}
+}
+
+.aside-body {
+	height: 100%;
+	overflow-y: auto;
+	padding: $aside-body-padding-y $aside-body-padding-x;
+}
+
+// Styling for desktop viewport
+@include media-breakpoint-up("lg") {
+	body.aside-active {
+		// Pushing wrapper, header and footer to fit body
+		.inner { padding-left: $aside-width + $grid-gutter-width; }
+	}
+}
+
+@include media-breakpoint-up("xl") {
+	.aside {
+		min-width: $aside-width-wide;
+		max-width: $aside-width-wide;
+	}
+
+	body.aside-active {
+		// Pushing wrapper, header and footer to fit body
+		.inner { padding-left: $aside-width-wide + $grid-gutter-width; }
+	}
+}
+
+// Styling for mobile viewport
+@include media-breakpoint-down("md") {
+	.aside {
+		position: fixed;
+		top: 0;
+		left: -100%;
+		height: calc(100vh - #{$grid-gutter-width * 2});
+		@include transition($aside-transition);
+	}
+
+	body.aside-show {
+		overflow: hidden;
+
+		.aside {
+			left: 0;
+		}
+	}
+
+	// Backdrop styles
+	#aside-backdrop {
+		position: fixed;
+		display: block;
+		width: 100vw;
+		height: 100vh;
+		background: $aside-backdrop-bg;
+		top: 0;
+		left: 0;
+		opacity: 0;
+		z-index: $zindex-aside-backdrop;
+	}
+}

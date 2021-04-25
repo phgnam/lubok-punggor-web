@@ -1,0 +1,187 @@
+{% extends "components/dashboard1/template.njk" %}
+
+{% set direction = "ltr" %}
+{% set page_title = "Date Time Picker" %}
+{% set breadcrumb = [
+    { text: "Dashboard", link: "dashboard1/ltr/index.html" | url, icon: '<i data-feather="home"></i>' },
+    { text: "Form" },
+    { text: "Advanced" },
+    { text: "Date time picker", link: "dashboard1/ltr/form/advanced/datetimepicker.html" | url }
+] %}
+{% set js_links = [
+    "assets/app/dashboard1/form/datetimepicker.js" | url
+] %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+
+            <!-- BEGIN Portlet -->
+            <div class="portlet">
+                <div class="portlet-header portlet-header-bordered">
+                    <h3 class="portlet-title">Date time picker</h3>
+                </div>
+                <div class="portlet-body">
+                    <p>Bootstrap form component to handle date and time data. For more info please visit the plugin's <a href="http://www.malot.fr/bootstrap-datetimepicker/demo.php" target="_blank">demo page</a> or <a href="http://github.com/smalot/bootstrap-datetimepicker" target="_blank">Github repository</a>.</p>
+                    <hr>
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Basic demo</label>
+                        <div class="col-sm-5 col-lg-4">
+                            <input type="text" class="form-control" placeholder="Select date" id="datetimepicker-1">
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Helper buttons</label>
+                        <div class="col-sm-5 col-lg-4">
+
+                            <!-- BEGIN Input Group -->
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Select date" id="datetimepicker-2">
+                                <div class="input-group-append">
+                                    <span class="input-group-text">
+                                        <i class="fa fa-calendar"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <!-- END Input Group -->
+
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Meridian format</label>
+                        <div class="col-sm-5 col-lg-4">
+
+                            <!-- BEGIN Input Group -->
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Select date" id="datetimepicker-3">
+                                <div class="input-group-append">
+                                    <span class="input-group-text">
+                                        <i class="fa fa-calendar"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <!-- END Input Group -->
+
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Week disabled</label>
+                        <div class="col-sm-5 col-lg-4">
+
+                            <!-- BEGIN Input Group -->
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Select date" id="datetimepicker-4">
+                                <div class="input-group-append">
+                                    <span class="input-group-text">
+                                        <i class="fa fa-calendar"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <!-- END Input Group -->
+
+                            <p class="mb-0 mt-2">Disable selected week columns</p>
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Date only</label>
+                        <div class="col-sm-5 col-lg-4">
+
+                            <!-- BEGIN Input Group -->
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Select date" id="datetimepicker-5">
+                                <div class="input-group-append">
+                                    <span class="input-group-text">
+                                        <i class="fa fa-calendar"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <!-- END Input Group -->
+
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Time only</label>
+                        <div class="col-sm-5 col-lg-4">
+
+                            <!-- BEGIN Input Group -->
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Select date" id="datetimepicker-6">
+                                <div class="input-group-append">
+                                    <span class="input-group-text">
+                                        <i class="fa fa-calendar"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <!-- END Input Group -->
+
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Locale</label>
+                        <div class="col-sm-5 col-lg-4">
+
+                            <!-- BEGIN Input Group -->
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Select date" id="datetimepicker-7">
+                                <div class="input-group-append">
+                                    <span class="input-group-text">
+                                        <i class="fa fa-calendar"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <!-- END Input Group -->
+
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row mb-0">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Inline</label>
+                        <div class="col-sm-5 col-lg-4">
+
+                            <!-- BEGIN Form Group -->
+                            <div class="form-group">
+                                <div id="datetimepicker-8"></div>
+                            </div>
+                            <!-- END Form Group -->
+
+                            <!-- BEGIN Form Group -->
+                            <div class="form-group mb-0">
+                                <div id="datetimepicker-9"></div>
+                            </div>
+                            <!-- END Form Group -->
+
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                </div>
+            </div>
+            <!-- END Portlet -->
+
+        </div>
+    </div>
+</div>
+{% endblock %}

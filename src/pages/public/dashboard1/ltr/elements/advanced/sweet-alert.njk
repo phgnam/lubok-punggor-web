@@ -1,0 +1,144 @@
+{% extends "components/dashboard1/template.njk" %}
+
+{% set direction = "ltr" %}
+{% set page_title = "Sweet Alert" %}
+{% set breadcrumb = [
+    { text: "Dashboard", link: "dashboard1/ltr/index.html" | url, icon: '<i data-feather="home"></i>' },
+    { text: "Elements" },
+    { text: "Advanced" },
+    { text: "Sweet alert", link: "dashboard1/ltr/elements/advanced/sweet-alert.html" | url }
+] %}
+{% set js_links = [
+    "assets/app/dashboard1/elements/sweet-alert.js" | url
+] %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+
+            <!-- BEGIN Portlet -->
+            <div class="portlet">
+                <div class="portlet-header portlet-header-bordered">
+                    <h3 class="portlet-title">Sweet alert</h3>
+                </div>
+                <div class="portlet-body">
+                    <p><strong>Sweet alert</strong> is a beautiful, responsive, customizable, accessible replacement for javascripts's popup boxes with zero dependencies. Check <a href="http://sweetalert2.github.io" target="_blank">Sweet Alert's page</a> for more info.</p>
+                    <hr>
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Basic example</label>
+                        <div class="col-sm-8 col-lg-9">
+                            <button class="btn btn-primary" id="swal-1">Click me</button>
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Title with a text under</label>
+                        <div class="col-sm-8 col-lg-9">
+                            <button class="btn btn-primary" id="swal-2">Click me</button>
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">More complex modal</label>
+                        <div class="col-sm-8 col-lg-9">
+                            <button class="btn btn-primary" id="swal-3">Click me</button>
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Custom HTML description</label>
+                        <div class="col-sm-8 col-lg-9">
+                            <button class="btn btn-primary" id="swal-4">Click me</button>
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Dialog position</label>
+                        <div class="col-sm-8 col-lg-9">
+                            <button class="btn btn-primary" id="swal-5">Click me</button>
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Confirm dialog</label>
+                        <div class="col-sm-8 col-lg-9">
+                            <button class="btn btn-primary" id="swal-6">Click me</button>
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Custom buttons</label>
+                        <div class="col-sm-8 col-lg-9">
+                            <button class="btn btn-primary" id="swal-7">Click me</button>
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Custom image</label>
+                        <div class="col-sm-8 col-lg-9">
+                            <button class="btn btn-primary" id="swal-8">Click me</button>
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Auto close timer</label>
+                        <div class="col-sm-8 col-lg-9">
+                            <button class="btn btn-primary" id="swal-9">Click me</button>
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">AJAX request</label>
+                        <div class="col-sm-8 col-lg-9">
+                            <button class="btn btn-primary" id="swal-10">Click me</button>
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Chaining modals</label>
+                        <div class="col-sm-8 col-lg-9">
+                            <button class="btn btn-primary" id="swal-11">Click me</button>
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row mb-0">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Toast</label>
+                        <div class="col-sm-8 col-lg-9">
+                            <button class="btn btn-primary" id="swal-12">Click me</button>
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                </div>
+            </div>
+            <!-- END Portlet -->
+
+        </div>
+    </div>
+</div>
+{% endblock %}

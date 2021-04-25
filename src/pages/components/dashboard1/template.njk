@@ -1,0 +1,86 @@
+{% from "components/dashboard1/variables.njk" import defaults %}
+
+{% set body_class = [] %}
+
+{% set body_class = body_class | array_push("theme-" + defaults.theme) %}
+
+{% if enable_preload | default(defaults.enable_preload) %}
+    {% set body_class = body_class | array_push("preload-active") %}
+{% endif %}
+
+{% if enable_aside | default(defaults.enable_aside) %}
+    {% set body_class = body_class | array_push("aside-active") %}
+    {% set body_class = body_class | array_push("aside-mobile-minimized") %}
+
+    {% if defaults.minimized_aside %}
+        {% set body_class = body_class | array_push("aside-desktop-minimized") %}
+    {% else %}
+        {% set body_class = body_class | array_push("aside-desktop-maximized") %}
+    {% endif %}
+{% endif %}
+
+<!DOCTYPE html>
+<html lang="en" dir="{{ direction }}">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+        {% for link in defaults.css_links[direction] | array_concat(css_links) %}
+            <link href="{{ link }}" rel="stylesheet">
+        {% endfor %}
+
+        <link href="{{ defaults.favicon }}" rel="shortcut icon" type="image/x-icon">
+        <title>{{ page_title }} | {{ defaults.brand_name }}</title>
+    </head>
+    <body class="{{ body_class | array_join(" ") }}" id="fullscreen">
+
+        {% if enable_preload | default(defaults.enable_preload) %}
+            {% include defaults.components.preload[direction] %}
+        {% endif %}
+
+        <!-- BEGIN Page Holder -->
+        <div class="holder">
+
+            {% if enable_aside | default(defaults.enable_aside) %}
+                {% include defaults.components.aside[direction] %}
+            {% endif %}
+
+            <!-- BEGIN Page Wrapper -->
+            <div class="wrapper">
+
+                {% if enable_header | default(defaults.enable_header) %}
+                    {% include defaults.components.header[direction] %}
+                {% endif %}
+
+                <!-- BEGIN Page Content -->
+                <div class="content {{ content_wrapper_class }}">
+                    {% block content %}{% endblock %}
+                </div>
+                <!-- END Page Content -->
+
+                {% if enable_footer | default(defaults.enable_footer) %}
+                    {% include defaults.components.footer[direction] %}
+                {% endif %}
+
+            </div>
+            <!-- END Page Wrapper -->
+
+        </div>
+        <!-- END Page Holder -->
+
+        {% if enable_scrolltop | default(defaults.enable_scrolltop) %}
+            {% include defaults.components.scrolltop[direction] %}
+        {% endif %}
+
+        {% for component in defaults.components.offcanvas[direction] %}
+            {% include component %}
+        {% endfor %}
+
+        {% block offcanvas %}{% endblock %}
+
+        {% for link in defaults.js_links | array_concat(js_links) %}
+            <script type="text/javascript" src="{{ link }}"></script>
+        {% endfor %}
+
+    </body>
+</html>

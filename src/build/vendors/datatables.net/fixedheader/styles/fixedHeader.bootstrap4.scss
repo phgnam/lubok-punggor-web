@@ -1,0 +1,26 @@
+@import "../../../variables";
+
+.dataTable {
+
+    // Floating header classes
+    &.fixedHeader-floating,
+    &.fixedHeader-locked {
+        width: initial !important;
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+        @include theme-variant("light") {
+            background: $datatable-fixed-element-bg-light;
+        }
+        @include theme-variant("dark") {
+            background: $datatable-fixed-element-bg-dark;
+        }
+    }
+
+    &.fixedHeader-floating { position: fixed !important; }
+    &.fixedHeader-locked { position: absolute !important; }
+}
+
+// Hide floating header in print view
+@media print {
+    .fixedHeader-floating { display: none; }
+}

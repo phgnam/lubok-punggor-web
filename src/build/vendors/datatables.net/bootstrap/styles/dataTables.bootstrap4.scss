@@ -1,0 +1,199 @@
+@import "../../../variables";
+
+.dataTable {
+    width: 100% !important;
+    max-width: none !important;
+    margin-top: $datatable-spacer !important;
+    margin-bottom: $datatable-spacer !important;
+    border-collapse: separate !important;
+    border-spacing: 0;
+    clear: both;
+
+    td,
+    th {
+        box-sizing: content-box;
+
+        // Remove default outline when table cells clicked
+        &:active { outline: none; }
+
+        // Align empty and loading message to center
+        &.dataTables_empty { text-align: center; }
+    }
+
+    thead {
+
+        // Add space for arrow beside table header
+        .sorting,
+        .sorting_asc,
+        .sorting_desc {
+            padding-right: $datatable-sorting-space;
+        }
+
+        .sorting_asc,
+        .sorting_desc {
+            position: relative;
+            cursor: pointer;
+
+            // Add arrow for table columns sorting
+            @include caret(down) {
+                position: absolute;
+                right: $datatable-sorting-offset;
+                bottom: $datatable-sorting-offset;
+                @include theme-variant("light") {
+                    color: $datatable-sorting-color-light;
+                }
+                @include theme-variant("dark") {
+                    color: $datatable-sorting-color-dark;
+                }
+            }
+        }
+
+        // Rotate arrow when columns sorting is ascending
+        .sorting_asc { @include caret-transform(up); }
+    }
+
+    // Modifier class to disable content wrapping
+    &.nowrap {
+        td, th { white-space: nowrap; }
+    }
+}
+
+// Outer containment for all datatable components
+.dataTables_wrapper {
+
+    // Length menu containment
+    .dataTables_length {
+        label {
+            text-align: left;
+            white-space: nowrap;
+        }
+
+        // Total row per page option element
+        select {
+            width: auto;
+            margin: 0 $datatable-input-spacer;
+        }
+    }
+
+    // Search input containment
+    .dataTables_filter {
+        text-align: right;
+
+        label {
+            text-align: left;
+            white-space: nowrap;
+        }
+
+        // Search input element
+        input {
+            display: inline-block;
+            width: auto;
+            margin-left: $datatable-input-spacer;
+        }
+    }
+
+    // Display information of row number
+    .dataTables_info {
+        padding-top: $datatable-info-spacer;
+        white-space: nowrap;
+    }
+
+    // Table pagination containment
+    .dataTables_paginate {
+        margin: 0;
+        text-align: right;
+        white-space: nowrap;
+
+        // Styling pagination
+        .pagination {
+            justify-content: flex-end;
+            white-space: nowrap;
+        }
+    }
+
+    .dataTables_processing {
+        position: absolute;
+        width: $datatable-process-width;
+        padding: $datatable-process-padding-y $datatable-process-padding-x;
+        text-align: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 50%);
+    }
+}
+
+// Remove margin on the table for scrollable header
+.dataTables_scrollHead {
+    .dataTable { margin-bottom: 0 !important; }
+    .table-bordered { border-bottom-width: 0; }
+}
+
+// Scrollable table body
+.dataTables_scrollBody table {
+    border-top: none;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+
+    tbody tr:first-child td,
+    tbody tr:first-child th {
+        border-top: none;
+    }
+}
+
+// Scrollable table footer
+.dataTables_scrollFoot {
+    > .dataTables_scrollFootInner {
+        box-sizing: content-box;
+
+        > table {
+            margin-top: 0 !important;
+            border-top: none;
+        }
+    }
+}
+
+// Small datatable
+.dataTable.table-sm {
+    > thead > tr > th { padding-right: $datatable-sorting-space-sm; }
+
+    .sorting_asc,
+    .sorting_desc {
+        &:after {
+            right: $datatable-sorting-offset-sm;
+            bottom: $datatable-sorting-offset-sm;
+        }
+    }
+}
+
+// Fix duplication border when datatable has .table-bordered class from bootstrap
+.dataTable.table-bordered {
+    td,
+    th {
+        border-left-width: 0;
+
+        &:last-child { border-right-width: 0; }
+    }
+
+
+    tbody td,
+    tbody th {
+        border-bottom-width: 0;
+    }
+}
+
+// Align control elements to center for small devices
+@include media-breakpoint-down("md") {
+    .dataTables_wrapper {
+        .dataTables_filter,
+        .dataTables_info,
+        .dataTables_length,
+        .dataTables_paginate {
+            text-align: center;
+        }
+
+        .dataTables_paginate .pagination {
+            justify-content: center;
+            margin-top: $datatable-input-spacer;
+        }
+    }
+}

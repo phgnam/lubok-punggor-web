@@ -1,0 +1,274 @@
+.daterangepicker {
+    position: absolute;
+    display: none;
+    width: auto;
+    padding: 0;
+    margin: 0;
+    font-size: $datepicker-font-size;
+    border-width: $datepicker-border-width;
+    border-style: solid;
+    @include border-radius($datepicker-border-radius);
+    @include theme-variant("light") {
+        color: $datepicker-color-light;
+        background: $datepicker-bg-light;
+        border-color: $datepicker-border-color-light;
+    }
+    @include theme-variant("dark") {
+        color: $datepicker-color-dark;
+        background: $datepicker-bg-dark;
+        border-color: $datepicker-border-color-dark;
+    }
+
+    .drp-calendar {
+        // Hide calendar by default
+        display: none;
+        padding: $datepicker-padding;
+    }
+
+    .calendar-table {
+        table {
+            width: 100%;
+            margin: 0;
+        }
+
+        // Calendar cell base styles
+        td,
+        th {
+            width: $datepicker-cell-dimension;
+            max-width: $datepicker-cell-dimension;
+            height: $datepicker-cell-dimension;
+            line-height: $datepicker-cell-dimension;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+            white-space: nowrap;
+            cursor: pointer;
+            @include border-radius($datepicker-cell-border-radius);
+        }
+    }
+
+    td,
+    th {
+        // Hoverable effect for all available cell
+        &.available:hover {
+            @include theme-variant("light") {
+                color: $datepicker-cell-hover-color-light;
+                background: $datepicker-cell-hover-bg-light;
+            }
+            @include theme-variant("dark") {
+                color: $datepicker-cell-hover-color-dark;
+                background: $datepicker-cell-hover-bg-dark;
+            }
+        }
+
+        // Week cell styles
+        &.week {
+            font-size: $datepicker-week-font-size;
+            @include theme-variant("light") {
+                color: $datepicker-week-color-light;
+                background: $datepicker-week-bg-light;
+            }
+            @include theme-variant("dark") {
+                color: $datepicker-week-color-dark;
+                background: $datepicker-week-bg-dark;
+            }
+        }
+    }
+
+    // Calendar cell states
+    td {
+        &.in-range {
+            @include border-radius(0);
+            @include theme-variant("light") {
+                color: $datepicker-cell-range-color-light;
+                background: $datepicker-cell-range-bg-light;
+            }
+            @include theme-variant("dark") {
+                color: $datepicker-cell-range-color-dark;
+                background: $datepicker-cell-range-bg-dark;
+            }
+        }
+
+        &.start-date {
+            @include border-right-radius(0);
+            @include border-left-radius($datepicker-cell-border-radius);
+        }
+
+        &.end-date {
+            @include border-left-radius(0);
+            @include border-right-radius($datepicker-cell-border-radius);
+        }
+
+        &.start-date.end-date {
+            @include border-radius($datepicker-cell-border-radius);
+        }
+
+        &.disabled {
+            &,
+            &:hover {
+                cursor: default;
+                @include theme-variant("light") {
+                    background: $datepicker-cell-disabled-bg-light;
+                    color: $datepicker-cell-disabled-color-light;
+                }
+                @include theme-variant("dark") {
+                    background: $datepicker-cell-disabled-bg-dark;
+                    color: $datepicker-cell-disabled-color-dark;
+                }
+            }
+        }
+
+        &.active {
+            &,
+            &:hover {
+                @include theme-variant("light") {
+                    color: $datepicker-cell-active-color-light;
+                    background: $datepicker-cell-active-bg-light;
+                }
+                @include theme-variant("dark") {
+                    color: $datepicker-cell-active-color-dark;
+                    background: $datepicker-cell-active-bg-dark;
+                }
+            }
+        }
+
+        &.off {
+            &,
+            &:hover,
+            &.active,
+            &.end-date,
+            &.in-range,
+            &.start-date {
+                @include theme-variant("light") {
+                    color: $datepicker-cell-off-color-light;
+                    background: $datepicker-cell-off-bg-light;
+                }
+                @include theme-variant("dark") {
+                    color: $datepicker-cell-off-color-dark;
+                    background: $datepicker-cell-off-bg-dark;
+                }
+            }
+        }
+    }
+
+    // Select elements for additional time information like month, year, hour, etc.
+    select {
+
+        // Add space beetween month and year select input
+        &.monthselect { margin-right: $daterangepicker-input-spacer; }
+
+        &.monthselect,
+        &.yearselect,
+        &.ampmselect,
+        &.hourselect,
+        &.minuteselect,
+        &.secondselect {
+            width: auto;
+        }
+    }
+
+    // Container for select elements
+    .calendar-time {
+        text-align: center;
+        margin-top: $daterangepicker-input-spacer;
+    }
+
+    // Container for button elements
+    .drp-buttons {
+        // Hide element by default
+        display: none;
+        text-align: right;
+        padding: $datepicker-padding;
+        clear: both;
+        border-top-width: $datepicker-border-width;
+        border-top-style: solid;
+        @include theme-variant("light") {
+            border-top-color: $datepicker-border-color-light;
+        }
+        @include theme-variant("dark") {
+            border-top-color: $datepicker-border-color-dark;
+        }
+
+        // Add space to button elements
+        .btn { margin-left: $daterangepicker-input-spacer; }
+    }
+
+    .next,
+    .prev {
+        > i {
+            transform: rotate(0deg)#{"/*rtl:rotate(180deg)*/"};
+        }
+    }
+
+    // Display information about dates are selected
+    .drp-selected {
+        display: none;
+        padding-right: $daterangepicker-input-spacer;
+    }
+
+    // Menu element contain predefined value
+    .ranges {
+        margin: 0;
+        text-align: left;
+
+        ul {
+            width: 100%;
+            padding: $daterangepicker-menu-padding-y 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        li {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: $daterangepicker-item-padding-y $daterangepicker-item-padding-x;
+            cursor: pointer;
+            @include theme-variant("light") {
+                color: $daterangepicker-item-color-light;
+            }
+            @include theme-variant("dark") {
+                color: $daterangepicker-item-color-dark;
+            }
+
+            &:hover {
+                @include theme-variant("light") {
+                    color: $daterangepicker-item-hover-color-light;
+                    background: $daterangepicker-item-hover-bg-light;
+                }
+                @include theme-variant("dark") {
+                    color: $daterangepicker-item-hover-color-dark;
+                    background: $daterangepicker-item-hover-bg-dark;
+                }
+            }
+
+            &:active,
+            &.active {
+                @include theme-variant("light") {
+                    color: $daterangepicker-item-active-color-light;
+                    background: $daterangepicker-item-active-bg-light;
+                }
+                @include theme-variant("dark") {
+                    color: $daterangepicker-item-active-color-dark;
+                    background: $daterangepicker-item-active-bg-dark;
+                }
+            }
+        }
+    }
+
+    // Styles for single calendar
+    &.single {
+        .drp-selected { display: none; }
+    }
+
+    // Show calendar elements when triggered
+    &.show-calendar {
+        .drp-calendar,
+        .drp-buttons {
+            display: block;
+        }
+    }
+
+    // Hide buttons when auto apply feature is enabled
+    &.auto-apply .drp-buttons { display: none; }
+}

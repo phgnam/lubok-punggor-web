@@ -1,0 +1,226 @@
+@import "../../variables";
+
+.twitter-typeahead { width: 100%; }
+
+// Input hint styles
+.tt-hint {
+    direction: ltr;
+    background: transparent !important;
+
+    @include theme-variant("light") {
+        color: $typeahead-hint-color-light;
+    }
+    @include theme-variant("dark") {
+        color: $typeahead-hint-color-dark;
+    }
+}
+
+// Suggestion menu container
+.tt-menu {
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    @include border-bottom-radius($typeahead-menu-border-radius);
+    @include theme-variant("light") {
+        background: $typeahead-menu-bg-light;
+        border: $typeahead-menu-border-width solid $typeahead-menu-border-color-light;
+        border-top-color: $typeahead-menu-active-border-color-light;
+    }
+    @include theme-variant("dark") {
+        background: $typeahead-menu-bg-dark;
+        border: $typeahead-menu-border-width solid $typeahead-menu-border-color-dark;
+        border-top-color: $typeahead-menu-active-border-color-dark;
+    }
+}
+
+.tt-menu-item {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	background: transparent;
+	padding: $typeahead-menu-item-padding-y $typeahead-menu-item-padding-x;
+	margin: 0;
+	cursor: default;
+    @include theme-variant("light") {
+        color: $typeahead-menu-item-color-light;
+    }
+    @include theme-variant("dark") {
+        color: $typeahead-menu-item-color-dark;
+    }
+
+	// Reset <a> tag styles
+	@at-root a#{&} {
+        text-decoration: none;
+        @include theme-variant("light") {
+            color: $typeahead-menu-item-color-light;
+        }
+        @include theme-variant("dark") {
+            color: $typeahead-menu-item-color-dark;
+        }
+	}
+
+    &:focus,
+    &:hover {
+        @include theme-variant("light") {
+            background: $typeahead-menu-item-hover-bg-light;
+            .tt-menu-title {
+                color: $typeahead-menu-item-hover-color-light;
+            }
+        }
+        @include theme-variant("dark") {
+            background: $typeahead-menu-item-hover-bg-dark;
+            .tt-menu-title {
+                color: $typeahead-menu-item-hover-color-dark;
+            }
+        }
+    }
+
+    &.active,
+    &:active {
+        @include theme-variant("light") {
+            background: $typeahead-menu-item-active-bg-light;
+            .tt-menu-title {
+                color: $typeahead-menu-item-active-color-light;
+            }
+        }
+        @include theme-variant("dark") {
+            background: $typeahead-menu-item-active-bg-dark;
+            .tt-menu-title {
+                color: $typeahead-menu-item-active-color-dark;
+            }
+        }
+    }
+
+    &.disabled,
+    &:disabled {
+        opacity: $typeahead-menu-item-disabled-opacity;
+        pointer-events: none;
+        cursor: default;
+        @include theme-variant("light") {
+            background: $typeahead-menu-item-disabled-bg-light;
+        }
+        @include theme-variant("dark") {
+            background: $typeahead-menu-item-disabled-bg-dark;
+        }
+    }
+}
+
+.tt-menu-content {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+}
+
+.tt-menu-title,
+.tt-menu-subtitle {
+	margin: 0;
+	padding: 0;
+	font-size: $typeahead-menu-content-font-size;
+	line-height: $typeahead-menu-content-line-height;
+	text-align: left;
+}
+
+.tt-menu-title {
+	font-weight: $typeahead-menu-title-font-weight;
+    @include theme-variant("light") {
+        color: $typeahead-menu-title-color-light;
+    }
+    @include theme-variant("dark") {
+        color: $typeahead-menu-title-color-dark;
+    }
+}
+
+.tt-menu-subtitle {
+	font-weight: $typeahead-menu-subtitle-font-weight;
+    @include theme-variant("light") {
+        color: $typeahead-menu-subtitle-color-light;
+    }
+    @include theme-variant("dark") {
+        color: $typeahead-menu-subtitle-color-dark;
+    }
+}
+
+.tt-menu-append,
+.tt-menu-prepend {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+
+	// Remove default avatar margin
+	> .avatar { margin: 0; }
+}
+
+.tt-menu-prepend { margin-right: $typeahead-menu-addon-spacer; }
+
+.tt-menu-append { margin-left: $typeahead-menu-addon-spacer; }
+
+// Suggestion item
+.tt-suggestion {
+    font-size: $typeahead-menu-item-font-size;
+    font-weight: $typeahead-menu-item-font-weight;
+    padding: $typeahead-menu-item-padding-y $typeahead-menu-item-padding-y;
+    @include theme-variant("light") {
+        color: $typeahead-menu-item-color-light;
+    }
+    @include theme-variant("dark") {
+        color: $typeahead-menu-item-color-dark;
+    }
+
+    &:hover {
+        @include theme-variant("light") {
+            color: $typeahead-menu-item-hover-color-light;
+            background: $typeahead-menu-item-hover-bg-light;
+        }
+        @include theme-variant("dark") {
+            color: $typeahead-menu-item-hover-color-dark;
+            background: $typeahead-menu-item-hover-bg-dark;
+        }
+    }
+}
+
+// Highlighted suggestion styles
+.tt-highlight {
+    color: $typeahead-menu-highlight-color !important;
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+// Empty message
+.tt-empty-message {
+    font-size: $typeahead-menu-empty-font-size;
+    font-weight: $typeahead-menu-empty-font-weight;
+    padding: $typeahead-menu-item-padding-y $typeahead-menu-item-padding-x;
+    @include theme-variant("light") {
+        color: $typeahead-menu-empty-color-light;
+    }
+    @include theme-variant("dark") {
+        color: $typeahead-menu-empty-color-dark;
+    }
+}
+
+// Header for group of suggestions
+.tt-header {
+    font-size: $typeahead-menu-header-font-size;
+    font-weight: $typeahead-menu-header-font-weight;
+    padding: $typeahead-menu-item-padding-y $typeahead-menu-item-padding-x;
+    margin: 0;
+    @include theme-variant("light") {
+        color: $typeahead-menu-header-color-light;
+    }
+    @include theme-variant("dark") {
+        color: $typeahead-menu-header-color-dark;
+    }
+
+    ~ .tt-suggestion { padding-left: $typeahead-menu-item-child-spacer; }
+}
+
+// Sizing
+.tt-input {
+    direction: ltr;
+
+    &.form-control ~ .tt-menu { top: calc(100% - #{$input-border-radius}) !important; }
+    &.form-control-lg ~ .tt-menu { top: calc(100% - #{$input-border-radius-lg}) !important; }
+    &.form-control-sm ~ .tt-menu { top: calc(100% - #{$input-border-radius-sm}) !important; }
+}

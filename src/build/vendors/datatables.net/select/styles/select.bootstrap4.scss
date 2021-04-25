@@ -1,0 +1,23 @@
+@import "../../../variables";
+
+.dataTable {
+    tbody {
+        // Selected state class
+        .selected {
+            @include theme-variant("light") {
+                background: $datatable-selected-bg-light !important;
+            }
+            @include theme-variant("dark") {
+                background: $datatable-selected-bg-dark !important;
+            }
+        }
+    }
+}
+
+// Selected row information
+.dataTables_wrapper {
+    .select-info,
+    .select-item {
+        margin-left: $datatable-info-spacer;
+    }
+}

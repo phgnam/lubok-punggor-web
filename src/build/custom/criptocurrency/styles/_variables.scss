@@ -1,0 +1,45 @@
+// Aside
+$aside-width:                 25rem !default;
+$aside-bg-light:              $white !default;
+$aside-bg-dark:               $gray-800 !default;
+$aside-border-width:          $border-width !default;
+$aside-border-color-light:    $border-color-light !default;
+$aside-border-color-dark:     $border-color-dark !default;
+$aside-transition:            $transition-base !default;
+
+$aside-header-padding-y:      1.25rem !default;
+$aside-header-padding-x:      1rem !default;
+
+$aside-body-padding-y:        1rem !default;
+$aside-body-padding-x:        1rem !default;
+
+$aside-title-color-light:     $text-level-2-light !default;
+$aside-title-color-dark:      $text-level-2-dark !default;
+$aside-title-font-size:       1.6rem !default;
+$aside-title-font-weight:     $font-weight-bolder !default;
+$aside-title-padding-x:       .5rem !default;
+
+$aside-backdrop-bg:           rgba($backdrop-bg, $backdrop-opacity) !default;
+
+// Header
+$header-bg-light:					 $white !default;
+$header-bg-dark:					 $gray-800 !default;
+$header-border-width:			     $border-width !default;
+$header-border-color-light:			 $border-color-light !default;
+$header-border-color-dark:			 $border-color-dark !default;
+
+$header-container-padding-y:         1rem !default;
+
+// Footer
+$footer-bg-light:                    $white !default;
+$footer-bg-dark:                     $gray-800 !default;
+$footer-color-light:                 $text-level-3-light !default;
+$footer-color-dark:                  $text-level-3-dark !default;
+$footer-border-width:			     $border-width !default;
+$footer-border-color-light:			 $border-color-light !default;
+$footer-border-color-dark:			 $border-color-dark !default;
+$footer-padding-y:                   1rem !default;
+
+// Wallet
+$wallet-column-gap:                  $grid-gutter-width !default;
+$wallet-column-num:                  4 !default;

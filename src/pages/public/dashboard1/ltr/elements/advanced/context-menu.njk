@@ -1,0 +1,115 @@
+{% extends "components/dashboard1/template.njk" %}
+
+{% set direction = "ltr" %}
+{% set page_title = "Context Menu" %}
+{% set breadcrumb = [
+    { text: "Dashboard", link: "dashboard1/ltr/index.html" | url, icon: '<i data-feather="home"></i>' },
+    { text: "Elements" },
+    { text: "Advanced" },
+    { text: "Context Menu", link: "dashboard1/ltr/elements/advanced/context-menu.html" | url }
+] %}
+{% set js_links = [
+    "assets/app/dashboard1/elements/context-menu.js" | url
+] %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+
+            <!-- BEGIN Portlet -->
+            <div class="portlet">
+                <div class="portlet-header portlet-header-bordered">
+                    <h3 class="portlet-title">Context menu</h3>
+                </div>
+                <div class="portlet-body">
+                    <p><strong>JQuery Context Menu</strong> was designed for web applications in need of menus on a possibly large amount of objects. Check more details by visiting <a href="http://swisnl.github.io/jQuery-contextMenu" target="_blank">the documentation</a>.</p>
+                    <hr>
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Basic setup</label>
+                        <div class="col-sm-8 col-lg-9">
+                            <button class="btn btn-primary" id="context-menu-1">Right click me</button>
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Custom icon</label>
+                        <div class="col-sm-8 col-lg-9">
+                            <button class="btn btn-primary" id="context-menu-2">Right click me</button>
+
+                            <p class="mb-0 mt-2">You can customize the icon with fontawesome</p>
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Accesskeys</label>
+                        <div class="col-sm-8 col-lg-9">
+                            <button class="btn btn-primary" id="context-menu-3">Right click me</button>
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Disabled command</label>
+                        <div class="col-sm-8 col-lg-9">
+                            <button class="btn btn-primary" id="context-menu-4">Right click me</button>
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Keeping context menu open</label>
+                        <div class="col-sm-8 col-lg-9">
+                            <button class="btn btn-primary" id="context-menu-5">Right click me</button>
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Submenu</label>
+                        <div class="col-sm-8 col-lg-9">
+                            <button class="btn btn-primary" id="context-menu-6">Right click me</button>
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Input form</label>
+                        <div class="col-sm-8 col-lg-9">
+                            <button class="btn btn-primary" id="context-menu-7">Right click me</button>
+
+                            <p class="mb-0 mt-2">You can put form inside context menu</p>
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row mb-0">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Custom triggers</label>
+                        <div class="col-sm-8 col-lg-9">
+                            <button class="btn btn-primary" id="context-menu-8">Click</button>
+                            <button class="btn btn-primary" id="context-menu-9">Hover</button>
+
+                            <p class="mb-0 mt-2">Reset the trigger by setting <code>trigger</code> property</p>
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                </div>
+            </div>
+            <!-- END Portlet -->
+
+        </div>
+    </div>
+</div>
+{% endblock %}

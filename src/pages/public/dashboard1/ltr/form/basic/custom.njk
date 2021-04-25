@@ -1,0 +1,332 @@
+{% extends "components/dashboard1/template.njk" %}
+
+{% set direction = "ltr" %}
+{% set page_title = "Custom Form" %}
+{% set breadcrumb = [
+    { text: "Dashboard", link: "dashboard1/ltr/index.html" | url, icon: '<i data-feather="home"></i>' },
+    { text: "Form" },
+    { text: "Basic" },
+    { text: "Custom", link: "dashboard1/ltr/form/basic/custom.html" | url }
+] %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6">
+
+            <!-- BEGIN Portlet -->
+            <div class="portlet">
+                <div class="portlet-header portlet-header-bordered">
+                    <h3 class="portlet-title">Custom select</h3>
+                </div>
+                <div class="portlet-body">
+                    <p>Custom <code>{{ "<select>" }}</code> menus need only a custom class, <code>.custom-select</code> to trigger the custom styles. Custom styles are limited to the <code>{{ "<select>" }}</code>’s initial appearance and cannot modify the <code>{{ "<option>" }}</code>s due to browser limitations.</p>
+                    <p>You may also choose from small and large custom selects to match our similarly sized text inputs.</p>
+                    <hr>
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group">
+                        <select class="custom-select custom-select-sm">
+                            <option selected="selected">Small</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group">
+                        <select class="custom-select">
+                            <option selected="selected">Default</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group mb-0">
+                        <select class="custom-select custom-select-lg">
+                            <option selected="selected">Large</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+                    <!-- END Form Group -->
+
+                </div>
+            </div>
+            <!-- END Portlet -->
+
+            <!-- BEGIN Portlet -->
+            <div class="portlet">
+                <div class="portlet-header portlet-header-bordered">
+                    <h3 class="portlet-title">Float label</h3>
+                </div>
+                <div class="portlet-body">
+                    <p>Put <code>{{ "<input>" }}</code> and <code>{{ "<label>" }}</code> into <code>.float-label</code> class. The label element will float above the placeholder and when the cursor focuses on input, the label will be floating to the top of input element.</p>
+                    <hr>
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group">
+                        <div class="float-label">
+                            <input type="email" id="email" class="form-control" placeholder="Email form">
+                            <label for="email">Email</label>
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group">
+                        <div class="float-label">
+                            <input type="password" id="password" class="form-control" placeholder="Password form">
+                            <label for="password">Password</label>
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group">
+                        <div class="float-label">
+                            <textarea class="form-control" id="textarea" rows="5" placeholder="Insert your text"></textarea>
+                            <label for="textarea">Textarea</label>
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group mb-0">
+                        <div class="float-label">
+                            <select class="custom-select" id="select">
+                                <option value="1">Option 1</option>
+                                <option value="2">Option 2</option>
+                                <option value="3">Option 3</option>
+                            </select>
+                            <label for="select">Select</label>
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <hr>
+                    <p>To change input element size, you can add <code>.float-label-{lg|sm}</code> classes.</p>
+                    <hr>
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group">
+                        <div class="float-label float-label-lg">
+                            <input type="text" id="form1" class="form-control form-control-lg" placeholder=".form-control-lg">
+                            <label for="form1">Large</label>
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group">
+                        <div class="float-label">
+                            <input type="text" id="form2" class="form-control" placeholder="no modifier">
+                            <label for="form2">Normal</label>
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group mb-0">
+                        <div class="float-label float-label-sm">
+                            <input type="text" id="form3" class="form-control form-control-sm" placeholder=".form-control-sm">
+                            <label for="form3">Small</label>
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                </div>
+            </div>
+            <!-- END Portlet -->
+
+            <!-- BEGIN Portlet -->
+            <div class="portlet">
+                <div class="portlet-header portlet-header-bordered">
+                    <h3 class="portlet-title">Custom file input</h3>
+                </div>
+                <div class="portlet-body">
+                    <p>The file input is the most gnarly of the bunch and requires additional JavaScript if you’d like to hook them up with functional <em>Choose file…</em> and selected file name text.</p>
+                    <hr>
+
+                    <!-- BEGIN Custom Form -->
+                    <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="customFile">
+                        <label class="custom-file-label" for="customFile">Choose file</label>
+                    </div>
+                    <!-- END Custom Form -->
+
+                </div>
+            </div>
+            <!-- END Portlet -->
+
+        </div>
+        <div class="col-md-6">
+
+            <!-- BEGIN Portlet -->
+            <div class="portlet">
+                <div class="portlet-header portlet-header-bordered">
+                    <h3 class="portlet-title">Custom checkboxes and radios</h3>
+                </div>
+                <div class="portlet-body">
+                    <p>Each checkbox and radio <code>{{ "<input>" }}</code> and <code>{{ "<label>" }}</code> pairing is wrapped in a <code>{{ "<div>" }}</code> to create our custom control. Structurally, this is the same approach as our default <code>.form-check</code>.</p>
+                    <p>Custom checkboxes and radios can also be disabled. Add the <code>disabled</code> boolean attribute to the <code>{{ "<input>" }}</code> and the custom indicator and label description will be automatically styled.</p>
+                    <hr>
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group">
+
+                        <!-- BEGIN Custom Form -->
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="customCheck1">
+                            <label class="custom-control-label" for="customCheck1">Default checkbox</label>
+                        </div>
+                        <!-- END Custom Form -->
+
+                        <!-- BEGIN Custom Form -->
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="customCheckDisabled1" disabled="disabled">
+                            <label class="custom-control-label" for="customCheckDisabled1">Disabled checkbox</label>
+                        </div>
+                        <!-- END Custom Form -->
+
+                        <!-- BEGIN Custom Form -->
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                            <label class="custom-control-label" for="customRadio1">Default radio</label>
+                        </div>
+                        <!-- END Custom Form -->
+
+                        <!-- BEGIN Custom Form -->
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                            <label class="custom-control-label" for="customRadio2">Second radio</label>
+                        </div>
+                        <!-- END Custom Form -->
+
+                        <!-- BEGIN Custom Form -->
+                        <div class="custom-control custom-radio">
+                            <input type="radio" name="radioDisabled" id="customRadioDisabled2" class="custom-control-input" disabled="disabled">
+                            <label class="custom-control-label" for="customRadioDisabled2">Disabled radio</label>
+                        </div>
+                        <!-- END Custom Form -->
+
+                    </div>
+                    <!-- END Form Group -->
+
+                    <hr>
+                    <p>Change custom checkboxes and radios size by adding <code>.custom-control-{sm|lg}</code> to the default elements.</p>
+                    <hr>
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group mb-0">
+
+                        <!-- BEGIN Custom Form -->
+                        <div class="custom-control custom-control-sm custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="customSizingCheck1">
+                            <label class="custom-control-label" for="customSizingCheck1">Small checkbox</label>
+                        </div>
+                        <!-- END Custom Form -->
+
+                        <!-- BEGIN Custom Form -->
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="customSizingCheck2">
+                            <label class="custom-control-label" for="customSizingCheck2">Default checkbox</label>
+                        </div>
+                        <!-- END Custom Form -->
+
+                        <!-- BEGIN Custom Form -->
+                        <div class="custom-control custom-control-lg custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="customSizingCheck3">
+                            <label class="custom-control-label" for="customSizingCheck3">Large checkbox</label>
+                        </div>
+                        <!-- END Custom Form -->
+
+                        <!-- BEGIN Custom Form -->
+                        <div class="custom-control custom-control-sm custom-radio">
+                            <input type="radio" id="customSizingRadio1" name="customSizingRadio" class="custom-control-input">
+                            <label class="custom-control-label" for="customSizingRadio1">Small radio</label>
+                        </div>
+                        <!-- END Custom Form -->
+
+                        <!-- BEGIN Custom Form -->
+                        <div class="custom-control custom-radio">
+                            <input type="radio" id="customSizingRadio2" name="customSizingRadio" class="custom-control-input">
+                            <label class="custom-control-label" for="customSizingRadio2">Default radio</label>
+                        </div>
+                        <!-- END Custom Form -->
+
+                        <!-- BEGIN Custom Form -->
+                        <div class="custom-control custom-control-lg custom-radio">
+                            <input type="radio" id="customSizingRadio3" name="customSizingRadio" class="custom-control-input">
+                            <label class="custom-control-label" for="customSizingRadio3">Large radio</label>
+                        </div>
+                        <!-- END Custom Form -->
+
+                    </div>
+                    <!-- END Form Group -->
+
+                </div>
+            </div>
+            <!-- END Portlet -->
+
+            <!-- BEGIN Portlet -->
+            <div class="portlet">
+                <div class="portlet-header portlet-header-bordered">
+                    <h3 class="portlet-title">Switches</h3>
+                </div>
+                <div class="portlet-body">
+                    <p>A switch has the markup of a custom checkbox but uses the <code>.custom-switch</code> class to render a toggle switch. Switches also support the <code>disabled</code> attribute.</p>
+                    <hr>
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group">
+
+                        <!-- BEGIN Custom Form -->
+                        <div class="custom-control custom-switch">
+                            <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                            <label class="custom-control-label" for="customSwitch1">Toggle this switch element</label>
+                        </div>
+                        <!-- END Custom Form -->
+
+                        <!-- BEGIN Custom Form -->
+                        <div class="custom-control custom-switch">
+                            <input type="checkbox" class="custom-control-input" disabled="disabled" id="customSwitch2">
+                            <label class="custom-control-label" for="customSwitch2">Disabled switch element</label>
+                        </div>
+                        <!-- END Custom Form -->
+
+                    </div>
+                    <!-- END Form Group -->
+
+                </div>
+            </div>
+            <!-- END Portlet -->
+
+            <!-- BEGIN Portlet -->
+            <div class="portlet">
+                <div class="portlet-header portlet-header-bordered">
+                    <h3 class="portlet-title">Custom slider</h3>
+                </div>
+                <div class="portlet-body">
+                    <p>Create custom <code>{{ '<input type="range">' }}</code> controls with <code>.custom-range</code>. The track (the background) and thumb (the value) are both styled to appear the same across browsers. As only IE and Firefox support “filling” their track from the left or right of the thumb as a means to visually indicate progress, we do not currently support it.</p>
+                    <hr>
+
+                    <!-- BEGIN Custom Form -->
+                    <label for="customRange1">Example range</label>
+                    <input type="range" class="custom-range" id="customRange1">
+                    <!-- END Custom Form -->
+
+                </div>
+            </div>
+            <!-- END Portlet -->
+
+        </div>
+    </div>
+</div>
+{% endblock %}

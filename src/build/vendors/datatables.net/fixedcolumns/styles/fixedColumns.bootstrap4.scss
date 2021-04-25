@@ -1,0 +1,83 @@
+@import "../../../variables";
+
+// Cloned table for floating columns
+.DTFC_Cloned {
+    tr {
+        margin-bottom: 0;
+        @include theme-variant("light") {
+            background: $datatable-fixed-element-bg-light;
+        }
+        @include theme-variant("dark") {
+            background: $datatable-fixed-element-bg-dark;
+        }
+    }
+
+    &.dataTable.table-striped tbody {
+        @include theme-variant("light") {
+            background: $datatable-fixed-element-bg-light;
+        }
+        @include theme-variant("dark") {
+            background: $datatable-fixed-element-bg-dark;
+        }
+    }
+}
+
+// Floating column header
+.DTFC_LeftHeadWrapper,
+.DTFC_RightHeadWrapper {
+    table {
+        margin-bottom: 0 !important;
+        border-bottom: none !important;
+        @include theme-variant("light") {
+            background: $datatable-fixed-element-bg-light;
+        }
+        @include theme-variant("dark") {
+            background: $datatable-fixed-element-bg-dark;
+        }
+    }
+}
+
+// Floating column body
+.DTFC_LeftBodyWrapper,
+.DTFC_RightBodyWrapper {
+    table {
+        margin: 0 !important;
+        border-top: none;
+        z-index: 2;
+    }
+
+    // Hide sorting arrow at header
+    .sorting_asc,
+    .sorting_desc {
+        &:after { display: none; }
+    }
+
+    table tbody tr:first-child td,
+    table tbody tr:first-child th {
+        border-top: none;
+    }
+}
+
+// Floating column footer
+.DTFC_LeftFootWrapper,
+.DTFC_RightFootWrapper {
+    table {
+        margin-top: 0 !important;
+        border-top: none;
+        @include theme-variant("light") {
+            background: $datatable-fixed-element-bg-light;
+        }
+        @include theme-variant("dark") {
+            background: $datatable-fixed-element-bg-dark;
+        }
+    }
+}
+
+.DTFC_Blocker {
+    @include theme-variant("light") {
+        background: $datatable-fixed-element-bg-light;
+    }
+    @include theme-variant("dark") {
+        background: $datatable-fixed-element-bg-dark;
+    }
+}

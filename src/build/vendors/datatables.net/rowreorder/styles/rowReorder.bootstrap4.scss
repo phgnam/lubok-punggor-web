@@ -1,0 +1,30 @@
+@import "../../../variables";
+
+// Draggable element
+.dt-rowReorder-float {
+    position: absolute !important;
+    width: auto !important;
+    table-layout: fixed;
+    opacity: $datatable-order-drag-opacity;
+    cursor: move;
+    z-index: 2;
+}
+
+// Row marker for positioning
+.dt-rowReorder-moving {
+    outline-offset: -#{$datatable-order-pointer-width};
+    outline-width: $datatable-order-pointer-width;
+    outline-style: solid;
+    @include theme-variant("light") {
+        outline-color: $datatable-order-pointer-color-light;
+    }
+    @include theme-variant("dark") {
+        outline-color: $datatable-order-pointer-color-dark;
+    }
+}
+
+// Hide x-axis main scrollbar
+body.dt-rowReorder-noOverflow { overflow-x: hidden; }
+
+// Drag handle
+.dataTable .reorder { cursor: move; }

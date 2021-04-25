@@ -1,0 +1,149 @@
+{% extends "components/dashboard1/template.njk" %}
+
+{% set direction = "ltr" %}
+{% set page_title = "Block UI" %}
+{% set breadcrumb = [
+    { text: "Dashboard", link: "dashboard1/ltr/index.html" | url, icon: '<i data-feather="home"></i>' },
+    { text: "Elements" },
+    { text: "Advanced" },
+    { text: "Block UI", link: "dashboard1/ltr/elements/advanced/block-ui.html" | url }
+] %}
+{% set js_links = [
+    "assets/app/dashboard1/elements/block-ui.js" | url
+] %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row flex-row-reverse">
+        <div class="col-md-4">
+
+            <!-- BEGIN Portlet -->
+            <div class="portlet overflow-hidden" id="blockui-target">
+                <div class="portlet-header portlet-header-bordered">
+                    <h3 class="portlet-title">Samples</h3>
+                </div>
+                <div class="portlet-body">
+                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+            </div>
+            <!-- END Portlet -->
+
+        </div>
+        <div class="col-md-8">
+
+            <!-- BEGIN Portlet -->
+            <div class="portlet">
+                <div class="portlet-header portlet-header-bordered">
+                    <h3 class="portlet-title">Block UI</h3>
+                </div>
+                <div class="portlet-body">
+                    <p>The <strong>jQuery BlockUI</strong> lets you simulate synchronous behavior when using AJAX, without locking the browser. BlockUI adds elements to the DOM to give it both the appearance and behavior of blocking user interaction. For more info, you can visit <a href="http://jquery.malsup.com/block" target="_blank">the homepage</a>.</p>
+                    <hr>
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Basic demo</label>
+                        <div class="col-sm-8 col-lg-9">
+
+                            <!-- BEGIN Tooltip -->
+                            <button class="btn btn-primary" id="blockui-trigger-1">Block</button>
+                            <button class="btn btn-primary" id="blockui-trigger-2">Unblock</button>
+                            <!-- END Tooltip -->
+
+                            <p class="mb-0 mt-2">Use <code>$('#element').block()</code> to block target element and <code>$('#element').unblock()</code> for unblocking.</p>
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Time Out</label>
+                        <div class="col-sm-8 col-lg-9">
+
+                            <!-- BEGIN Tooltip -->
+                            <button class="btn btn-primary" id="blockui-trigger-3">Click me</button>
+                            <!-- END Tooltip -->
+
+                            <p class="mb-0 mt-2">Set timeout before unblocked by setting <code>timeout</code> property.</p>
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Custom text</label>
+                        <div class="col-sm-8 col-lg-9">
+
+                            <!-- BEGIN Tooltip -->
+                            <button class="btn btn-primary" id="blockui-trigger-4">Click me</button>
+                            <!-- END Tooltip -->
+
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Custom element</label>
+                        <div class="col-sm-8 col-lg-9">
+
+                            <!-- BEGIN Tooltip -->
+                            <button class="btn btn-primary" id="blockui-trigger-5">Click me</button>
+                            <!-- END Tooltip -->
+
+                            <p class="mb-0 mt-2">You can put html elements into <code>message</code> property</p>
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Custom style</label>
+                        <div class="col-sm-8 col-lg-9">
+
+                            <!-- BEGIN Tooltip -->
+                            <button class="btn btn-primary" id="blockui-trigger-6">Click me</button>
+                            <!-- END Tooltip -->
+
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Block page</label>
+                        <div class="col-sm-8 col-lg-9">
+
+                            <!-- BEGIN Tooltip -->
+                            <button class="btn btn-primary" id="blockui-trigger-7">Click me</button>
+                            <!-- END Tooltip -->
+
+                            <p class="mb-0 mt-2">Use <code>$.blockUI()</code> to block the page</p>
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row mb-0">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Spinner</label>
+                        <div class="col-sm-8 col-lg-9">
+
+                            <!-- BEGIN Tooltip -->
+                            <button class="btn btn-primary" id="blockui-trigger-8">Border</button>
+                            <button class="btn btn-primary" id="blockui-trigger-9">Grow</button>
+                            <button class="btn btn-primary" id="blockui-trigger-10">Spinner only</button>
+                            <!-- END Tooltip -->
+
+                            <p class="mb-0 mt-2">Mix block message with spinner</p>
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                </div>
+            </div>
+            <!-- END Portlet -->
+
+        </div>
+    </div>
+</div>
+{% endblock %}

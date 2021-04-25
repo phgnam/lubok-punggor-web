@@ -1,0 +1,31 @@
+// Container for conversation
+.chat-wrapper {
+    overflow: auto;
+    @include theme-variant("light") {
+        background: $chat-wrapper-bg-light;
+	}
+	@include theme-variant("dark") {
+        background: $chat-wrapper-bg-dark;
+	}
+}
+
+// Override .portlet element
+.chat-portlet {
+    height: 100%;
+    max-height: 100%;
+    margin-bottom: 0;
+    border: 0;
+    @include border-radius(0);
+
+    > *:first-child { @include border-top-radius(0); }
+	> *:last-child { @include border-bottom-radius(0); }
+}
+
+.chat-favorites {
+    display: flex;
+    flex-direction: row;
+    margin: $chat-favorites-spacer 0;
+    padding-bottom: $chat-favorites-padding;
+    white-space: nowrap;
+    overflow: auto;
+}

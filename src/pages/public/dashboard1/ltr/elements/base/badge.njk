@@ -1,0 +1,322 @@
+{% extends "components/dashboard1/template.njk" %}
+
+{% set direction = "ltr" %}
+{% set page_title = "Badge" %}
+{% set breadcrumb = [
+    { text: "Dashboard", link: "dashboard1/ltr/index.html" | url, icon: '<i data-feather="home"></i>' },
+    { text: "Elements" },
+    { text: "Base" },
+    { text: "Badge", link: "dashboard1/ltr/elements/base/badge.html" | url }
+] %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+
+            <!-- BEGIN Portlet -->
+            <div class="portlet">
+                <div class="portlet-header portlet-header-bordered">
+                    <h3 class="portlet-title">Basic</h3>
+                </div>
+                <div class="portlet-body">
+                    <p>Add any of the below mentioned modifier classes to change the appearance of a badge.</p>
+                    <div class="row">
+                        <div class="col-md-6">
+
+                            <!-- BEGIN Portlet -->
+                            <div class="portlet">
+                                <div class="portlet-header portlet-header-bordered">
+                                    <h3 class="portlet-title">Solid</h3>
+                                </div>
+                                <div class="portlet-body">
+                                    <p>Use <code>.badge-{color}</code> to apply these variant.</p>
+
+                                    <!-- BEGIN Badges -->
+                                    <span class="badge badge-primary">primary</span>
+                                    <span class="badge badge-secondary">secondary</span>
+                                    <span class="badge badge-success">succes</span>
+                                    <span class="badge badge-warning">warning</span>
+                                    <span class="badge badge-danger">danger</span>
+                                    <span class="badge badge-dark">dark</span>
+                                    <span class="badge badge-light">light</span>
+                                    <!-- END Badges -->
+
+                                </div>
+                            </div>
+                            <!-- END Portlet -->
+
+                            <!-- BEGIN Portlet -->
+                            <div class="portlet mb-md-0">
+                                <div class="portlet-header portlet-header-bordered">
+                                    <h3 class="portlet-title">Outline</h3>
+                                </div>
+                                <div class="portlet-body">
+                                    <p>Use <code>.badge-outline-{color}</code> to apply these variant.</p>
+
+                                    <!-- BEGIN Badges -->
+                                    <span class="badge badge-outline-primary">primary</span>
+                                    <span class="badge badge-outline-secondary">secondary</span>
+                                    <span class="badge badge-outline-success">succes</span>
+                                    <span class="badge badge-outline-warning">warning</span>
+                                    <span class="badge badge-outline-danger">danger</span>
+                                    <span class="badge badge-outline-dark">dark</span>
+                                    <span class="badge badge-outline-light">light</span>
+                                    <!-- END Badges -->
+
+                                </div>
+                            </div>
+                            <!-- END Portlet -->
+
+                        </div>
+                        <div class="col-md-6">
+
+                            <!-- BEGIN Portlet -->
+                            <div class="portlet">
+                                <div class="portlet-header portlet-header-bordered">
+                                    <h3 class="portlet-title">Label</h3>
+                                </div>
+                                <div class="portlet-body">
+                                    <p>Use <code>.badge-label-{color}</code> to apply these variant.</p>
+
+                                    <!-- BEGIN Badges -->
+                                    <span class="badge badge-label-primary">primary</span>
+                                    <span class="badge badge-label-secondary">secondary</span>
+                                    <span class="badge badge-label-success">succes</span>
+                                    <span class="badge badge-label-warning">warning</span>
+                                    <span class="badge badge-label-danger">danger</span>
+                                    <span class="badge badge-label-dark">dark</span>
+                                    <span class="badge badge-label-light">light</span>
+                                    <!-- END Badges -->
+
+                                </div>
+                            </div>
+                            <!-- END Portlet -->
+
+                            <!-- BEGIN Portlet -->
+                            <div class="portlet mb-0">
+                                <div class="portlet-header portlet-header-bordered">
+                                    <h3 class="portlet-title">Text</h3>
+                                </div>
+                                <div class="portlet-body">
+                                    <p>Use <code>.badge-text-{color}</code> to apply these variant.</p>
+
+                                    <!-- BEGIN Badges -->
+                                    <span class="badge badge-text-primary">primary</span>
+                                    <span class="badge badge-text-secondary">secondary</span>
+                                    <span class="badge badge-text-success">succes</span>
+                                    <span class="badge badge-text-warning">warning</span>
+                                    <span class="badge badge-text-danger">danger</span>
+                                    <span class="badge badge-text-dark">dark</span>
+                                    <span class="badge badge-text-light">light</span>
+                                    <!-- END Badges -->
+
+                                </div>
+                            </div>
+                            <!-- END Portlet -->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END Portlet -->
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+
+            <!-- BEGIN Portlet -->
+            <div class="portlet">
+                <div class="portlet-header portlet-header-bordered">
+                    <h3 class="portlet-title">Sizing</h3>
+                </div>
+                <div class="portlet-body">
+                    <p>Change your badges size by adding <code>.badge-{lg|xl}</code> modifier classes.</p>
+
+                    <!-- BEGIN Badges -->
+                    <span class="badge badge-primary">primary</span>
+                    <span class="badge badge-secondary">secondary</span>
+                    <span class="badge badge-success">succes</span>
+                    <span class="badge badge-warning">warning</span>
+                    <span class="badge badge-danger">danger</span>
+                    <span class="badge badge-dark">dark</span>
+                    <!-- END Badges -->
+
+                    <div class="m-4"></div>
+
+                    <!-- BEGIN Badges -->
+                    <span class="badge badge-primary badge-lg">primary</span>
+                    <span class="badge badge-secondary badge-lg">secondary</span>
+                    <span class="badge badge-success badge-lg">succes</span>
+                    <span class="badge badge-warning badge-lg">warning</span>
+                    <span class="badge badge-danger badge-lg">danger</span>
+                    <span class="badge badge-dark badge-lg">dark</span>
+                    <!-- END Badges -->
+
+                    <div class="m-4"></div>
+
+                    <!-- BEGIN Badges -->
+                    <span class="badge badge-primary badge-xl">primary</span>
+                    <span class="badge badge-secondary badge-xl">secondary</span>
+                    <span class="badge badge-success badge-xl">succes</span>
+                    <span class="badge badge-warning badge-xl">warning</span>
+                    <span class="badge badge-danger badge-xl">danger</span>
+                    <span class="badge badge-dark badge-xl">dark</span>
+                    <!-- END Badges -->
+
+                </div>
+            </div>
+            <!-- END Portlet -->
+
+            <!-- BEGIN Portlet -->
+            <div class="portlet">
+                <div class="portlet-header portlet-header-bordered">
+                    <h3 class="portlet-title">Shaped badges</h3>
+                </div>
+                <div class="portlet-body">
+                    <p>Make your badge into a circle or square shape by adding <code>.badge-{circle|square}</code> modifier classes.</p>
+                    <div class="row">
+                        <div class="col-md-6">
+
+                            <!-- BEGIN Portlet -->
+                            <div class="portlet mb-md-0">
+                                <div class="portlet-header portlet-header-bordered">
+                                    <h3 class="portlet-title">Circle</h3>
+                                </div>
+                                <div class="portlet-body">
+
+                                    <!-- BEGIN Badges -->
+                                    <span class="badge badge-primary badge-circle">A</span>
+                                    <span class="badge badge-outline-secondary badge-circle badge-lg">B</span>
+                                    <span class="badge badge-label-success badge-circle badge-xl">C</span>
+                                    <span class="badge badge-warning badge-circle">D</span>
+                                    <span class="badge badge-outline-danger badge-circle badge-lg">E</span>
+                                    <span class="badge badge-label-dark badge-circle badge-xl">F</span>
+                                    <!-- END Badges -->
+
+                                </div>
+                            </div>
+                            <!-- END Portlet -->
+
+                        </div>
+                        <div class="col-md-6">
+
+                            <!-- BEGIN Portlet -->
+                            <div class="portlet mb-0">
+                                <div class="portlet-header portlet-header-bordered">
+                                    <h3 class="portlet-title">Square</h3>
+                                </div>
+                                <div class="portlet-body">
+
+                                    <!-- BEGIN Badges -->
+                                    <span class="badge badge-primary badge-square">A</span>
+                                    <span class="badge badge-outline-secondary badge-square badge-lg">B</span>
+                                    <span class="badge badge-label-success badge-square badge-xl">C</span>
+                                    <span class="badge badge-warning badge-square">D</span>
+                                    <span class="badge badge-outline-danger badge-square badge-lg">E</span>
+                                    <span class="badge badge-label-dark badge-square badge-xl">F</span>
+                                    <!-- END Badges -->
+
+                                </div>
+                            </div>
+                            <!-- END Portlet -->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END Portlet -->
+
+        </div>
+        <div class="col-md-6">
+
+            <!-- BEGIN Portlet -->
+            <div class="portlet">
+                <div class="portlet-header portlet-header-bordered">
+                    <h3 class="portlet-title">Links</h3>
+                </div>
+                <div class="portlet-body">
+                    <p>Using the contextual <code>.badge-{color}</code> classes on an <code>{{ "<a>" }}</code> element quickly provide <em>actionable</em> badges with hover and focus states.</p>
+
+                    <!-- BEGIN Badges -->
+                    <a href="#" class="badge badge-primary">Primary</a>
+                    <a href="#" class="badge badge-outline-secondary">Secondary</a>
+                    <a href="#" class="badge badge-label-success">Success</a>
+                    <a href="#" class="badge badge-text-danger">Danger</a>
+                    <a href="#" class="badge badge-outline-warning">Warning</a>
+                    <a href="#" class="badge badge-label-info">Info</a>
+                    <a href="#" class="badge badge-light">Light</a>
+                    <a href="#" class="badge badge-text-dark">Dark</a>
+                    <!-- END Badges -->
+
+                </div>
+            </div>
+            <!-- END Portlet -->
+
+            <!-- BEGIN Portlet -->
+            <div class="portlet">
+                <div class="portlet-header portlet-header-bordered">
+                    <h3 class="portlet-title">Pill badges</h3>
+                </div>
+                <div class="portlet-body">
+                    <p>Use the <code>.badge-pill</code> modifier class to make badge element more rounded.</p>
+
+                    <!-- BEGIN Badges -->
+                    <span class="badge badge-primary badge-pill">primary</span>
+                    <span class="badge badge-secondary badge-pill">secondary</span>
+                    <span class="badge badge-success badge-pill">success</span>
+                    <span class="badge badge-warning badge-pill">warning</span>
+                    <span class="badge badge-danger badge-pill">danger</span>
+                    <span class="badge badge-dark badge-pill">dark</span>
+                    <span class="badge badge-light badge-pill">light</span>
+                    <!-- END Badges -->
+
+                </div>
+            </div>
+            <!-- END Portlet -->
+
+            <!-- BEGIN Portlet -->
+            <div class="portlet">
+                <div class="portlet-header">
+                    <h3 class="portlet-title">Examples</h3>
+                </div>
+                <div class="portlet-body">
+                    <div class="row">
+                        <div class="col-md-6">
+
+                            <!-- BEGIN Portlet -->
+                            <div class="portlet mb-md-0">
+                                <div class="portlet-header portlet-header-bordered">
+                                    <h3 class="portlet-title">Header with badge</h3>
+                                </div>
+                                <div class="portlet-body">
+                                    <h5 class="mb-0">Heading <span class="badge badge-primary">badge</span></h5>
+                                </div>
+                            </div>
+                            <!-- END Portlet -->
+
+                        </div>
+                        <div class="col-md-6">
+
+                            <!-- BEGIN Portlet -->
+                            <div class="portlet mb-0">
+                                <div class="portlet-header portlet-header-bordered">
+                                    <h3 class="portlet-title">Badge inside button</h3>
+                                </div>
+                                <div class="portlet-body">
+                                    <button class="btn btn-primary">Notification <span class="badge badge-secondary">+ 10</span></button>
+                                </div>
+                            </div>
+                            <!-- END Portlet -->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END Portlet -->
+
+        </div>
+    </div>
+</div>
+{% endblock %}

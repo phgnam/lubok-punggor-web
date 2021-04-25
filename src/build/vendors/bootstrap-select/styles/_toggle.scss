@@ -1,0 +1,159 @@
+.bootstrap-select {
+
+    // Base toggle styles
+    .dropdown-toggle {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;
+
+        // Outer content container on toggle
+        .filter-option {
+            text-align: left;
+            overflow: hidden;
+            flex: 1;
+        }
+
+        // Inner container that contain text, icon, etc
+        .filter-option-inner-inner {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            @include icon-size($bs-select-icon-size);
+            @include icon-style{
+                width: $bs-select-icon-width;
+                margin-right: $bs-select-icon-spacer;
+                text-align: center;
+            }
+        }
+    }
+
+    // Default toggle appeareance
+    .bs-btn-default {
+        @include theme-variant("light") {
+            color: $bs-select-color-light;
+            background: $bs-select-bg-light;
+            border-color: $bs-select-border-color-light;
+        }
+        @include theme-variant("dark") {
+            color: $bs-select-color-dark;
+            background: $bs-select-bg-dark;
+            border-color: $bs-select-border-color-dark;
+        }
+
+        &:active,
+        &.active {
+            @include theme-variant("light") {
+                border-color: $bs-select-active-border-color-light;
+            }
+            @include theme-variant("dark") {
+                border-color: $bs-select-active-border-color-dark;
+            }
+        }
+
+        &:disabled,
+        &.disabled {
+            opacity: $bs-select-disabled-opacity;
+            @include theme-variant("light") {
+                color: $bs-select-disabled-color-light;
+                background: $bs-select-disabled-bg-light;
+                border-color: $bs-select-disabled-border-color-light;
+            }
+            @include theme-variant("dark") {
+                color: $bs-select-disabled-color-dark;
+                background: $bs-select-disabled-bg-dark;
+                border-color: $bs-select-disabled-border-color-dark;
+            }
+        }
+    }
+
+    &.show > .bs-btn-default {
+        @include theme-variant("light") {
+            border-color: $bs-select-active-border-color-light;
+        }
+        @include theme-variant("dark") {
+            border-color: $bs-select-active-border-color-dark;
+        }
+    }
+
+    // Override default form-control class style
+    &.form-control {
+        height: auto;
+        border: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    &.form-control-lg,
+    &.form-control-sm {
+        padding: 0;
+
+        .dropdown-toggle {
+            font-size: inherit;
+            line-height: inherit;
+            border-radius: inherit;
+        }
+    }
+}
+
+// Validation state styles
+.bootstrap-select.is-invalid .dropdown-toggle,
+.was-validated .bootstrap-select:invalid + .dropdown-toggle {
+    &,
+    &:hover,
+    &:focus,
+    &:active {
+        border-color: $bs-select-invalid-border-color;
+    }
+}
+
+.bootstrap-select.is-valid .dropdown-toggle,
+.was-validated .bootstrap-select:valid + .dropdown-toggle {
+    &,
+    &:hover,
+    &:focus,
+    &:active {
+        border-color: $bs-select-valid-border-color;
+    }
+}
+
+// Sizing
+.bootstrap-select.form-control-sm,
+.input-group-sm .bootstrap-select.form-control {
+
+    // Override icon styles
+    .filter-option-inner-inner {
+        @include icon-size($bs-select-icon-size-sm);
+        @include icon-style{
+            width: $bs-select-icon-width-sm;
+            margin-right: $bs-select-icon-spacer-sm;
+        }
+    }
+
+    .dropdown-toggle { padding: $input-btn-padding-y-sm $input-btn-padding-x-sm; }
+}
+
+.bootstrap-select.form-control-lg,
+.input-group-lg .bootstrap-select.form-control {
+
+    // Override icon styles
+    .filter-option-inner-inner {
+        @include icon-size($bs-select-icon-size-lg);
+        @include icon-style{
+            width: $bs-select-icon-width-lg;
+            margin-right: $bs-select-icon-spacer-lg;
+        }
+    }
+
+    .dropdown-toggle { padding: $input-btn-padding-y-lg $input-btn-padding-x-lg; }
+}
+
+// Inheriting from default input group styles
+.input-group .bootstrap-select.form-control .dropdown-toggle {
+    height: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    border-radius: inherit;
+}
+
+.form-inline .bootstrap-select .form-control { width: 100%; }

@@ -1,0 +1,22 @@
+.footer {
+	width: 100%;
+	padding: 0 $grid-gutter-width;
+}
+
+.footer-inner {
+	padding: $footer-padding-y 0;
+	margin-bottom: $grid-gutter-width;
+	border-width: $footer-border-width;
+	border-style: solid;
+	@include border-radius($footer-border-radius);
+	@include theme-variant("light") {
+		color: $footer-color-light;
+		background: $footer-bg-light;
+		border-color: $footer-border-color-light;
+	}
+	@include theme-variant("dark") {
+		color: $footer-color-dark;
+		background: $footer-bg-dark;
+		border-color: $footer-border-color-dark;
+	}
+}

@@ -1,0 +1,912 @@
+{% from "components/dashboard1/variables.njk" import defaults %}
+
+<!-- BEGIN Aside -->
+<div class="aside">
+    <div class="aside-header">
+        <h3 class="aside-title">{{ defaults.brand_name }}</h3>
+        <div class="aside-addon">
+            <button class="btn btn-label-primary btn-icon btn-lg" data-toggle="aside">
+                <i class="fa fa-times aside-icon-minimize"></i>
+                <i class="fa fa-thumbtack aside-icon-maximize"></i>
+            </button>
+        </div>
+    </div>
+    <div class="aside-body" data-simplebar>
+
+        <!-- BEGIN Menu -->
+        <div class="menu">
+            <div class="menu-item">
+                <a href="{{ 'dashboard1/ltr/index.html' | url }}" class="menu-item-link">
+                    <div class="menu-item-icon">
+                        <i class="fa fa-desktop"></i>
+                    </div>
+                    <span class="menu-item-text">Dashboard</span>
+                </a>
+            </div>
+
+            <!-- BEGIN Menu Section -->
+            <div class="menu-section">
+                <div class="menu-section-icon">
+                    <i class="fa fa-ellipsis-h"></i>
+                </div>
+                <h2 class="menu-section-text">Application</h2>
+            </div>
+            <!-- END Menu Section -->
+
+            <div class="menu-item">
+                <a href="{{ 'email/ltr/index.html' | url }}" class="menu-item-link">
+                    <div class="menu-item-icon">
+                        <i class="fa fa-envelope"></i>
+                    </div>
+                    <span class="menu-item-text">Email</span>
+                    <div class="menu-item-addon">
+                        <span class="badge badge-label-success">new</span>
+                    </div>
+                </a>
+            </div>
+            <div class="menu-item">
+                <a href="{{ 'chatting/ltr/index.html' | url }}" class="menu-item-link">
+                    <div class="menu-item-icon">
+                        <i class="fa fa-comments"></i>
+                    </div>
+                    <span class="menu-item-text">Chatting</span>
+                </a>
+            </div>
+            <div class="menu-item">
+                <a href="{{ 'criptocurrency/ltr/index.html' | url }}" class="menu-item-link">
+                    <div class="menu-item-icon">
+                        <i class="fa fa-dollar-sign"></i>
+                    </div>
+                    <span class="menu-item-text">Criptocurrency</span>
+                </a>
+            </div>
+
+            <!-- BEGIN Menu Section -->
+            <div class="menu-section">
+                <div class="menu-section-icon">
+                    <i class="fa fa-ellipsis-h"></i>
+                </div>
+                <h2 class="menu-section-text">Elements</h2>
+            </div>
+            <!-- END Menu Section -->
+
+            <div class="menu-item">
+                <button class="menu-item-link menu-item-toggle">
+                    <div class="menu-item-icon">
+                        <i class="fa fa-palette"></i>
+                    </div>
+                    <span class="menu-item-text">Base</span>
+                    <div class="menu-item-addon">
+                        <i class="menu-item-caret caret"></i>
+                    </div>
+                </button>
+
+                <!-- BEGIN Menu Submenu -->
+                <div class="menu-submenu">
+                    <div class="menu-item">
+                        <a href="{{ 'dashboard1/ltr/elements/base/accordion.html' | url }}" class="menu-item-link">
+                            <i class="menu-item-bullet"></i>
+                            <span class="menu-item-text">Accordion</span>
+                        </a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="{{ 'dashboard1/ltr/elements/base/alert.html' | url }}" class="menu-item-link">
+                            <i class="menu-item-bullet"></i>
+                            <span class="menu-item-text">Alert</span>
+                        </a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="{{ 'dashboard1/ltr/elements/base/badge.html' | url }}" class="menu-item-link">
+                            <i class="menu-item-bullet"></i>
+                            <span class="menu-item-text">Badge</span>
+                        </a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="{{ 'dashboard1/ltr/elements/base/button.html' | url }}" class="menu-item-link">
+                            <i class="menu-item-bullet"></i>
+                            <span class="menu-item-text">Button</span>
+                        </a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="{{ 'dashboard1/ltr/elements/base/button-group.html' | url }}" class="menu-item-link">
+                            <i class="menu-item-bullet"></i>
+                            <span class="menu-item-text">Button group</span>
+                        </a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="{{ 'dashboard1/ltr/elements/base/card.html' | url }}" class="menu-item-link">
+                            <i class="menu-item-bullet"></i>
+                            <span class="menu-item-text">Card</span>
+                        </a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="{{ 'dashboard1/ltr/elements/base/color.html' | url }}" class="menu-item-link">
+                            <i class="menu-item-bullet"></i>
+                            <span class="menu-item-text">Color</span>
+                        </a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="{{ 'dashboard1/ltr/elements/base/dropdown.html' | url }}" class="menu-item-link">
+                            <i class="menu-item-bullet"></i>
+                            <span class="menu-item-text">Dropdown</span>
+                        </a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="{{ 'dashboard1/ltr/elements/base/grid-nav.html' | url }}" class="menu-item-link">
+                            <i class="menu-item-bullet"></i>
+                            <span class="menu-item-text">Grid navigation</span>
+                        </a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="{{ 'dashboard1/ltr/elements/base/list-group.html' | url }}" class="menu-item-link">
+                            <i class="menu-item-bullet"></i>
+                            <span class="menu-item-text">List group</span>
+                        </a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="{{ 'dashboard1/ltr/elements/base/marker.html' | url }}" class="menu-item-link">
+                            <i class="menu-item-bullet"></i>
+                            <span class="menu-item-text">Marker</span>
+                        </a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="{{ 'dashboard1/ltr/elements/base/modal.html' | url }}" class="menu-item-link">
+                            <i class="menu-item-bullet"></i>
+                            <span class="menu-item-text">Modal</span>
+                        </a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="{{ 'dashboard1/ltr/elements/base/nav.html' | url }}" class="menu-item-link">
+                            <i class="menu-item-bullet"></i>
+                            <span class="menu-item-text">Navigation</span>
+                        </a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="{{ 'dashboard1/ltr/elements/base/pagination.html' | url }}" class="menu-item-link">
+                            <i class="menu-item-bullet"></i>
+                            <span class="menu-item-text">Pagination</span>
+                        </a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="{{ 'dashboard1/ltr/elements/base/popover.html' | url }}" class="menu-item-link">
+                            <i class="menu-item-bullet"></i>
+                            <span class="menu-item-text">Popover</span>
+                        </a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="{{ 'dashboard1/ltr/elements/base/progress.html' | url }}" class="menu-item-link">
+                            <i class="menu-item-bullet"></i>
+                            <span class="menu-item-text">Progress</span>
+                        </a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="{{ 'dashboard1/ltr/elements/base/spinner.html' | url }}" class="menu-item-link">
+                            <i class="menu-item-bullet"></i>
+                            <span class="menu-item-text">Spinner</span>
+                        </a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="{{ 'dashboard1/ltr/elements/base/tab.html' | url }}" class="menu-item-link">
+                            <i class="menu-item-bullet"></i>
+                            <span class="menu-item-text">Tab</span>
+                        </a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="{{ 'dashboard1/ltr/elements/base/table.html' | url }}" class="menu-item-link">
+                            <i class="menu-item-bullet"></i>
+                            <span class="menu-item-text">Table</span>
+                        </a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="{{ 'dashboard1/ltr/elements/base/tooltip.html' | url }}" class="menu-item-link">
+                            <i class="menu-item-bullet"></i>
+                            <span class="menu-item-text">Tooltip</span>
+                        </a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="{{ 'dashboard1/ltr/elements/base/type.html' | url }}" class="menu-item-link">
+                            <i class="menu-item-bullet"></i>
+                            <span class="menu-item-text">Typography</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- END Menu Submenu -->
+
+            </div>
+            <div class="menu-item">
+                <button class="menu-item-link menu-item-toggle">
+                    <div class="menu-item-icon">
+                        <i class="fa fa-adjust"></i>
+                    </div>
+                    <span class="menu-item-text">Advanced</span>
+                    <div class="menu-item-addon">
+                        <i class="menu-item-caret caret"></i>
+                    </div>
+                </button>
+
+                <!-- BEGIN Menu Submenu -->
+                <div class="menu-submenu">
+                    <div class="menu-item">
+                        <a href="{{ 'dashboard1/ltr/elements/advanced/avatar.html' | url }}" class="menu-item-link">
+                            <i class="menu-item-bullet"></i>
+                            <span class="menu-item-text">Avatar</span>
+                        </a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="{{ 'dashboard1/ltr/elements/advanced/block-ui.html' | url }}" class="menu-item-link">
+                            <i class="menu-item-bullet"></i>
+                            <span class="menu-item-text">Block UI</span>
+                        </a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="{{ 'dashboard1/ltr/elements/advanced/carousel.html' | url }}" class="menu-item-link">
+                            <i class="menu-item-bullet"></i>
+                            <span class="menu-item-text">Carousel</span>
+                        </a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="{{ 'dashboard1/ltr/elements/advanced/chat.html' | url }}" class="menu-item-link">
+                            <i class="menu-item-bullet"></i>
+                            <span class="menu-item-text">Chat</span>
+                        </a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="{{ 'dashboard1/ltr/elements/advanced/context-menu.html' | url }}" class="menu-item-link">
+                            <i class="menu-item-bullet"></i>
+                            <span class="menu-item-text">Context menu</span>
+                        </a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="{{ 'dashboard1/ltr/elements/advanced/rich-list.html' | url }}" class="menu-item-link">
+                            <i class="menu-item-bullet"></i>
+                            <span class="menu-item-text">Rich list</span>
+                        </a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="{{ 'dashboard1/ltr/elements/advanced/sortable.html' | url }}" class="menu-item-link">
+                            <i class="menu-item-bullet"></i>
+                            <span class="menu-item-text">Sortable</span>
+                        </a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="{{ 'dashboard1/ltr/elements/advanced/sweet-alert.html' | url }}" class="menu-item-link">
+                            <i class="menu-item-bullet"></i>
+                            <span class="menu-item-text">Sweet alert</span>
+                        </a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="{{ 'dashboard1/ltr/elements/advanced/timeline.html' | url }}" class="menu-item-link">
+                            <i class="menu-item-bullet"></i>
+                            <span class="menu-item-text">Timeline</span>
+                        </a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="{{ 'dashboard1/ltr/elements/advanced/toastr.html' | url }}" class="menu-item-link">
+                            <i class="menu-item-bullet"></i>
+                            <span class="menu-item-text">Toastr</span>
+                        </a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="{{ 'dashboard1/ltr/elements/advanced/treeview.html' | url }}" class="menu-item-link">
+                            <i class="menu-item-bullet"></i>
+                            <span class="menu-item-text">Treeview</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- END Menu Submenu -->
+
+            </div>
+            <div class="menu-item">
+                <button class="menu-item-link menu-item-toggle">
+                    <div class="menu-item-icon">
+                        <i class="fa fa-icons"></i>
+                    </div>
+                    <span class="menu-item-text">Icons</span>
+                    <div class="menu-item-addon">
+                        <i class="menu-item-caret caret"></i>
+                    </div>
+                </button>
+
+                <!-- BEGIN Menu Submenu -->
+                <div class="menu-submenu">
+                    <div class="menu-item">
+                        <a href="{{ 'dashboard1/ltr/icons/fontawesome.html' | url }}" class="menu-item-link">
+                            <i class="menu-item-bullet"></i>
+                            <span class="menu-item-text">Font Awesome</span>
+                        </a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="{{ 'dashboard1/ltr/icons/feather.html' | url }}" class="menu-item-link">
+                            <i class="menu-item-bullet"></i>
+                            <span class="menu-item-text">Feather</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- END Menu Submenu -->
+
+            </div>
+            <div class="menu-item">
+                <button class="menu-item-link menu-item-toggle">
+                    <div class="menu-item-icon">
+                        <i class="fa fa-window-restore"></i>
+                    </div>
+                    <span class="menu-item-text">Portlet</span>
+                    <div class="menu-item-addon">
+                        <i class="menu-item-caret caret"></i>
+                    </div>
+                </button>
+
+                <!-- BEGIN Menu Submenu -->
+                <div class="menu-submenu">
+                    <div class="menu-item">
+                        <a href="{{ 'dashboard1/ltr/portlet/base.html' | url }}" class="menu-item-link">
+                            <i class="menu-item-bullet"></i>
+                            <span class="menu-item-text">Base</span>
+                        </a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="{{ 'dashboard1/ltr/portlet/drag.html' | url }}" class="menu-item-link">
+                            <i class="menu-item-bullet"></i>
+                            <span class="menu-item-text">Draggable</span>
+                        </a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="{{ 'dashboard1/ltr/portlet/tab.html' | url }}" class="menu-item-link">
+                            <i class="menu-item-bullet"></i>
+                            <span class="menu-item-text">Tab</span>
+                        </a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="{{ 'dashboard1/ltr/portlet/tool.html' | url }}" class="menu-item-link">
+                            <i class="menu-item-bullet"></i>
+                            <span class="menu-item-text">Tool</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- END Menu Submenu -->
+
+            </div>
+            <div class="menu-item">
+                <button class="menu-item-link menu-item-toggle">
+                    <div class="menu-item-icon">
+                        <i class="fa fa-shapes"></i>
+                    </div>
+                    <span class="menu-item-text">Widget</span>
+                    <div class="menu-item-addon">
+                        <i class="menu-item-caret caret"></i>
+                    </div>
+                </button>
+
+                <!-- BEGIN Menu Submenu -->
+                <div class="menu-submenu">
+                    <div class="menu-item">
+                        <a href="{{ 'dashboard1/ltr/widgets/general.html' | url }}" class="menu-item-link">
+                            <i class="menu-item-bullet"></i>
+                            <span class="menu-item-text">General</span>
+                        </a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="{{ 'dashboard1/ltr/widgets/chart.html' | url }}" class="menu-item-link">
+                            <i class="menu-item-bullet"></i>
+                            <span class="menu-item-text">Chart</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- END Menu Submenu -->
+
+            </div>
+
+            <!-- BEGIN Menu Section -->
+            <div class="menu-section">
+                <div class="menu-section-icon">
+                    <i class="fa fa-ellipsis-h"></i>
+                </div>
+                <h2 class="menu-section-text">Data</h2>
+            </div>
+            <!-- END Menu Section -->
+
+            <div class="menu-item">
+                <a href="{{ 'dashboard1/ltr/chart/apex-chart.html' | url }}" class="menu-item-link">
+                    <div class="menu-item-icon">
+                        <i class="fa fa-chart-pie"></i>
+                    </div>
+                    <span class="menu-item-text">Charts</span>
+                </a>
+            </div>
+            <div class="menu-item">
+                <button class="menu-item-link menu-item-toggle">
+                    <div class="menu-item-icon">
+                        <i class="fa fa-table"></i>
+                    </div>
+                    <span class="menu-item-text">Datatable</span>
+                    <div class="menu-item-addon">
+                        <i class="menu-item-caret caret"></i>
+                    </div>
+                </button>
+
+                <!-- BEGIN Menu Submenu -->
+                <div class="menu-submenu">
+                    <div class="menu-item">
+                        <button class="menu-item-link menu-item-toggle">
+                            <i class="menu-item-bullet"></i>
+                            <span class="menu-item-text">Basic</span>
+                            <div class="menu-item-addon">
+                                <i class="menu-item-caret caret"></i>
+                            </div>
+                        </button>
+
+                        <!-- BEGIN Menu Submenu -->
+                        <div class="menu-submenu">
+                            <div class="menu-item">
+                                <a href="{{ 'dashboard1/ltr/datatable/basic/base.html' | url }}" class="menu-item-link">
+                                    <i class="menu-item-bullet"></i>
+                                    <span class="menu-item-text">Base</span>
+                                </a>
+                            </div>
+                            <div class="menu-item">
+                                <a href="{{ 'dashboard1/ltr/datatable/basic/footer.html' | url }}" class="menu-item-link">
+                                    <i class="menu-item-bullet"></i>
+                                    <span class="menu-item-text">Footer</span>
+                                </a>
+                            </div>
+                            <div class="menu-item">
+                                <a href="{{ 'dashboard1/ltr/datatable/basic/scrollable.html' | url }}" class="menu-item-link">
+                                    <i class="menu-item-bullet"></i>
+                                    <span class="menu-item-text">Scrollable</span>
+                                </a>
+                            </div>
+                            <div class="menu-item">
+                                <a href="{{ 'dashboard1/ltr/datatable/basic/pagination.html' | url }}" class="menu-item-link">
+                                    <i class="menu-item-bullet"></i>
+                                    <span class="menu-item-text">Pagination</span>
+                                </a>
+                            </div>
+                            <div class="menu-item">
+                                <a href="{{ 'dashboard1/ltr/datatable/basic/menu.html' | url }}" class="menu-item-link">
+                                    <i class="menu-item-bullet"></i>
+                                    <span class="menu-item-text">Length menu</span>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- END Menu Submenu -->
+
+                    </div>
+                    <div class="menu-item">
+                        <button class="menu-item-link menu-item-toggle">
+                            <i class="menu-item-bullet"></i>
+                            <span class="menu-item-text">Advanced</span>
+                            <div class="menu-item-addon">
+                                <i class="menu-item-caret caret"></i>
+                            </div>
+                        </button>
+
+                        <!-- BEGIN Menu Submenu -->
+                        <div class="menu-submenu">
+                            <div class="menu-item">
+                                <a href="{{ 'dashboard1/ltr/datatable/advanced/column-rendering.html' | url }}" class="menu-item-link">
+                                    <i class="menu-item-bullet"></i>
+                                    <span class="menu-item-text">Column rendering</span>
+                                </a>
+                            </div>
+                            <div class="menu-item">
+                                <a href="{{ 'dashboard1/ltr/datatable/advanced/column-visibility.html' | url }}" class="menu-item-link">
+                                    <i class="menu-item-bullet"></i>
+                                    <span class="menu-item-text">Column visibility</span>
+                                </a>
+                            </div>
+                            <div class="menu-item">
+                                <a href="{{ 'dashboard1/ltr/datatable/advanced/footer-callback.html' | url }}" class="menu-item-link">
+                                    <i class="menu-item-bullet"></i>
+                                    <span class="menu-item-text">Footer callback</span>
+                                </a>
+                            </div>
+                            <div class="menu-item">
+                                <a href="{{ 'dashboard1/ltr/datatable/advanced/multiple-controls.html' | url }}" class="menu-item-link">
+                                    <i class="menu-item-bullet"></i>
+                                    <span class="menu-item-text">Multiple controls</span>
+                                </a>
+                            </div>
+                            <div class="menu-item">
+                                <a href="{{ 'dashboard1/ltr/datatable/advanced/row-callback.html' | url }}" class="menu-item-link">
+                                    <i class="menu-item-bullet"></i>
+                                    <span class="menu-item-text">Row callback</span>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- END Menu Submenu -->
+
+                    </div>
+                    <div class="menu-item">
+                        <button class="menu-item-link menu-item-toggle">
+                            <i class="menu-item-bullet"></i>
+                            <span class="menu-item-text">Source</span>
+                            <div class="menu-item-addon">
+                                <i class="menu-item-caret caret"></i>
+                            </div>
+                        </button>
+
+                        <!-- BEGIN Menu Submenu -->
+                        <div class="menu-submenu">
+                            <div class="menu-item">
+                                <a href="{{ 'dashboard1/ltr/datatable/source/html.html' | url }}" class="menu-item-link">
+                                    <i class="menu-item-bullet"></i>
+                                    <span class="menu-item-text">HTML</span>
+                                </a>
+                            </div>
+                            <div class="menu-item">
+                                <a href="{{ 'dashboard1/ltr/datatable/source/javascript.html' | url }}" class="menu-item-link">
+                                    <i class="menu-item-bullet"></i>
+                                    <span class="menu-item-text">Javascript</span>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- END Menu Submenu -->
+
+                    </div>
+                    <div class="menu-item">
+                        <button class="menu-item-link menu-item-toggle">
+                            <i class="menu-item-bullet"></i>
+                            <span class="menu-item-text">Extension</span>
+                            <div class="menu-item-addon">
+                                <i class="menu-item-caret caret"></i>
+                            </div>
+                        </button>
+
+                        <!-- BEGIN Menu Submenu -->
+                        <div class="menu-submenu">
+                            <div class="menu-item">
+                                <a href="{{ 'dashboard1/ltr/datatable/extension/autofill.html' | url }}" class="menu-item-link">
+                                    <i class="menu-item-bullet"></i>
+                                    <span class="menu-item-text">Auto fill</span>
+                                </a>
+                            </div>
+                            <div class="menu-item">
+                                <a href="{{ 'dashboard1/ltr/datatable/extension/buttons.html' | url }}" class="menu-item-link">
+                                    <i class="menu-item-bullet"></i>
+                                    <span class="menu-item-text">Buttons</span>
+                                </a>
+                            </div>
+                            <div class="menu-item">
+                                <a href="{{ 'dashboard1/ltr/datatable/extension/column-reorder.html' | url }}" class="menu-item-link">
+                                    <i class="menu-item-bullet"></i>
+                                    <span class="menu-item-text">Column reorder</span>
+                                </a>
+                            </div>
+                            <div class="menu-item">
+                                <a href="{{ 'dashboard1/ltr/datatable/extension/fixed-header.html' | url }}" class="menu-item-link">
+                                    <i class="menu-item-bullet"></i>
+                                    <span class="menu-item-text">Fixed header</span>
+                                </a>
+                            </div>
+                            <div class="menu-item">
+                                <a href="{{ 'dashboard1/ltr/datatable/extension/fixed-column.html' | url }}" class="menu-item-link">
+                                    <i class="menu-item-bullet"></i>
+                                    <span class="menu-item-text">Fixed column</span>
+                                </a>
+                            </div>
+                            <div class="menu-item">
+                                <a href="{{ 'dashboard1/ltr/datatable/extension/key-table.html' | url }}" class="menu-item-link">
+                                    <i class="menu-item-bullet"></i>
+                                    <span class="menu-item-text">Key table</span>
+                                </a>
+                            </div>
+                            <div class="menu-item">
+                                <a href="{{ 'dashboard1/ltr/datatable/extension/row-group.html' | url }}" class="menu-item-link">
+                                    <i class="menu-item-bullet"></i>
+                                    <span class="menu-item-text">Row group</span>
+                                </a>
+                            </div>
+                            <div class="menu-item">
+                                <a href="{{ 'dashboard1/ltr/datatable/extension/row-reorder.html' | url }}" class="menu-item-link">
+                                    <i class="menu-item-bullet"></i>
+                                    <span class="menu-item-text">Row reorder</span>
+                                </a>
+                            </div>
+                            <div class="menu-item">
+                                <a href="{{ 'dashboard1/ltr/datatable/extension/scroller.html' | url }}" class="menu-item-link">
+                                    <i class="menu-item-bullet"></i>
+                                    <span class="menu-item-text">Scroller</span>
+                                </a>
+                            </div>
+                            <div class="menu-item">
+                                <a href="{{ 'dashboard1/ltr/datatable/extension/search-panes.html' | url }}" class="menu-item-link">
+                                    <i class="menu-item-bullet"></i>
+                                    <span class="menu-item-text">Search panes</span>
+                                </a>
+                            </div>
+                            <div class="menu-item">
+                                <a href="{{ 'dashboard1/ltr/datatable/extension/select.html' | url }}" class="menu-item-link">
+                                    <i class="menu-item-bullet"></i>
+                                    <span class="menu-item-text">Select</span>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- END Menu Submenu -->
+
+                    </div>
+                </div>
+                <!-- END Menu Submenu -->
+
+            </div>
+
+            <!-- BEGIN Menu Section -->
+            <div class="menu-section">
+                <div class="menu-section-icon">
+                    <i class="fa fa-ellipsis-h"></i>
+                </div>
+                <h2 class="menu-section-text">Form</h2>
+            </div>
+            <!-- END Menu Section -->
+
+            <div class="menu-item">
+                <button class="menu-item-link menu-item-toggle">
+                    <div class="menu-item-icon">
+                        <i class="fa fa-dice"></i>
+                    </div>
+                    <span class="menu-item-text">Basic</span>
+                    <div class="menu-item-addon">
+                        <i class="menu-item-caret caret"></i>
+                    </div>
+                </button>
+
+                <!-- BEGIN Menu Submenu -->
+                <div class="menu-submenu">
+                    <div class="menu-item">
+                        <a href="{{ 'dashboard1/ltr/form/basic/base.html' | url }}" class="menu-item-link">
+                            <i class="menu-item-bullet"></i>
+                            <span class="menu-item-text">Base</span>
+                        </a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="{{ 'dashboard1/ltr/form/basic/custom.html' | url }}" class="menu-item-link">
+                            <i class="menu-item-bullet"></i>
+                            <span class="menu-item-text">Custom</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- END Menu Submenu -->
+
+            </div>
+            <div class="menu-item">
+                <button class="menu-item-link menu-item-toggle">
+                    <div class="menu-item-icon">
+                        <i class="fa fa-fill-drip"></i>
+                    </div>
+                    <span class="menu-item-text">Advanced</span>
+                    <div class="menu-item-addon">
+                        <i class="menu-item-caret caret"></i>
+                    </div>
+                </button>
+
+                <!-- BEGIN Menu Submenu -->
+                <div class="menu-submenu">
+                    <div class="menu-item">
+                        <a href="{{ 'dashboard1/ltr/form/advanced/autosize.html' | url }}" class="menu-item-link">
+                            <i class="menu-item-bullet"></i>
+                            <span class="menu-item-text">Autosize</span>
+                        </a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="{{ 'dashboard1/ltr/form/advanced/bs-select.html' | url }}" class="menu-item-link">
+                            <i class="menu-item-bullet"></i>
+                            <span class="menu-item-text">Bootstrap select</span>
+                        </a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="{{ 'dashboard1/ltr/form/advanced/bs-maxlength.html' | url }}" class="menu-item-link">
+                            <i class="menu-item-bullet"></i>
+                            <span class="menu-item-text">Bootstrap maxlength</span>
+                        </a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="{{ 'dashboard1/ltr/form/advanced/clipboard.html' | url }}" class="menu-item-link">
+                            <i class="menu-item-bullet"></i>
+                            <span class="menu-item-text">Clipboard</span>
+                        </a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="{{ 'dashboard1/ltr/form/advanced/datepicker.html' | url }}" class="menu-item-link">
+                            <i class="menu-item-bullet"></i>
+                            <span class="menu-item-text">Date picker</span>
+                        </a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="{{ 'dashboard1/ltr/form/advanced/datetimepicker.html' | url }}" class="menu-item-link">
+                            <i class="menu-item-bullet"></i>
+                            <span class="menu-item-text">Date time picker</span>
+                        </a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="{{ 'dashboard1/ltr/form/advanced/daterangepicker.html' | url }}" class="menu-item-link">
+                            <i class="menu-item-bullet"></i>
+                            <span class="menu-item-text">Date range picker</span>
+                        </a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="{{ 'dashboard1/ltr/form/advanced/inputmask.html' | url }}" class="menu-item-link">
+                            <i class="menu-item-bullet"></i>
+                            <span class="menu-item-text">Input mask</span>
+                        </a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="{{ 'dashboard1/ltr/form/advanced/select2.html' | url }}" class="menu-item-link">
+                            <i class="menu-item-bullet"></i>
+                            <span class="menu-item-text">Select2</span>
+                        </a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="{{ 'dashboard1/ltr/form/advanced/slider.html' | url }}" class="menu-item-link">
+                            <i class="menu-item-bullet"></i>
+                            <span class="menu-item-text">Slider</span>
+                        </a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="{{ 'dashboard1/ltr/form/advanced/touchspin.html' | url }}" class="menu-item-link">
+                            <i class="menu-item-bullet"></i>
+                            <span class="menu-item-text">Touchspin</span>
+                        </a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="{{ 'dashboard1/ltr/form/advanced/typeahead.html' | url }}" class="menu-item-link">
+                            <i class="menu-item-bullet"></i>
+                            <span class="menu-item-text">Typeahead</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- END Menu Submenu -->
+
+            </div>
+            <div class="menu-item">
+                <button class="menu-item-link menu-item-toggle">
+                    <div class="menu-item-icon">
+                        <i class="fa fa-pencil-ruler"></i>
+                    </div>
+                    <span class="menu-item-text">Editor</span>
+                    <div class="menu-item-addon">
+                        <i class="menu-item-caret caret"></i>
+                    </div>
+                </button>
+
+                <!-- BEGIN Menu Submenu -->
+                <div class="menu-submenu">
+                    <div class="menu-item">
+                        <a href="{{ 'dashboard1/ltr/editor/basic.html' | url }}" class="menu-item-link">
+                            <i class="menu-item-bullet"></i>
+                            <span class="menu-item-text">Basic</span>
+                        </a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="{{ 'dashboard1/ltr/editor/bubble.html' | url }}" class="menu-item-link">
+                            <i class="menu-item-bullet"></i>
+                            <span class="menu-item-text">Bubble</span>
+                        </a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="{{ 'dashboard1/ltr/editor/complex.html' | url }}" class="menu-item-link">
+                            <i class="menu-item-bullet"></i>
+                            <span class="menu-item-text">Complex</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- END Menu Submenu -->
+
+            </div>
+            <div class="menu-item">
+                <a href="{{ 'dashboard1/ltr/form/layout.html' | url }}" class="menu-item-link">
+                    <div class="menu-item-icon">
+                        <i class="fa fa-ruler-combined"></i>
+                    </div>
+                    <span class="menu-item-text">Layout</span>
+                </a>
+            </div>
+            <div class="menu-item">
+                <a href="{{ 'dashboard1/ltr/form/validation.html' | url }}" class="menu-item-link">
+                    <div class="menu-item-icon">
+                        <i class="fa fa-check"></i>
+                    </div>
+                    <span class="menu-item-text">Validation</span>
+                </a>
+            </div>
+
+            <!-- BEGIN Menu Section -->
+            <div class="menu-section">
+                <div class="menu-section-icon">
+                    <i class="fa fa-ellipsis-h"></i>
+                </div>
+                <h2 class="menu-section-text">Pages</h2>
+            </div>
+            <!-- END Menu Section -->
+
+            <div class="menu-item">
+                <button class="menu-item-link menu-item-toggle">
+                    <div class="menu-item-icon">
+                        <i class="fa fa-unlock-alt"></i>
+                    </div>
+                    <span class="menu-item-text">Login</span>
+                    <div class="menu-item-addon">
+                        <i class="menu-item-caret caret"></i>
+                    </div>
+                </button>
+
+                <!-- BEGIN Menu Submenu -->
+                <div class="menu-submenu">
+                    <div class="menu-item">
+                        <a href="{{ 'dashboard1/ltr/pages/login/login-1.html' | url }}" class="menu-item-link">
+                            <i class="menu-item-bullet"></i>
+                            <span class="menu-item-text">Login 1</span>
+                        </a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="{{ 'dashboard1/ltr/pages/login/login-2.html' | url }}" class="menu-item-link">
+                            <i class="menu-item-bullet"></i>
+                            <span class="menu-item-text">Login 2</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- END Menu Submenu -->
+
+            </div>
+            <div class="menu-item">
+                <button class="menu-item-link menu-item-toggle">
+                    <div class="menu-item-icon">
+                        <i class="fa fa-user-plus"></i>
+                    </div>
+                    <span class="menu-item-text">Register</span>
+                    <div class="menu-item-addon">
+                        <i class="menu-item-caret caret"></i>
+                    </div>
+                </button>
+
+                <!-- BEGIN Menu Submenu -->
+                <div class="menu-submenu">
+                    <div class="menu-item">
+                        <a href="{{ 'dashboard1/ltr/pages/register/register-1.html' | url }}" class="menu-item-link">
+                            <i class="menu-item-bullet"></i>
+                            <span class="menu-item-text">Register 1</span>
+                        </a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="{{ 'dashboard1/ltr/pages/register/register-2.html' | url }}" class="menu-item-link">
+                            <i class="menu-item-bullet"></i>
+                            <span class="menu-item-text">Register 2</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- END Menu Submenu -->
+
+            </div>
+            <div class="menu-item">
+                <button class="menu-item-link menu-item-toggle">
+                    <div class="menu-item-icon">
+                        <i class="fa fa-unlink"></i>
+                    </div>
+                    <span class="menu-item-text">Error</span>
+                    <div class="menu-item-addon">
+                        <i class="menu-item-caret caret"></i>
+                    </div>
+                </button>
+
+                <!-- BEGIN Menu Submenu -->
+                <div class="menu-submenu">
+                    <div class="menu-item">
+                        <a href="{{ 'dashboard1/ltr/pages/error/error-1.html' | url }}" class="menu-item-link">
+                            <i class="menu-item-bullet"></i>
+                            <span class="menu-item-text">Error 1</span>
+                        </a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="{{ 'dashboard1/ltr/pages/error/error-2.html' | url }}" class="menu-item-link">
+                            <i class="menu-item-bullet"></i>
+                            <span class="menu-item-text">Error 2</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- END Menu Submenu -->
+
+            </div>
+        </div>
+        <!-- END Menu -->
+
+    </div>
+</div>
+<!-- END Aside -->

@@ -1,0 +1,121 @@
+@import "../../../variables";
+
+@keyframes dtb-spinner {
+    100% { transform: rotate(360deg); }
+}
+
+// Button group
+.dt-button-collection {
+    position: absolute;
+    right: auto !important;
+    left: 0 !important;
+    padding: $datatable-btn-collection-padding-y $datatable-btn-collection-padding-x;
+    z-index: $zindex-dt-btn-collection;
+    border-width: $datatable-btn-collection-border-width;
+    border-style: solid;
+    @include border-radius($datatable-btn-collection-border-radius);
+    @include theme-variant("light") {
+        background: $datatable-btn-collection-bg-light;
+        border-color: $datatable-btn-collection-border-color-light;
+    }
+    @include theme-variant("dark") {
+        background: $datatable-btn-collection-bg-dark;
+        border-color: $datatable-btn-collection-border-color-dark;
+    }
+
+    // Reset default dropdown menu drom bootstrap
+    .dropdown-menu {
+        position: static;
+        display: block !important;
+        min-width: 100%;
+        background: transparent;
+        margin: 0;
+        padding: 0 !important;
+        border: 0 !important;
+        z-index: $zindex-dt-btn-collection + 1;
+
+        .btn-group { width: 100%; }
+    }
+
+    // Modifier class to position dropdown to center of page
+    &.fixed {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    // Number of collumns classes
+    &.two-column {
+        width: $datatable-btn-collection-2col-width;
+        > .dropdown-menu { column-count: 2; }
+    }
+
+    &.three-column {
+        width: $datatable-btn-collection-3col-width;
+        > .dropdown-menu { column-count: 3; }
+    }
+
+    &.four-column {
+        width: $datatable-btn-collection-4col-width;
+        > .dropdown-menu { column-count: 4; }
+    }
+}
+
+// Button group title
+.dt-button-collection-title {
+    font-size: $datatable-btn-collection-title-font-size;
+    font-weight: $datatable-btn-collection-title-font-weight;
+    padding: $datatable-btn-collection-title-padding-y $datatable-btn-collection-title-padding-x;
+    text-align: center;
+    @include theme-variant("light") {
+        color: $datatable-btn-collection-title-color-light;
+    }
+    @include theme-variant("dark") {
+        color: $datatable-btn-collection-title-color-dark;
+    }
+
+    &:empty { display: none; }
+}
+
+// Backdrop for fixed button group
+.dt-button-background {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: $zindex-dt-btn-collection - 1;
+}
+
+.dt-buttons {
+
+    // Loading state for button
+    .btn.processing {
+        position: relative;
+        @include theme-variant("light") {
+            color: $datatable-btn-collection-spinner-color-light;
+        }
+        @include theme-variant("dark") {
+            color: $datatable-btn-collection-spinner-color-dark;
+        }
+
+        // Spinner inside the button
+        &:after {
+            content: "";
+            position: absolute;
+            display: block;
+            width: $datatable-btn-collection-spinner-dimension;
+            height: $datatable-btn-collection-spinner-dimension;
+            margin-left: -#{$datatable-btn-collection-spinner-dimension / 2};
+            margin-top: -#{$datatable-btn-collection-spinner-dimension / 2};
+            border: $datatable-btn-collection-spinner-border-width solid $datatable-btn-collection-spinner-border-color;
+            border-left-color: transparent;
+            border-right-color: transparent;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            animation: $datatable-btn-collection-spinner-animation;
+        }
+    }
+}

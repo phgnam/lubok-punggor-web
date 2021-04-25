@@ -1,0 +1,429 @@
+{
+  "config": {
+    "port": 2000,
+    "production": false,
+    "css_style": "nested",
+    "html_beautify": true,
+    "sourcemaps": true,
+    "skip": [],
+    "output": {
+      "styles": {
+        "core": "core.css",
+        "vendor": "vendor.css"
+      },
+      "scripts": {
+        "core": "core.js",
+        "mandatory": "mandatory.js",
+        "vendor": "vendor.js"
+      }
+    },
+    "path": {
+      "src": "src",
+      "src_assets": "src/assets",
+      "src_build": "src/build",
+      "src_pages": "src/pages",
+      "src_app": "src/app",
+      "dist": "dist",
+      "dist_assets": "dist/assets",
+      "dist_build": "dist/assets/build",
+      "dist_build_styles": "dist/assets/build/styles",
+      "dist_build_scripts": "dist/assets/build/scripts",
+      "dist_pages": "dist",
+      "dist_app": "dist/assets/app",
+      "node_modules": "node_modules"
+    }
+  },
+  "build": {
+    "core": {
+      "styles": {
+        "watch": ["src/build/core/styles/**/*.scss"],
+        "compile": ["src/build/core/styles/index.scss"]
+      },
+      "scripts": [
+        "src/build/core/scripts/util.js",
+        "src/build/core/scripts/button.js",
+        "src/build/core/scripts/dropdown.js",
+        "src/build/core/scripts/alert.js",
+        "src/build/core/scripts/modal.js",
+        "src/build/core/scripts/tab.js",
+        "src/build/core/scripts/tooltip.js",
+        "src/build/core/scripts/popover.js",
+        "src/build/core/scripts/collapse.js",
+        "src/build/core/scripts/preload.js",
+        "src/build/core/scripts/sidemenu.js",
+        "src/build/core/scripts/scrolltop.js",
+        "src/build/core/scripts/portlet.js",
+        "src/build/core/scripts/menu.js"
+      ]
+    },
+    "custom": {
+      "dashboard1": {
+        "scripts": [
+          "src/build/custom/dashboard1/scripts/aside.js",
+          "src/build/custom/dashboard1/scripts/init.js"
+        ],
+        "styles": {
+          "watch": ["src/build/custom/dashboard1/styles/**/*.scss"],
+          "compile": ["src/build/custom/dashboard1/styles/index.scss"]
+        }
+      },
+      "dashboard2": {
+        "scripts": ["src/build/custom/dashboard2/scripts/init.js"],
+        "styles": {
+          "watch": ["src/build/custom/dashboard2/styles/**/*.scss"],
+          "compile": ["src/build/custom/dashboard2/styles/index.scss"]
+        }
+      },
+      "dashboard3": {
+        "scripts": [
+          "src/build/custom/dashboard3/scripts/aside.js",
+          "src/build/custom/dashboard3/scripts/init.js"
+        ],
+        "styles": {
+          "watch": ["src/build/custom/dashboard3/styles/**/*.scss"],
+          "compile": ["src/build/custom/dashboard3/styles/index.scss"]
+        }
+      },
+      "dashboard4": {
+        "scripts": ["src/build/custom/dashboard4/scripts/init.js"],
+        "styles": {
+          "watch": ["src/build/custom/dashboard4/styles/**/*.scss"],
+          "compile": ["src/build/custom/dashboard4/styles/index.scss"]
+        }
+      },
+      "dashboard5": {
+        "scripts": [
+          "src/build/custom/dashboard5/scripts/aside.js",
+          "src/build/custom/dashboard5/scripts/sidebar.js",
+          "src/build/custom/dashboard5/scripts/init.js"
+        ],
+        "styles": {
+          "watch": ["src/build/custom/dashboard5/styles/**/*.scss"],
+          "compile": ["src/build/custom/dashboard5/styles/index.scss"]
+        }
+      },
+      "dashboard6": {
+        "scripts": ["src/build/custom/dashboard6/scripts/init.js"],
+        "styles": {
+          "watch": ["src/build/custom/dashboard6/styles/**/*.scss"],
+          "compile": ["src/build/custom/dashboard6/styles/index.scss"]
+        }
+      },
+      "dashboard7": {
+        "scripts": [
+          "src/build/custom/dashboard7/scripts/aside.js",
+          "src/build/custom/dashboard7/scripts/sidebar.js",
+          "src/build/custom/dashboard7/scripts/init.js"
+        ],
+        "styles": {
+          "watch": ["src/build/custom/dashboard7/styles/**/*.scss"],
+          "compile": ["src/build/custom/dashboard7/styles/index.scss"]
+        }
+      },
+      "dashboard8": {
+        "scripts": [
+          "src/build/custom/dashboard8/scripts/aside.js",
+          "src/build/custom/dashboard8/scripts/init.js"
+        ],
+        "styles": {
+          "watch": ["src/build/custom/dashboard8/styles/**/*.scss"],
+          "compile": ["src/build/custom/dashboard8/styles/index.scss"]
+        }
+      },
+      "chatting": {
+        "scripts": [
+          "src/build/custom/chatting/scripts/layout.js",
+          "src/build/custom/chatting/scripts/init.js"
+        ],
+        "styles": {
+          "watch": ["src/build/custom/chatting/styles/**/*.scss"],
+          "compile": ["src/build/custom/chatting/styles/index.scss"]
+        }
+      },
+      "criptocurrency": {
+        "scripts": [
+          "src/build/custom/criptocurrency/scripts/aside.js",
+          "src/build/custom/criptocurrency/scripts/init.js"
+        ],
+        "styles": {
+          "watch": ["src/build/custom/criptocurrency/styles/**/*.scss"],
+          "compile": ["src/build/custom/criptocurrency/styles/index.scss"]
+        }
+      },
+      "email": {
+        "scripts": [
+          "src/build/custom/email/scripts/aside.js",
+          "src/build/custom/email/scripts/sidebar.js",
+          "src/build/custom/email/scripts/init.js"
+        ],
+        "styles": {
+          "watch": ["src/build/custom/email/styles/**/*.scss"],
+          "compile": ["src/build/custom/email/styles/index.scss"]
+        }
+      }
+    },
+    "vendors": {
+      "mandatory": {
+        "jquery": {
+          "scripts": ["node_modules/jquery/dist/jquery.js"]
+        },
+        "popper.js": {
+          "scripts": ["node_modules/popper.js/dist/umd/popper.js"]
+        },
+        "moment": {
+          "scripts": ["node_modules/moment/moment.js"]
+        },
+        "raphael": {
+          "scripts": ["node_modules/raphael/raphael.js"]
+        },
+        "handlebars": {
+          "scripts": ["node_modules/handlebars/dist/handlebars.js"]
+        }
+      },
+      "optional": {
+        "apexcharts": {
+          "styles": {
+            "watch": ["src/build/vendors/apexcharts/styles/*.scss"],
+            "compile": ["src/build/vendors/apexcharts/styles/apexcharts.scss"]
+          },
+          "scripts": ["src/build/vendors/apexcharts/scripts/apexcharts.js"]
+        },
+        "axios": {
+          "scripts": ["src/build/vendors/axios/scripts/axios.min.js"]
+        },
+        "autosize": {
+          "scripts": ["node_modules/autosize/dist/autosize.js"]
+        },
+        "block-ui": {
+          "styles": ["src/build/vendors/block-ui/styles/block-ui.scss"],
+          "scripts": ["src/build/vendors/block-ui/scripts/block-ui.js"]
+        },
+        "bootstrap-datepicker": {
+          "styles": [
+            "src/build/vendors/bootstrap-datepicker/styles/bootstrap-datepicker.scss"
+          ],
+          "scripts": [
+            "src/build/vendors/bootstrap-datepicker/scripts/bootstrap-datepicker.js",
+            "node_modules/bootstrap-datepicker/dist/locales/bootstrap-datepicker.ru.min.js"
+          ]
+        },
+        "bootstrap-daterangepicker": {
+          "styles": {
+            "watch": [
+              "src/build/vendors/bootstrap-daterangepicker/styles/*.scss"
+            ],
+            "compile": [
+              "src/build/vendors/bootstrap-daterangepicker/styles/daterangepicker.scss"
+            ]
+          },
+          "scripts": [
+            "src/build/vendors/bootstrap-daterangepicker/scripts/daterangepicker.js"
+          ]
+        },
+        "bootstrap-datetime-picker": {
+          "styles": [
+            "src/build/vendors/bootstrap-datetime-picker/styles/datetimepicker.scss"
+          ],
+          "scripts": [
+            "src/build/vendors/bootstrap-datetime-picker/scripts/bootstrap-datetimepicker.js",
+            "node_modules/bootstrap-datetime-picker/js/locales/bootstrap-datetimepicker.ru.js"
+          ]
+        },
+        "bootstrap-maxlength": {
+          "scripts": [
+            "src/build/vendors/bootstrap-maxlength/scripts/bootstrap-maxlength.js"
+          ]
+        },
+        "bootstrap-select": {
+          "styles": {
+            "watch": ["src/build/vendors/bootstrap-select/styles/*.scss"],
+            "compile": [
+              "src/build/vendors/bootstrap-select/styles/bootstrap-select.scss"
+            ]
+          },
+          "scripts": [
+            "src/build/vendors/bootstrap-select/scripts/bootstrap-select.js"
+          ]
+        },
+        "bootstrap-touchspin": {
+          "styles": [
+            "src/build/vendors/bootstrap-touchspin/styles/bootstrap-touchspin.scss"
+          ],
+          "scripts": [
+            "node_modules/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.js"
+          ]
+        },
+        "clipboard": {
+          "scripts": ["node_modules/clipboard/dist/clipboard.js"]
+        },
+        "datatables.net": {
+          "styles": [
+            "src/build/vendors/datatables.net/bootstrap/styles/dataTables.bootstrap4.scss",
+            "src/build/vendors/datatables.net/autofill/styles/autoFill.bootstrap4.scss",
+            "src/build/vendors/datatables.net/buttons/styles/buttons.bootstrap4.scss",
+            "src/build/vendors/datatables.net/colreorder/styles/colReorder.bootstrap4.scss",
+            "src/build/vendors/datatables.net/fixedcolumns/styles/fixedColumns.bootstrap4.scss",
+            "src/build/vendors/datatables.net/fixedheader/styles/fixedHeader.bootstrap4.scss",
+            "src/build/vendors/datatables.net/keytable/styles/keyTable.bootstrap4.scss",
+            "src/build/vendors/datatables.net/responsive/styles/responsive.bootstrap4.scss",
+            "src/build/vendors/datatables.net/rowgroup/styles/rowGroup.bootstrap4.scss",
+            "src/build/vendors/datatables.net/rowreorder/styles/rowReorder.bootstrap4.scss",
+            "src/build/vendors/datatables.net/scroller/styles/scroller.bootstrap4.scss",
+            "src/build/vendors/datatables.net/searchpanes/styles/searchPanes.bootstrap4.scss",
+            "src/build/vendors/datatables.net/select/styles/select.bootstrap4.scss"
+          ],
+          "scripts": [
+            "node_modules/jszip/dist/jszip.js",
+            "node_modules/pdfmake/build/pdfmake.js",
+            "node_modules/pdfmake/build/vfs_fonts.js",
+            "node_modules/datatables.net/js/jquery.dataTables.js",
+            "node_modules/datatables.net-bs4/js/dataTables.bootstrap4.js",
+            "node_modules/datatables.net-autofill/js/dataTables.autoFill.js",
+            "node_modules/datatables.net-autofill-bs4/js/autoFill.bootstrap4.js",
+            "node_modules/datatables.net-buttons/js/dataTables.buttons.js",
+            "src/build/vendors/datatables.net/buttons/scripts/buttons.bootstrap4.js",
+            "node_modules/datatables.net-buttons/js/buttons.colVis.js",
+            "node_modules/datatables.net-buttons/js/buttons.flash.js",
+            "node_modules/datatables.net-buttons/js/buttons.html5.js",
+            "node_modules/datatables.net-buttons/js/buttons.print.js",
+            "node_modules/datatables.net-colreorder/js/dataTables.colReorder.js",
+            "node_modules/datatables.net-colreorder-bs4/js/colReorder.bootstrap4.js",
+            "node_modules/datatables.net-fixedcolumns/js/dataTables.fixedColumns.js",
+            "node_modules/datatables.net-fixedcolumns-bs4/js/fixedColumns.bootstrap4.js",
+            "node_modules/datatables.net-fixedheader/js/dataTables.fixedHeader.js",
+            "node_modules/datatables.net-fixedheader-bs4/js/fixedHeader.bootstrap4.js",
+            "node_modules/datatables.net-keytable/js/dataTables.keyTable.js",
+            "node_modules/datatables.net-keytable-bs4/js/keyTable.bootstrap4.js",
+            "node_modules/datatables.net-responsive/js/dataTables.responsive.js",
+            "node_modules/datatables.net-responsive-bs4/js/responsive.bootstrap4.js",
+            "node_modules/datatables.net-rowgroup/js/dataTables.rowGroup.js",
+            "node_modules/datatables.net-rowgroup-bs4/js/rowGroup.bootstrap4.js",
+            "node_modules/datatables.net-rowreorder/js/dataTables.rowReorder.js",
+            "node_modules/datatables.net-rowreorder-bs4/js/rowReorder.bootstrap4.js",
+            "node_modules/datatables.net-scroller/js/dataTables.scroller.js",
+            "node_modules/datatables.net-scroller-bs4/js/scroller.bootstrap4.js",
+            "src/build/vendors/datatables.net/searchpanes/scripts/dataTables.searchPanes.js",
+            "src/build/vendors/datatables.net/searchpanes/scripts/searchPanes.bootstrap4.js",
+            "node_modules/datatables.net-select/js/dataTables.select.js",
+            "node_modules/datatables.net-select-bs4/js/select.bootstrap4.js"
+          ]
+        },
+        "feather-icons": {
+          "styles": ["src/build/vendors/feather-icons/styles/feather.scss"],
+          "scripts": [
+            "node_modules/feather-icons/dist/feather.js",
+            "src/build/vendors/feather-icons/scripts/feather.js"
+          ]
+        },
+        "fontawesome": {
+          "styles": {
+            "watch": ["src/build/vendors/fontawesome/styles/*.scss"],
+            "compile": [
+              "node_modules/@fortawesome/fontawesome-free/scss/fontawesome.scss",
+              "src/build/vendors/fontawesome/styles/regular.scss",
+              "src/build/vendors/fontawesome/styles/solid.scss",
+              "src/build/vendors/fontawesome/styles/brands.scss"
+            ]
+          },
+          "fonts": ["node_modules/@fortawesome/fontawesome-free/webfonts/*"]
+        },
+        "inputmask": {
+          "scripts": ["node_modules/inputmask/dist/jquery.inputmask.js"]
+        },
+        "ion-rangeslider": {
+          "styles": {
+            "watch": ["src/build/vendors/ion-rangeslider/styles/*.scss"],
+            "compile": [
+              "src/build/vendors/ion-rangeslider/styles/ion-rangeslider.scss"
+            ]
+          },
+          "scripts": ["node_modules/ion-rangeslider/js/ion.rangeSlider.js"]
+        },
+        "jquery-contextmenu": {
+          "styles": [
+            "src/build/vendors/jquery-contextmenu/styles/context-menu.scss"
+          ],
+          "scripts": [
+            "src/build/vendors/jquery-contextmenu/scripts/jquery.contextMenu.js"
+          ]
+        },
+        "jquery-sticky": {
+          "scripts": ["node_modules/jquery-sticky/jquery.sticky.js"]
+        },
+        "jquery-validation": {
+          "scripts": [
+            "src/build/vendors/jquery-validation/scripts/jquery.validate.js"
+          ]
+        },
+        "jstree": {
+          "styles": {
+            "watch": ["src/build/vendors/jstree/styles/*.scss"],
+            "compile": ["src/build/vendors/jstree/styles/jstree.scss"]
+          },
+          "scripts": ["node_modules/jstree/dist/jstree.js"]
+        },
+        "katex": {
+          "styles": ["src/build/vendors/katex/styles/katex.scss"],
+          "scripts": ["node_modules/katex/dist/katex.js"],
+          "fonts": ["node_modules/katex/dist/fonts/*"]
+        },
+        "quill": {
+          "styles": {
+            "watch": ["src/build/vendors/quill/styles/**/*.scss"],
+            "compile": [
+              "src/build/vendors/quill/styles/snow.scss",
+              "src/build/vendors/quill/styles/bubble.scss"
+            ]
+          },
+          "scripts": ["src/build/vendors/quill/scripts/quill.js"]
+        },
+        "select2": {
+          "styles": {
+            "watch": ["src/build/vendors/select2/styles/*.scss"],
+            "compile": ["src/build/vendors/select2/styles/select2.scss"]
+          },
+          "scripts": ["src/build/vendors/select2/scripts/select2.js"]
+        },
+        "simplebar": {
+          "styles": {
+            "watch": ["src/build/vendors/simplebar/styles/*.scss"],
+            "compile": ["src/build/vendors/simplebar/styles/simplebar.scss"]
+          },
+          "scripts": ["node_modules/simplebar/dist/simplebar.js"]
+        },
+        "slick-carousel": {
+          "styles": {
+            "watch": ["src/build/vendors/slick-carousel/styles/*.scss"],
+            "compile": ["src/build/vendors/slick-carousel/styles/slick.scss"]
+          },
+          "scripts": ["src/build/vendors/slick-carousel/scripts/slick.js"]
+        },
+        "sortablejs": {
+          "styles": ["src/build/vendors/sortablejs/styles/sortable.scss"],
+          "scripts": ["node_modules/sortablejs/dist/sortable.umd.js"]
+        },
+        "sweetalert2": {
+          "styles": {
+            "watch": ["src/build/vendors/sweetalert2/styles/*.scss"],
+            "compile": ["src/build/vendors/sweetalert2/styles/sweetalert2.scss"]
+          },
+          "scripts": ["node_modules/sweetalert2/dist/sweetalert2.js"]
+        },
+        "toastr": {
+          "styles": {
+            "watch": ["src/build/vendors/toastr/styles/*.scss"],
+            "compile": ["src/build/vendors/toastr/styles/toastr.scss"]
+          },
+          "scripts": ["node_modules/toastr/toastr.js"]
+        },
+        "typeahead.js": {
+          "styles": ["src/build/vendors/typeahead.js/styles/typeahead.scss"],
+          "scripts": [
+            "node_modules/typeahead.js/dist/typeahead.jquery.js",
+            "node_modules/typeahead.js/dist/bloodhound.js"
+          ]
+        }
+      }
+    }
+  }
+}

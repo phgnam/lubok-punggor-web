@@ -1,0 +1,23 @@
+.holder {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+}
+
+.wrapper {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	width: 100%;
+	padding-top: $grid-gutter-width;
+	background: $wrapper-bg;
+}
+
+.content {
+	flex: 1;
+
+	> [class*="container"] {
+		height: 100%;
+	}
+}

@@ -1,0 +1,89 @@
+{% extends "components/dashboard1/template.njk" %}
+
+{% set direction = "ltr" %}
+{% set page_title = "Popover" %}
+{% set breadcrumb = [
+    { text: "Dashboard", link: "dashboard1/ltr/index.html" | url, icon: '<i data-feather="home"></i>' },
+    { text: "Elements" },
+    { text: "Base" },
+    { text: "Popover", link: "dashboard1/ltr/elements/base/popover.html" | url }
+] %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+
+            <!-- BEGIN Portlet -->
+            <div class="portlet">
+                <div class="portlet-header portlet-header-bordered">
+                    <h3 class="portlet-title">Popover examples</h3>
+                </div>
+                <div class="portlet-body">
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Basic popover</label>
+                        <div class="col-sm-8 col-lg-9">
+
+                            <!-- BEGIN Popover -->
+                            <button class="btn btn-primary" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">Click me</button>
+                            <!-- END Popover -->
+
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Positions</label>
+                        <div class="col-sm-8 col-lg-9">
+
+                            <!-- BEGIN Popovers -->
+                            <button class="btn btn-primary" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Top</button>
+                            <button class="btn btn-primary" data-container="body" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Right</button>
+                            <button class="btn btn-primary" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Bottom</button>
+                            <button class="btn btn-primary" data-container="body" data-toggle="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Left</button>
+                            <!-- END Popovers -->
+
+                            <p class="mb-0 mt-2">Change popover placement by setting <code>data-placement</code> attribute with <code>top|bottom|right|left</code></p>
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Dismiss on next click</label>
+                        <div class="col-sm-8 col-lg-9">
+
+                            <!-- BEGIN Popover -->
+                            <button class="btn btn-primary" data-toggle="popover" data-trigger="focus" title="Dismissible popover" data-content="And here's some amazing content. It's very engaging. Right?">Dismissible popover</button>
+                            <!-- END Popover -->
+
+                            <p class="mb-0 mt-2">Use the <code>data-trigger="focus"</code> attribute to dismiss popovers on the user’s next click of a different element than the toggle element</p>
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row mb-0">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">HTML content</label>
+                        <div class="col-sm-8 col-lg-9">
+
+                            <!-- BEGIN Popover -->
+                            <button type="button" class="btn btn-primary" data-toggle="popover" title="Popover title" data-html="true" data-content="And here's some amazing <b>HTML</b> content. It's very <code>engaging</code>. Right?">Click me</button>
+                            <!-- END Popover -->
+
+                            <p class="mb-0 mt-2">Enable popover html content by setting <code>data-html="true"</code></p>
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                </div>
+            </div>
+            <!-- END Portlet -->
+
+        </div>
+    </div>
+</div>
+{% endblock %}

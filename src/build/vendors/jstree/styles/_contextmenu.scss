@@ -1,0 +1,123 @@
+.jstree-contextmenu .jstree-anchor {
+	// Disable selection/Copy of UIWebView
+	-webkit-user-select: none;
+	// Disable the IOS popup when long-press on a link
+	-webkit-touch-callout: none;
+}
+
+.vakata-context {
+	z-index: 10;
+	display: none;
+
+	&,
+	ul {
+		position: absolute;
+		width: $jstree-menu-min-width;
+		padding: $jstree-menu-padding-y 0;
+		margin: 0;
+		border-width: $jstree-menu-border-width;
+		border-style: solid;
+		@include border-radius($jstree-menu-border-radius);
+		@include theme-variant("light") {
+			background: $jstree-menu-bg-light;
+			border-color: $jstree-menu-border-color-light;
+	    }
+	    @include theme-variant("dark") {
+			background: $jstree-menu-bg-dark;
+			border-color: $jstree-menu-border-color-dark;
+	    }
+	}
+
+	// Submenu elements
+	ul {
+		list-style: none;
+		left: 100%;
+		margin-top: -#{$jstree-menu-submenu-offset-y};
+	}
+
+	.vakata-context-right ul {
+		left: auto;
+		right: 100%;
+	}
+
+	li {
+		list-style: none;
+
+		// Context menu item element styles
+		> a {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			padding: $jstree-menu-item-padding-y $jstree-menu-item-padding-x;
+			text-decoration: none;
+			white-space: nowrap;
+			@include theme-variant("light") {
+				color: $jstree-menu-item-color-light;
+		    }
+		    @include theme-variant("dark") {
+				color: $jstree-menu-item-color-dark;
+		    }
+			@include icon-size($jstree-menu-icon-size);
+			@include icon-style{
+				display: inline-block;
+				width: $jstree-menu-icon-dimension;
+				margin-right: $jstree-menu-icon-spacer;
+				text-align: center;
+				vertical-align: top;
+			}
+
+			// Add caret when the element has parent
+			&.vakata-context-parent {
+				@include caret(right) {
+					flex: 1;
+					text-align: right;
+					margin-left: $jstree-menu-caret-spacer;
+				}
+			}
+
+			&:focus { outline: 0; }
+
+			.vakata-contextmenu-sep { display: none; }
+		}
+	}
+
+	.vakata-context-separator {
+		height: $jstree-menu-separator-width;
+		max-height: $jstree-menu-separator-width;
+		padding: 0;
+		border: 0;
+		@include theme-variant("light") {
+			background: $jstree-menu-separator-color-light;
+		}
+		@include theme-variant("dark") {
+			background: $jstree-menu-separator-color-dark;
+		}
+	}
+
+	.vakata-context-hover > a {
+		@include theme-variant("light") {
+			color: $jstree-menu-item-hover-color-light;
+			background: $jstree-menu-item-hover-bg-light;
+		}
+		@include theme-variant("dark") {
+			color: $jstree-menu-item-hover-color-dark;
+			background: $jstree-menu-item-hover-bg-dark;
+		}
+	}
+
+	.vakata-contextmenu-disabled {
+		a,
+		a:hover {
+			opacity: $jstree-menu-item-disabled-opacity;
+			cursor: default;
+			@include theme-variant("light") {
+				color: $jstree-menu-item-disabled-color-light;
+				background: $jstree-menu-item-disabled-bg-light;
+			}
+			@include theme-variant("dark") {
+				color: $jstree-menu-item-disabled-color-dark;
+				background: $jstree-menu-item-disabled-bg-dark;
+			}
+		}
+	}
+}

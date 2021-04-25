@@ -1,0 +1,104 @@
+.bootstrap-select {
+
+    // Dropdown menu elements
+    .dropdown-menu {
+        width: 100%;
+
+        // Container that contain dropdown item
+        &.inner {
+            position: static;
+            border: 0;
+            padding: 0;
+            margin: 0;
+            @include border-radius(0);
+        }
+    }
+
+    // List in dropdown menu elements
+    .dropdown-item {
+        cursor: pointer;
+        user-select: none;
+        outline: 0;
+
+        // Hide check mark by default
+        .check-mark { display: none; }
+
+        // Add space if links are sub option
+        &.opt { padding-left: $bs-select-item-option-spacer; }
+
+        > span {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            // Icon inside dropdown item styles
+            &:not(.text):not(.subtext) {
+                width: $bs-select-icon-width;
+                font-size: $bs-select-icon-size;
+                margin-right: $bs-select-icon-spacer;
+                text-align: center;
+            }
+
+            // Check mark styles
+            &.check-mark {
+                position: absolute;
+                margin: 0;
+                right: $bs-select-icon-spacer;
+            }
+        }
+
+        // Elements for displaying text in dropdown link
+        .text {
+            flex: 1;
+            display: inline-block;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        // Add space between main text and sub text elements inside dropdown link
+        .subtext { padding-left: $bs-select-subtext-spacer; }
+    }
+
+    // Popup for displaying important message
+    .notify {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: $bs-select-notify-font-size;
+        font-weight: $bs-select-notify-font-weight;
+        border-width: $bs-select-notify-border-width;
+        border-style: solid;
+        padding: $bs-select-notify-padding-y $bs-select-notify-padding-x;
+        margin: $bs-select-notify-offset;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        pointer-events: none;
+        @include border-radius($bs-select-notify-border-radius);
+        @include theme-variant("light") {
+            color: $bs-select-notify-color-light;
+            background: $bs-select-notify-bg-light;
+            border-color: $bs-select-notify-border-color-light;
+        }
+        @include theme-variant("dark") {
+            color: $bs-select-notify-color-dark;
+            background: $bs-select-notify-bg-dark;
+            border-color: $bs-select-notify-border-color-dark;
+        }
+    }
+
+    // Elements for showing no result message
+    .no-results {
+        font-size: $bs-select-empty-font-size;
+        font-weight: $bs-select-empty-font-weight;
+        padding: $bs-select-item-padding-y $bs-select-item-padding-x;
+        white-space: nowrap;
+        @include theme-variant("light") {
+            color: $bs-select-empty-color-light;
+        }
+        @include theme-variant("dark") {
+            color: $bs-select-empty-color-dark;
+        }
+    }
+}

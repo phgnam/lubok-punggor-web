@@ -1,0 +1,69 @@
+{% set defaults = {
+    brand_name: "Panely",
+    favicon: "assets/images/favicon.ico" | url,
+    theme: "light",
+    enable_preload: true,
+    enable_aside: true,
+    minimized_aside: false,
+    enable_header: true,
+    enable_footer: true,
+    enable_scrolltop: true,
+    components: {
+        preload: {
+            ltr: "components/general/preload/ltr/spinner.njk",
+            rtl: "components/general/preload/rtl/spinner.njk"
+        },
+        aside: {
+            ltr: "components/dashboard1/partial/aside/ltr/aside.njk",
+            rtl: "components/dashboard1/partial/aside/rtl/aside.njk"
+        },
+        header: {
+            ltr: "components/dashboard1/partial/header/ltr/header.njk",
+            rtl: "components/dashboard1/partial/header/rtl/header.njk"
+        },
+        footer: {
+            ltr: "components/dashboard1/partial/footer/ltr/footer.njk",
+            rtl: "components/dashboard1/partial/footer/rtl/footer.njk"
+        },
+        scrolltop: {
+            ltr: "components/general/scrolltop/ltr/scrolltop.njk",
+            rtl: "components/general/scrolltop/rtl/scrolltop.njk"
+        },
+        offcanvas: {
+            ltr: [
+                "components/general/sidemenu/ltr/todo.njk",
+                "components/general/sidemenu/ltr/settings.njk",
+                "components/general/sidemenu/ltr/dashboard.njk",
+                "components/general/sidemenu/ltr/navigation.njk",
+                "components/general/float-button/ltr/float-button.njk"
+            ],
+            rtl: [
+                "components/general/sidemenu/rtl/todo.njk",
+                "components/general/sidemenu/rtl/settings.njk",
+                "components/general/sidemenu/rtl/dashboard.njk",
+                "components/general/sidemenu/rtl/navigation.njk",
+                "components/general/float-button/rtl/float-button.njk"
+            ]
+        }
+    },
+    css_links: {
+        ltr: [
+            "https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&family=Roboto+Mono&display=swap",
+            "assets/build/styles/ltr-core.css" | url,
+            "assets/build/styles/ltr-vendor.css" | url,
+            "assets/build/styles/ltr-dashboard1.css" | url
+        ],
+        rtl: [
+            "https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&family=Roboto+Mono&display=swap",
+            "assets/build/styles/rtl-core.css" | url,
+            "assets/build/styles/rtl-vendor.css" | url,
+            "assets/build/styles/rtl-dashboard1.css" | url
+        ]
+    },
+    js_links: [
+        "assets/build/scripts/mandatory.js" | url,
+        "assets/build/scripts/core.js" | url,
+        "assets/build/scripts/vendor.js" | url,
+        "assets/build/scripts/dashboard1.js" | url
+    ]
+}%}

@@ -1,0 +1,81 @@
+{% extends "components/dashboard1/template.njk" %}
+
+{% set direction = "ltr" %}
+{% set page_title = "Dashboard 1" %}
+{% set breadcrumb = [
+    { text: "Dashboard", link: "dashboard1/ltr/index.html" | url, icon: '<i data-feather="home"></i>' }
+] %}
+{% set js_links = [
+    "assets/app/dashboard1/home.js" | url
+] %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            {% include "components/general/widgets/ltr/widget-33.njk" %}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xl-4">
+            <div class="row portlet-row-fill-md h-100">
+                <div class="col-md-7 col-xl-12">
+                    {% include "components/general/widgets/ltr/widget-22.njk" %}
+                </div>
+                <div class="col-md-5 col-xl-12">
+                    {% include "components/general/widgets/ltr/widget-10.njk" %}
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-4">
+            <div class="row portlet-row-fill-md h-100">
+                <div class="col-md-4 col-xl-12">
+                    {% include "components/general/widgets/ltr/widget-28.njk" %}
+                </div>
+                <div class="col-md-4 col-xl-12">
+                    {% include "components/general/widgets/ltr/widget-29.njk" %}
+                </div>
+                <div class="col-md-4 col-xl-12">
+                    {% include "components/general/widgets/ltr/widget-34.njk" %}
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-4">
+            <div class="row portlet-row-fill-md h-100">
+                <div class="col-md-6 col-xl-12">
+                    {% include "components/general/widgets/ltr/widget-3.njk" %}
+                </div>
+                <div class="col-md-6 col-xl-12">
+                    <div class="row portlet-row-fill-sm">
+                        <div class="col-sm-6">
+                            {% include "components/general/widgets/ltr/widget-21.njk" %}
+                            {% include "components/general/widgets/ltr/widget-16.njk" %}
+                        </div>
+                        <div class="col-sm-6">
+                            {% include "components/general/widgets/ltr/widget-35.njk" %}
+                            {% include "components/general/widgets/ltr/widget-18.njk" %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row portlet-row-fill-xl">
+        <div class="col-xl-4">
+            {% include "components/general/widgets/ltr/widget-27.njk" %}
+        </div>
+        <div class="col-xl-8">
+            <div class="row portlet-row-fill-md">
+                <div class="col-md-6">
+                    {% include "components/general/widgets/ltr/widget-13.njk" %}
+                    {% include "components/general/widgets/ltr/widget-14.njk" %}
+                </div>
+                <div class="col-md-6">
+                    {% include "components/general/widgets/ltr/widget-7.njk" %}
+                    {% include "components/general/widgets/ltr/widget-15.njk" %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

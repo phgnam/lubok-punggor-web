@@ -1,0 +1,13 @@
+@import "../../../variables";
+
+.dataTable tbody {
+    td.focus,
+    th.focus {
+        @include theme-variant("light") {
+            box-shadow: inset 0 0 0 $datatable-key-outline-width $datatable-key-outline-color-light;
+        }
+        @include theme-variant("dark") {
+            box-shadow: inset 0 0 0 $datatable-key-outline-width $datatable-key-outline-color-dark;
+        }
+    }
+}

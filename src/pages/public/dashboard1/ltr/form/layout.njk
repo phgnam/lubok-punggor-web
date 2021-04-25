@@ -1,0 +1,797 @@
+{% extends "components/dashboard1/template.njk" %}
+
+{% set direction = "ltr" %}
+{% set page_title = "Form Layout" %}
+{% set breadcrumb = [
+    { text: "Dashboard", link: "dashboard1/ltr/index.html" | url, icon: '<i data-feather="home"></i>' },
+    { text: "Form" },
+    { text: "Layout", link: "dashboard1/ltr/form/layout.html" | url }
+] %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6">
+
+            <!-- BEGIN Portlet -->
+            <div class="portlet">
+                <div class="portlet-header portlet-header-bordered">
+                    <h3 class="portlet-title">Basic layout</h3>
+                </div>
+                <div class="portlet-body">
+
+                    <!-- BEGIN Form -->
+                    <form>
+
+                        <!-- BEGIN Form Group -->
+                        <div class="form-group">
+                            <label for="inputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="inputEmail1" placeholder="Please insert your email">
+                            <small class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        </div>
+                        <!-- END Form Group -->
+
+                        <!-- BEGIN Form Group -->
+                        <div class="form-group">
+                            <label for="inputPassword1">Password</label>
+                            <input type="password" class="form-control" id="inputPassword1" placeholder="Please insert your email">
+                        </div>
+                        <!-- END Form Group -->
+
+                        <!-- BEGIN Form Group -->
+                        <div class="form-group">
+
+                            <!-- BEGIN Custom Checkbox -->
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="check1">
+                                <label class="custom-control-label" for="check1">Check this checkbox</label>
+                            </div>
+                            <!-- END Custom Checkbox -->
+
+                        </div>
+                        <!-- END Form Group -->
+
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                    <!-- END Form -->
+
+                </div>
+            </div>
+            <!-- END Portlet -->
+
+            <!-- BEGIN Portlet -->
+            <div class="portlet">
+                <div class="portlet-header portlet-header-bordered">
+                    <h3 class="portlet-title">Horizontal form</h3>
+                </div>
+                <div class="portlet-body">
+
+                    <!-- BEGIN Form -->
+                    <form>
+
+                        <!-- BEGIN Form Group -->
+                        <div class="form-group row">
+                            <label for="inputEmail2" class="col-sm-2 col-form-label">Email</label>
+                            <div class="col-sm-10">
+                                <input type="email" class="form-control" id="inputEmail2" placeholder="Please insert your email">
+                            </div>
+                        </div>
+                        <!-- END Form Group -->
+
+                        <!-- BEGIN Form Group -->
+                        <div class="form-group row">
+                            <label for="inputPassword2" class="col-sm-2 col-form-label">Password</label>
+                            <div class="col-sm-10">
+                                <input type="password" class="form-control" id="inputPassword2" placeholder="Please insert your password">
+                            </div>
+                        </div>
+                        <!-- END Form Group -->
+
+                        <!-- BEGIN Form Group -->
+                        <fieldset class="form-group">
+                            <div class="row">
+                                <legend class="col-form-label col-sm-2 pt-0">Gender</legend>
+                                <div class="col-sm-10">
+
+                                    <!-- BEGIN Form Group -->
+                                    <div class="form-group mb-0">
+
+                                        <!-- BEGIN Custom Radio -->
+                                        <div class="custom-control custom-radio">
+                                            <input type="radio" class="custom-control-input" name="gridRadios1" id="gridRadios1-1">
+                                            <label class="custom-control-label" for="gridRadios1-1">Male</label>
+                                        </div>
+                                        <!-- END Custom Radio -->
+
+                                        <!-- BEGIN Custom Radio -->
+                                        <div class="custom-control custom-radio">
+                                            <input type="radio" class="custom-control-input" name="gridRadios1" id="gridRadios1-2">
+                                            <label class="custom-control-label" for="gridRadios1-2">Female</label>
+                                        </div>
+                                        <!-- END Custom Radio -->
+
+                                    </div>
+                                    <!-- END Form Group -->
+
+                                </div>
+                            </div>
+                        </fieldset>
+                        <!-- END Form Group -->
+
+                        <!-- BEGIN Form Group -->
+                        <div class="form-group row">
+                            <div class="col-sm-2">Check</div>
+                            <div class="col-sm-10">
+
+                                <!-- BEGIN Form Group -->
+                                <div class="form-group">
+
+                                    <!-- BEGIN Custom Checkbox -->
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="gridCheck1">
+                                        <label class="custom-control-label" for="gridCheck1">Accepts agreements and terms</label>
+                                    </div>
+                                    <!-- END Custom Checkbox -->
+
+                                </div>
+                                <!-- END Form Group -->
+
+                            </div>
+                        </div>
+                        <!-- END Form Group -->
+
+                        <button type="submit" class="btn btn-primary">Sign in</button>
+                    </form>
+                    <!-- END Form -->
+
+                </div>
+            </div>
+            <!-- END Portlet -->
+
+            <!-- BEGIN Portlet -->
+            <div class="portlet">
+                <div class="portlet-header portlet-header-bordered">
+                    <h3 class="portlet-title">Centered horizontal form</h3>
+                </div>
+                <div class="portlet-body">
+
+                    <!-- BEGIN Form -->
+                    <form>
+
+                        <!-- BEGIN Form Group -->
+                        <div class="form-group row">
+                            <label for="inputEmail3" class="col-sm-3 offset-sm-1 col-form-label text-right">Email</label>
+                            <div class="col-sm-6">
+                                <input type="email" class="form-control" id="inputEmail3" placeholder="Please insert your email">
+                            </div>
+                        </div>
+                        <!-- END Form Group -->
+
+                        <!-- BEGIN Form Group -->
+                        <div class="form-group row">
+                            <label for="inputPassword3" class="col-sm-3 offset-sm-1 col-form-label text-right">Password</label>
+                            <div class="col-sm-6">
+                                <input type="password" class="form-control" id="inputPassword3" placeholder="Please insert your password">
+                            </div>
+                        </div>
+                        <!-- END Form Group -->
+
+                        <!-- BEGIN Form Group -->
+                        <fieldset class="form-group">
+                            <div class="row">
+                                <legend class="col-form-label col-sm-3 offset-sm-1 pt-0 text-right">Gender</legend>
+                                <div class="col-sm-6">
+
+                                    <!-- BEGIN Form Group -->
+                                    <div class="form-group mb-0">
+
+                                        <!-- BEGIN Custom Radio -->
+                                        <div class="custom-control custom-radio">
+                                            <input type="radio" class="custom-control-input" name="gridRadios2" id="gridRadios2-1">
+                                            <label class="custom-control-label" for="gridRadios2-1">Male</label>
+                                        </div>
+                                        <!-- END Custom Radio -->
+
+                                        <!-- BEGIN Custom Radio -->
+                                        <div class="custom-control custom-radio">
+                                            <input type="radio" class="custom-control-input" name="gridRadios2" id="gridRadios2-2">
+                                            <label class="custom-control-label" for="gridRadios2-2">Female</label>
+                                        </div>
+                                        <!-- END Custom Radio -->
+
+                                    </div>
+                                    <!-- END Form Group -->
+
+                                </div>
+                            </div>
+                        </fieldset>
+                        <!-- END Form Group -->
+
+                        <!-- BEGIN Form Group -->
+                        <div class="form-group row">
+                            <div class="col-sm-3 offset-sm-1 text-right">Agreements</div>
+                            <div class="col-sm-6">
+
+                                <!-- BEGIN Form Group -->
+                                <div class="form-group mb-0">
+
+                                    <!-- BEGIN Custom Checkbox -->
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="gridCheck2">
+                                        <label class="custom-control-label" for="gridCheck2">Agree to terms and conditions</label>
+                                    </div>
+                                    <!-- END Custom Checkbox -->
+
+                                </div>
+                                <!-- END Form Group -->
+
+                            </div>
+                        </div>
+                        <!-- END Form Group -->
+
+                        <!-- BEGIN Form Group -->
+                        <div class="form-group text-center mb-0">
+                            <button type="submit" class="btn btn-primary">Sign in</button>
+                        </div>
+                        <!-- END Form Group -->
+
+                    </form>
+                    <!-- END Form -->
+
+                </div>
+            </div>
+            <!-- END Portlet -->
+
+            <!-- BEGIN Portlet -->
+            <div class="portlet">
+                <div class="portlet-header portlet-header-bordered">
+                    <h3 class="portlet-title">One more complex layout</h3>
+                </div>
+                <div class="portlet-body">
+
+                    <!-- BEGIN Form -->
+                    <form>
+
+                        <!-- BEGIN Form Row -->
+                        <div class="form-row">
+                            <div class="col-md-4 mb-3">
+                                <label for="inputFirstName">First name</label>
+                                <input type="text" class="form-control" id="inputFirstName" value="Mark">
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label for="inputLastName">Last name</label>
+                                <input type="text" class="form-control" id="inputLastName" value="Otto">
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label for="inputUserName">Username</label>
+
+                                <!-- BEGIN Input Group -->
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">@</span>
+                                    </div>
+                                    <input type="text" class="form-control" id="inputUserName" value="Mark Otto">
+                                </div>
+                                <!-- END Input Group -->
+
+                            </div>
+                        </div>
+                        <!-- END Form Row -->
+
+                        <!-- BEGIN Form Row -->
+                        <div class="form-row">
+                            <div class="col-md-6 mb-3">
+                                <label for="inputCity1">City</label>
+                                <input type="text" class="form-control" id="inputCity1" placeholder="The city where you living">
+                            </div>
+                            <div class="col-md-3 mb-3">
+                                <label for="inputSelect1">State</label>
+                                <select class="custom-select" id="inputSelect1">
+                                    <option selected="selected" disabled="disabled" value="">Choose...</option>
+                                    <option>One</option>
+                                    <option>Two</option>
+                                    <option>Three</option>
+                                </select>
+                            </div>
+                            <div class="col-md-3 mb-3">
+                                <label for="inputZip1">Zip</label>
+                                <input type="text" class="form-control" id="inputZip1" placeholder="Post code">
+                            </div>
+                        </div>
+                        <!-- END Form Row -->
+
+                        <!-- BEGIN Form Group -->
+                        <div class="form-group">
+
+                            <!-- BEGIN Custom Checkbox -->
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="check2">
+                                <label class="custom-control-label" for="check2">Agree to terms and conditions</label>
+                            </div>
+                            <!-- END Custom Checkbox -->
+
+                        </div>
+                        <!-- END Form Group -->
+
+                        <button class="btn btn-primary" type="submit">Submit form</button>
+                    </form>
+                    <!-- END Form -->
+
+                </div>
+            </div>
+            <!-- END Portlet -->
+
+            <!-- BEGIN Portlet -->
+            <div class="portlet">
+                <div class="portlet-header portlet-header-bordered">
+                    <h3 class="portlet-title">Section layout</h3>
+                </div>
+                <div class="portlet-body">
+
+                    <!-- BEGIN Form -->
+                    <form>
+                        <h5 class="mb-4">Customer info</h5>
+
+                        <!-- BEGIN Form Group -->
+                        <div class="form-group row">
+                            <label class="col-sm-2 col-form-label">Name</label>
+                            <div class="col-sm-10">
+
+                                <!-- BEGIN Input Group -->
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="First name">
+                                    <input type="text" class="form-control" placeholder="Last name">
+                                </div>
+                                <!-- END Input Group -->
+
+                            </div>
+                        </div>
+                        <!-- END Form Group -->
+
+                        <!-- BEGIN Form Group -->
+                        <div class="form-group row mb-0">
+                            <label for="inputAddress1" class="col-sm-2 col-form-label">Address</label>
+                            <div class="col-sm-10">
+
+                                <!-- BEGIN Input Group -->
+                                <div class="input-group-icon">
+                                    <input type="text" class="form-control" id="inputAddress1" placeholder="Yout address here">
+                                    <div class="input-group-append">
+                                        <i class="fa fa-map-marker-alt"></i>
+                                    </div>
+                                </div>
+                                <!-- END Input Group -->
+
+                            </div>
+                        </div>
+                        <!-- END Form Group -->
+
+                        <h5 class="my-4">Customer account</h5>
+
+                        <!-- BEGIN Form Group -->
+                        <div class="form-group row">
+                            <label for="inputEmail4" class="col-sm-2 col-form-label">Email</label>
+                            <div class="col-sm-10">
+                                <input type="email" class="form-control" id="inputEmail4" placeholder="Please insert your email">
+                            </div>
+                        </div>
+                        <!-- END Form Group -->
+
+                        <!-- BEGIN Form Group -->
+                        <div class="form-group row">
+                            <label for="inputPassword4" class="col-sm-2 col-form-label">Password</label>
+                            <div class="col-sm-10">
+                                <input type="password" class="form-control" id="inputPassword4" placeholder="Please insert your password">
+                            </div>
+                        </div>
+                        <!-- END Form Group -->
+
+                        <button type="submit" class="btn btn-primary">Sign in</button>
+                    </form>
+                    <!-- END Form -->
+
+                </div>
+            </div>
+            <!-- END Portlet -->
+
+        </div>
+        <div class="col-md-6">
+
+            <!-- BEGIN Portlet -->
+            <div class="portlet">
+                <div class="portlet-header portlet-header-bordered">
+                    <h3 class="portlet-title">Basic layout with float label</h3>
+                </div>
+                <div class="portlet-body">
+
+                    <!-- BEGIN Form -->
+                    <form>
+
+                        <!-- BEGIN Form Group -->
+                        <div class="form-group">
+
+                            <!-- BEGIN Float Label -->
+                            <div class="float-label">
+                                <input type="email" id="inputEmail5" class="form-control" placeholder="Please insert your email">
+                                <label for="inputEmail5">Email</label>
+                            </div>
+                            <!-- END Float Label -->
+
+                            <small class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        </div>
+                        <!-- END Form Group -->
+
+                        <!-- BEGIN Form Group -->
+                        <div class="form-group">
+
+                            <!-- BEGIN Float Label -->
+                            <div class="float-label">
+                                <input type="password" id="inputPassword5" class="form-control" placeholder="Please insert your password">
+                                <label for="inputPassword5">Password</label>
+                            </div>
+                            <!-- END Float Label -->
+
+                        </div>
+                        <!-- END Form Group -->
+
+                        <!-- BEGIN Form Group -->
+                        <div class="form-group">
+
+                            <!-- BEGIN Custom Checkbox -->
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="check3">
+                                <label class="custom-control-label" for="check3">Check this checkbox</label>
+                            </div>
+                            <!-- END Custom Checkbox -->
+
+                        </div>
+                        <!-- END Form Group -->
+
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                    <!-- END Form -->
+
+                </div>
+            </div>
+            <!-- END Portlet -->
+
+            <!-- BEGIN Portlet -->
+            <div class="portlet">
+                <div class="portlet-header portlet-header-bordered">
+                    <h3 class="portlet-title">Inline form</h3>
+                </div>
+                <div class="portlet-body">
+
+                    <!-- BEGIN Form -->
+                    <form>
+
+                        <!-- BEGIN Form Row -->
+                        <div class="form-row align-items-center">
+                            <div class="col-4">
+                                <input type="text" class="form-control" placeholder="Jane Doe">
+                            </div>
+                            <div class="col-5">
+
+                                <!-- BEGIN Input Group -->
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">@</div>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="Username">
+                                </div>
+                                <!-- END Input Group -->
+
+                            </div>
+                            <div class="col-auto">
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                        </div>
+                        <!-- END Form Row -->
+
+                    </form>
+                    <!-- END Form -->
+
+                </div>
+            </div>
+            <!-- END Portlet -->
+
+            <!-- BEGIN Portlet -->
+            <div class="portlet">
+                <div class="portlet-header portlet-header-bordered">
+                    <h3 class="portlet-title">Other inline form</h3>
+                </div>
+                <div class="portlet-body">
+
+                    <!-- BEGIN Form -->
+                    <form class="form-inline">
+                        <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Preference</label>
+
+                        <!-- BEGIN Custom Select -->
+                        <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+                            <option selected="selected">Choose...</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                        <!-- END Custom Select -->
+
+                        <!-- BEGIN Custom Checkbox -->
+                        <div class="custom-control custom-checkbox my-1 mr-sm-2">
+                            <input type="checkbox" class="custom-control-input" id="customControlInline">
+                            <label class="custom-control-label" for="customControlInline">Remember my preference</label>
+                        </div>
+                        <!-- END Custom Checkbox -->
+
+                        <button type="submit" class="btn btn-primary my-1">Submit</button>
+                    </form>
+                    <!-- END Form -->
+
+                </div>
+            </div>
+            <!-- END Portlet -->
+
+            <!-- BEGIN Portlet -->
+            <div class="portlet">
+                <div class="portlet-header portlet-header-bordered">
+                    <h3 class="portlet-title">One more inline form</h3>
+                </div>
+                <div class="portlet-body">
+
+                    <!-- BEGIN Form -->
+                    <form class="form-inline">
+
+                        <!-- BEGIN Form Group -->
+                        <div class="form-group">
+                            <label for="inputPassword6">Password</label>
+                            <input type="password" id="inputPassword6" class="form-control mx-sm-3" placeholder="Please provide your password">
+                            <small class="text-muted">Must be 8-20 characters long.</small>
+                        </div>
+                        <!-- END Form Group -->
+
+                    </form>
+                    <!-- END Form -->
+
+                </div>
+            </div>
+            <!-- END Portlet -->
+
+            <!-- BEGIN Portlet -->
+            <div class="portlet">
+                <div class="portlet-header portlet-header-bordered">
+                    <h3 class="portlet-title">Complex layout</h3>
+                </div>
+                <div class="portlet-body">
+
+                    <!-- BEGIN Form -->
+                    <form>
+
+                        <!-- BEGIN Form Row -->
+                        <div class="form-row">
+
+                            <!-- BEGIN Form Group -->
+                            <div class="form-group col-md-6">
+                                <label for="inputEmail6">Email</label>
+                                <input type="email" class="form-control" id="inputEmail6" placeholder="Please insert your email">
+                            </div>
+                            <!-- END Form Group -->
+
+                            <!-- BEGIN Form Group -->
+                            <div class="form-group col-md-6">
+                                <label for="inputPassword7">Password</label>
+                                <input type="password" class="form-control" id="inputPassword7" placeholder="Please insert your password">
+                            </div>
+                            <!-- END Form Group -->
+
+                        </div>
+                        <!-- END Form Row -->
+
+                        <!-- BEGIN Form Group -->
+                        <div class="form-group">
+                            <label for="inputAddress2">Address</label>
+                            <input type="text" class="form-control" id="inputAddress2" placeholder="1234 Main St">
+                        </div>
+                        <!-- END Form Group -->
+
+                        <!-- BEGIN Form Group -->
+                        <div class="form-group">
+                            <label for="inputAddress3">Address 2</label>
+                            <input type="text" class="form-control" id="inputAddress3" placeholder="Apartment, studio, or floor">
+                        </div>
+                        <!-- END Form Group -->
+
+                        <!-- BEGIN Form Row -->
+                        <div class="form-row">
+
+                            <!-- BEGIN Form Group -->
+                            <div class="form-group col-md-6">
+                                <label for="inputCity2">City</label>
+                                <input type="text" class="form-control" id="inputCity2" placeholder="The city where you living">
+                            </div>
+                            <!-- END Form Group -->
+
+                            <!-- BEGIN Form Group -->
+                            <div class="form-group col-md-4">
+                                <label for="inputState1">State</label>
+                                <select id="inputState1" class="form-control">
+                                    <option selected="selected">Choose...</option>
+                                    <option>One</option>
+                                    <option>Two</option>
+                                    <option>Three</option>
+                                </select>
+                            </div>
+                            <!-- END Form Group -->
+
+                            <!-- BEGIN Form Group -->
+                            <div class="form-group col-md-2">
+                                <label for="inputZip2">Zip</label>
+                                <input type="text" class="form-control" id="inputZip2" placeholder="Post code">
+                            </div>
+                            <!-- END Form Group -->
+
+                        </div>
+                        <!-- END Form Row -->
+
+                        <!-- BEGIN Form Group -->
+                        <div class="form-group">
+
+                            <!-- BEGIN Custom Checkbox -->
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="check4">
+                                <label class="custom-control-label" for="check4">Check me out</label>
+                            </div>
+                            <!-- END Custom Checkbox -->
+
+                        </div>
+                        <!-- END Form Group -->
+
+                        <button type="submit" class="btn btn-primary">Sign in</button>
+                    </form>
+                    <!-- END Form -->
+
+                </div>
+            </div>
+            <!-- END Portlet -->
+
+            <!-- BEGIN Portlet -->
+            <div class="portlet">
+                <div class="portlet-header portlet-header-bordered">
+                    <h3 class="portlet-title">Complex layout with float label</h3>
+                </div>
+                <div class="portlet-body">
+
+                    <!-- BEGIN Form -->
+                    <form>
+
+                        <!-- BEGIN Form Row -->
+                        <div class="form-row">
+
+                            <!-- BEGIN Form Group -->
+                            <div class="form-group col-md-6">
+
+                                <!-- BEGIN Float Label -->
+                                <div class="float-label">
+                                    <input type="email" id="inputEmail7" class="form-control" placeholder="Insert your email">
+                                    <label for="inputEmail7">Email</label>
+                                </div>
+                                <!-- END Float Label -->
+
+                            </div>
+                            <!-- END Form Group -->
+
+                            <!-- BEGIN Form Group -->
+                            <div class="form-group col-md-6">
+
+                                <!-- BEGIN Float Label -->
+                                <div class="float-label">
+                                    <input type="password" id="inputPassword8" class="form-control" placeholder="Insert your password">
+                                    <label for="inputPassword8">Password</label>
+                                </div>
+                                <!-- END Float Label -->
+
+                            </div>
+                            <!-- END Form Group -->
+
+                        </div>
+                        <!-- END Form Row -->
+
+                        <!-- BEGIN Form Group -->
+                        <div class="form-group">
+
+                            <!-- BEGIN Float Label -->
+                            <div class="float-label">
+                                <input type="text" id="inputAddress5" class="form-control" placeholder="1234 Main St">
+                                <label for="inputAddress5">Address</label>
+                            </div>
+                            <!-- END Float Label -->
+
+                        </div>
+                        <!-- END Form Group -->
+
+                        <!-- BEGIN Form Group -->
+                        <div class="form-group">
+
+                            <!-- BEGIN Float Label -->
+                            <div class="float-label">
+                                <input type="text" id="inputAddress6" class="form-control" placeholder="Apartment, studio, or floor">
+                                <label for="inputAddress6">Address 2</label>
+                            </div>
+                            <!-- END Float Label -->
+
+                        </div>
+                        <!-- END Form Group -->
+
+                        <!-- BEGIN Form Row -->
+                        <div class="form-row">
+
+                            <!-- BEGIN Form Group -->
+                            <div class="form-group col-md-6">
+
+                                <!-- BEGIN Float Label -->
+                                <div class="float-label">
+                                    <input type="text" id="inputCity3" class="form-control" placeholder="Insert your city">
+                                    <label for="inputCity3">City</label>
+                                </div>
+                                <!-- END Float Label -->
+
+                            </div>
+                            <!-- END Form Group -->
+
+                            <!-- BEGIN Form Group -->
+                            <div class="form-group col-md-4">
+
+                                <!-- BEGIN Float Label -->
+                                <div class="float-label">
+                                    <select id="inputState2" class="form-control">
+                                        <option selected="selected">Choose...</option>
+                                        <option>One</option>
+                                        <option>Two</option>
+                                        <option>Three</option>
+                                    </select>
+                                    <label for="inputState2">State</label>
+                                </div>
+                                <!-- END Float Label -->
+
+                            </div>
+                            <!-- END Form Group -->
+
+                            <!-- BEGIN Form Group -->
+                            <div class="form-group col-md-2">
+
+                                <!-- BEGIN Float Label -->
+                                <div class="float-label">
+                                    <input type="text" class="form-control" id="inputZip3" placeholder="123456">
+                                    <label for="inputZip3">Zip</label>
+                                </div>
+                                <!-- END Float Label -->
+
+                            </div>
+                            <!-- END Form Group -->
+
+                        </div>
+                        <!-- END Form Row -->
+
+                        <!-- BEGIN Form Group -->
+                        <div class="form-group">
+
+                            <!-- BEGIN Custom Checkbox -->
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="check5">
+                                <label class="custom-control-label" for="check5">Check me out</label>
+                            </div>
+                            <!-- END Custom Checkbox -->
+
+                        </div>
+                        <!-- END Form Group -->
+
+                        <button type="submit" class="btn btn-primary">Sign in</button>
+                    </form>
+                    <!-- END Form -->
+
+                </div>
+            </div>
+            <!-- END Portlet -->
+
+        </div>
+    </div>
+</div>
+{% endblock %}

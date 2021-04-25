@@ -1,0 +1,61 @@
+.jstree-wholerow-ul {
+	position: relative;
+	display: inline-block;
+	min-width: 100%;
+
+	.jstree-leaf > .jstree-ocl {
+		cursor: pointer;
+	}
+
+	.jstree-anchor,
+	.jstree-icon {
+		position: relative;
+	}
+
+	// Remove default anchor background
+	.jstree-hovered,
+	.jstree-clicked {
+		background: transparent;
+	}
+
+	.jstree-wholerow {
+		position: absolute;
+		height: $jstree-base-height;
+		width: 100%;
+		left: 0;
+		user-select: none;
+		cursor: pointer;
+	}
+
+	.jstree-wholerow-hovered {
+		@include theme-variant("light") {
+			color: $jstree-anchor-hover-color-light;
+			background: $jstree-anchor-hover-bg-light;
+	    }
+	    @include theme-variant("dark") {
+			color: $jstree-anchor-hover-color-dark;
+			background: $jstree-anchor-hover-bg-dark;
+	    }
+	}
+
+	.jstree-wholerow-clicked {
+		@include theme-variant("light") {
+			color: $jstree-anchor-active-color-light;
+			background: $jstree-anchor-active-bg-light;
+
+			// Change expand tool color
+			+ .jstree-ocl:after {
+				color: $jstree-anchor-active-color-light;
+			}
+		}
+		@include theme-variant("dark") {
+			color: $jstree-anchor-active-color-dark;
+			background: $jstree-anchor-active-bg-dark;
+
+			// Change expand tool color
+			+ .jstree-ocl:after {
+				color: $jstree-anchor-active-color-dark;
+			}
+		}
+	}
+}

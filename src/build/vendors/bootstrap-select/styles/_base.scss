@@ -1,0 +1,37 @@
+// Hide default select elements
+.bs-select-hidden,
+.selectpicker {
+    display: none !important;
+}
+
+.bootstrap-select {
+    width: 100%;
+
+    // Modifier class to make bootstrap select width fit to content
+    &.fit-width {
+        width: auto;
+        max-width: fit-content;
+    }
+
+    // Show check mark on selected item
+    &.show-tick .dropdown-menu {
+        .selected .check-mark { display: inline-block; }
+
+        // Add space on select items display for check mark
+        li a .text { padding-right: $bs-select-icon-width + $bs-select-icon-spacer; }
+    }
+}
+
+// Add padding on button container elements
+.bs-actionsbox,
+.bs-donebutton,
+.bs-searchbox {
+    padding: $bs-select-btngroup-padding-y $bs-select-btngroup-padding-x;
+
+    .btn-group { width: 100%; }
+}
+
+.bs-actionsbox {
+    // Divide button to half width
+    .btn-group button { width: 50%; }
+}

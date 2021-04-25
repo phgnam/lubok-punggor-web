@@ -1,0 +1,322 @@
+{% extends "components/dashboard1/template.njk" %}
+
+{% set direction = "ltr" %}
+{% set page_title = "Modal" %}
+{% set breadcrumb = [
+    { text: "Dashboard", link: "dashboard1/ltr/index.html" | url, icon: '<i data-feather="home"></i>' },
+    { text: "Elements" },
+    { text: "Base" },
+    { text: "Modal", link: "dashboard1/ltr/elements/base/modal.html" | url }
+] %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+
+            <!-- BEGIN Portlet -->
+            <div class="portlet">
+                <div class="portlet-header portlet-header-bordered">
+                    <h3 class="portlet-title">Modal examples</h3>
+                </div>
+                <div class="portlet-body">
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Basic demo</label>
+                        <div class="col-sm-8 col-lg-9">
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#modal1">Click me</button>
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Without footer</label>
+                        <div class="col-sm-8 col-lg-9">
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#modal2">Click me</button>
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Bordered header and footer</label>
+                        <div class="col-sm-8 col-lg-9">
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#modal3">Click me</button>
+                            <p class="mb-0 mt-2">Add <code>.modal-{header|footer}-bordered</code> class to modal header or footer elements for bordered styles</p>
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Static backdrop</label>
+                        <div class="col-sm-8 col-lg-9">
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#modal4">Click me</button>
+                            <p class="mb-0 mt-2">Disable backdrop behavior (don't close modal when backdrop clicked)</p>
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Scrolling modal</label>
+                        <div class="col-sm-8 col-lg-9">
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#modal5">Click me</button>
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Fixed scrollable content</label>
+                        <div class="col-sm-8 col-lg-9">
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#modal6">Click me</button>
+                            <p class="mb-0 mt-2">Apply <code>.modal-dialog-scrollable</code> to make modal body fixed and scrollable</p>
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Vertically centered</label>
+                        <div class="col-sm-8 col-lg-9">
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#modal7">Click me</button>
+                            <p class="mb-0 mt-2">Make your modal align center to page by applying <code>.modal-dialog-centered</code></p>
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row mb-0">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Form in modal</label>
+                        <div class="col-sm-8 col-lg-9">
+                            <button class="btn btn-primary" data-toggle="modal" data-target="#modal8">Click me</button>
+                            <p class="mb-0 mt-2">You can insert any elements to modal body</p>
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                </div>
+            </div>
+            <!-- END Portlet -->
+
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block offcanvas %}
+
+<!-- BEGIN Modal -->
+<div class="modal fade" id="modal1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Basic</h5>
+                <button type="button" class="btn btn-label-danger btn-icon" data-dismiss="modal">
+                    <i class="fa fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate fugit eveniet sed, ipsum rem quasi quisquam recusandae nesciunt deleniti iste sit repellat rerum amet. Neque debitis iste, quos repudiandae ut!</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary mr-2">Submit</button>
+                <button class="btn btn-outline-danger">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END Modal -->
+
+<!-- BEGIN Modal -->
+<div class="modal fade" id="modal2">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Without footer</h5>
+                <button type="button" class="btn btn-label-danger btn-icon" data-dismiss="modal">
+                    <i class="fa fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate fugit eveniet sed, ipsum rem quasi quisquam recusandae nesciunt deleniti iste sit repellat rerum amet. Neque debitis iste, quos repudiandae ut!</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END Modal -->
+
+<!-- BEGIN Modal -->
+<div class="modal fade" id="modal3">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header modal-header-bordered">
+                <h5 class="modal-title">Bordered</h5>
+                <button type="button" class="btn btn-label-danger btn-icon" data-dismiss="modal">
+                    <i class="fa fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate fugit eveniet sed, ipsum rem quasi quisquam recusandae nesciunt deleniti iste sit repellat rerum amet. Neque debitis iste, quos repudiandae ut!</p>
+            </div>
+            <div class="modal-footer modal-footer-bordered">
+                <button class="btn btn-primary mr-2">Submit</button>
+                <button class="btn btn-outline-danger">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END Modal -->
+
+<!-- BEGIN Modal -->
+<div class="modal fade" id="modal4" data-backdrop="static">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Static backdrop</h5>
+                <button type="button" class="btn btn-label-danger btn-icon" data-dismiss="modal">
+                    <i class="fa fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate fugit eveniet sed, ipsum rem quasi quisquam recusandae nesciunt deleniti iste sit repellat rerum amet. Neque debitis iste, quos repudiandae ut!</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary mr-2">Submit</button>
+                <button class="btn btn-outline-danger">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END Modal -->
+
+<!-- BEGIN Modal -->
+<div class="modal fade" id="modal5">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Scrollable</h5>
+                <button type="button" class="btn btn-label-danger btn-icon" data-dismiss="modal">
+                    <i class="fa fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+                <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+                <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+                <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+                <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+                <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                <p class="mb-0">Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary mr-2">Submit</button>
+                <button class="btn btn-outline-danger">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END Modal -->
+
+<!-- BEGIN Modal -->
+<div class="modal fade" id="modal6">
+    <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Fixed scrollable content</h5>
+                <button type="button" class="btn btn-label-danger btn-icon" data-dismiss="modal">
+                    <i class="fa fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+                <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+                <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+                <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+                <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+                <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+                <p class="mb-0">Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary mr-2">Submit</button>
+                <button class="btn btn-outline-danger">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END Modal -->
+
+<!-- BEGIN Modal -->
+<div class="modal fade" id="modal7">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Vertical centered</h5>
+                <button type="button" class="btn btn-label-danger btn-icon" data-dismiss="modal">
+                    <i class="fa fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate fugit eveniet sed, ipsum rem quasi quisquam recusandae nesciunt deleniti iste sit repellat rerum amet. Neque debitis iste, quos repudiandae ut!</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary mr-2">Submit</button>
+                <button class="btn btn-outline-danger">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END Modal -->
+
+<!-- BEGIN Modal -->
+<div class="modal fade" id="modal8">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Form</h5>
+                <button type="button" class="btn btn-label-danger btn-icon" data-dismiss="modal">
+                    <i class="fa fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+
+                <!-- BEGIN Form Group -->
+                <div class="form-group">
+                    <label for="email1">Email form</label>
+                    <input type="email" class="form-control" id="email1">
+                    <small class="form-text text-muted">Please submit your email</small>
+                </div>
+                <!-- END Form Group -->
+
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary mr-2">Submit</button>
+                <button class="btn btn-outline-danger">Reset</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END Modal -->
+
+{% endblock %}

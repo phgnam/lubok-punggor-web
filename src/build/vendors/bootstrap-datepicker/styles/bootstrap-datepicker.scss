@@ -1,0 +1,291 @@
+@import "../../variables";
+
+// Base styles
+.datepicker {
+    min-width: $datepicker-min-width;
+    font-size: $datepicker-font-size;
+    padding: $datepicker-padding;
+    margin: 0;
+    @include border-radius($datepicker-border-radius);
+    @include theme-variant("light") {
+        color: $datepicker-color-light;
+        background: $datepicker-bg-light;
+    }
+    @include theme-variant("dark") {
+        color: $datepicker-color-dark;
+        background: $datepicker-bg-dark;
+    }
+
+    // Disabled default selection and popup
+    table {
+        width: 100%;
+        margin: 0;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none; //
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    // Styling datepicker cell
+    td,
+    th {
+        width: $datepicker-cell-dimension;
+        height: $datepicker-cell-dimension;
+        text-align: center;
+        border: none;
+        @include border-radius($datepicker-cell-border-radius);
+    }
+
+    // Cell content styles
+    table tr td {
+        &.day {
+            cursor: pointer;
+
+            &:hover,
+            &.focused {
+                @include theme-variant("light") {
+                    color: $datepicker-cell-hover-color-light;
+                    background: $datepicker-cell-hover-bg-light;
+                }
+                @include theme-variant("dark") {
+                    color: $datepicker-cell-hover-color-dark;
+                    background: $datepicker-cell-hover-bg-dark;
+                }
+            }
+        }
+
+        &.new,
+        &.old {
+            @include theme-variant("light") {
+                background: $datepicker-cell-off-bg-light;
+                &, &:hover { color: $datepicker-cell-off-color-light; }
+            }
+            @include theme-variant("dark") {
+                background: $datepicker-cell-off-bg-dark;
+                &, &:hover { color: $datepicker-cell-off-color-dark; }
+            }
+        }
+
+        &.today  {
+            position: relative;
+
+            &,
+            &:hover,
+            &.disabled {
+                @include theme-variant("light") {
+                    color: $datepicker-cell-today-color-light;
+                    background: $datepicker-cell-today-bg-light;
+                }
+                @include theme-variant("dark") {
+                    color: $datepicker-cell-today-color-dark;
+                    background: $datepicker-cell-today-bg-dark;
+                }
+            }
+
+            &:after {
+                content: "";
+                position: absolute;
+                display: inline-block;
+                border-bottom: $datepicker-pick-width solid currentColor;
+                border-left: $datepicker-pick-width solid transparent;
+                bottom: $datepicker-pick-offset;
+                right: $datepicker-pick-offset;
+            }
+        }
+
+        &.highlighted {
+            @include border-radius(0);
+            @include theme-variant("light") {
+                color: $datepicker-cell-highlight-color-light;
+                background: $datepicker-cell-highlight-bg-light;
+            }
+            @include theme-variant("dark") {
+                color: $datepicker-cell-highlight-color-dark;
+                background: $datepicker-cell-highlight-bg-dark;
+            }
+        }
+
+        &.range {
+            &,
+            &:hover,
+            &.disabled {
+                @include border-radius(0);
+                @include theme-variant("light") {
+                    color: $datepicker-cell-range-color-light;
+                    background: $datepicker-cell-range-bg-light;
+                }
+                @include theme-variant("dark") {
+                    color: $datepicker-cell-range-color-dark;
+                    background: $datepicker-cell-range-bg-dark;
+                }
+            }
+        }
+
+        &.range-start { @include border-right-radius(0); }
+        &.range-end { @include border-left-radius(0); }
+
+        &.disabled {
+            cursor: default;
+
+            &, &:hover {
+                @include theme-variant("light") {
+                    color: $datepicker-cell-disabled-color-light;
+                    background: $datepicker-cell-disabled-bg-light;
+                }
+                @include theme-variant("dark") {
+                    color: $datepicker-cell-disabled-color-dark;
+                    background: $datepicker-cell-disabled-bg-dark;
+                }
+            }
+        }
+
+        &.selected,
+        &.active {
+            &,
+            &:hover,
+            &.disabled {
+                @include theme-variant("light") {
+                    color: $datepicker-cell-active-color-light;
+                    background: $datepicker-cell-active-bg-light;
+                }
+                @include theme-variant("dark") {
+                    color: $datepicker-cell-active-color-dark;
+                    background: $datepicker-cell-active-bg-dark;
+                }
+            }
+        }
+
+        // Big cell when select month and year
+        span {
+            display: block;
+            width: (100% / $datepicker-block-col) - ($datepicker-block-col-margin * 2);
+            height: $datepicker-block-height;
+            line-height: $datepicker-block-height;
+            margin: $datepicker-block-col-margin;
+            float: left;
+            cursor: pointer;
+            @include border-radius($datepicker-cell-border-radius);
+
+            &:hover,
+            &.focused {
+                @include theme-variant("light") {
+                    color: $datepicker-block-hover-color-light;
+                    background: $datepicker-block-hover-bg-light;
+                }
+                @include theme-variant("dark") {
+                    color: $datepicker-block-hover-color-dark;
+                    background: $datepicker-block-hover-bg-dark;
+                }
+            }
+
+            &.disabled {
+                cursor: default;
+                @include theme-variant("light") {
+                    background: $datepicker-block-disabled-bg-light;
+                    color: $datepicker-block-disabled-color-light;
+                }
+                @include theme-variant("dark") {
+                    background: $datepicker-block-disabled-bg-dark;
+                    color: $datepicker-block-disabled-color-dark;
+                }
+            }
+
+            &.active {
+                @include theme-variant("light") {
+                    color: $datepicker-block-active-color-light;
+                    background: $datepicker-block-active-bg-light;
+                }
+                @include theme-variant("dark") {
+                    color: $datepicker-block-active-color-dark;
+                    background: $datepicker-block-active-bg-dark;
+                }
+            }
+
+            &.new,
+            &.old {
+                @include theme-variant("light") {
+                    color: $datepicker-block-off-color-light;
+                    background: $datepicker-block-off-bg-light;
+                }
+                @include theme-variant("dark") {
+                    color: $datepicker-block-off-color-dark;
+                    background: $datepicker-block-off-bg-dark;
+                }
+            }
+        }
+    }
+
+    // Styling navigation buttons
+    .datepicker-switch,
+    .next,
+    .prev,
+    tfoot tr th {
+        cursor: pointer;
+
+        &:hover {
+            @include theme-variant("light") {
+                color: $datepicker-nav-hover-color-light;
+                background: $datepicker-nav-hover-bg-light;
+            }
+            @include theme-variant("dark") {
+                color: $datepicker-nav-hover-color-dark;
+                background: $datepicker-nav-hover-bg-dark;
+            }
+        }
+    }
+
+    .datepicker-switch { width: $datepicker-switch-width; }
+
+    @include rtl-ignore {
+        .next,
+        .prev {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: $datepicker-nav-dimension;
+            width: $datepicker-nav-dimension;
+            @include caret(right);
+
+            &.disabled { visibility: hidden; }
+        }
+
+        .prev { @include caret-transform(left); }
+    }
+
+    // Basic styling for calendar-week cells
+    .cw {
+        font-size: $datepicker-week-font-size;
+        vertical-align: middle;
+        @include theme-variant("light") {
+            color: $datepicker-week-color-light;
+            background: $datepicker-week-bg-light;
+        }
+        @include theme-variant("dark") {
+            color: $datepicker-week-color-dark;
+            background: $datepicker-week-bg-dark;
+        }
+    }
+}
+
+// Remove default dropdown menu margin
+.datepicker-dropdown { margin: 0; }
+
+// Style for inline datepicker
+.datepicker-inline {
+    width: fit-content;
+    border-width: $datepicker-border-width;
+    border-style: solid;
+    @include theme-variant("light") {
+        border-color: $datepicker-border-color-light;
+    }
+    @include theme-variant("dark") {
+        border-color: $datepicker-border-color-dark;
+    }
+}
+
+// Change text alignment on input group
+.input-daterange {
+    input { text-align: center; }
+}

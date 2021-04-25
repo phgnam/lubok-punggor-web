@@ -1,0 +1,28 @@
+@mixin portlet-variant($bg, $color: color-yiq($bg), $accent-color: darken($bg, 7.5%)) {
+	color: $color !important;
+	background-color: $bg !important;
+	border-color: $accent-color !important;
+
+	> .portlet-header {
+		.portlet-icon,
+		.portlet-title,
+		.portlet-subtitle {
+			color: inherit;
+		}
+	}
+
+	> .portlet-body {
+		color: inherit;
+
+		hr { border-color: $accent-color !important; }
+	}
+
+	> .portlet-header,
+	> .portlet-footer {
+		border-color: $accent-color !important;
+	}
+
+	> .portlet-footer {
+		background-color: $accent-color !important;
+	}
+}

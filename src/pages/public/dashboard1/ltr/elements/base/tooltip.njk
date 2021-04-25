@@ -1,0 +1,89 @@
+{% extends "components/dashboard1/template.njk" %}
+
+{% set direction = "ltr" %}
+{% set page_title = "Tooltip" %}
+{% set breadcrumb = [
+    { text: "Dashboard", link: "dashboard1/ltr/index.html" | url, icon: '<i data-feather="home"></i>' },
+    { text: "Elements" },
+    { text: "Base" },
+    { text: "Tooltip", link: "dashboard1/ltr/elements/base/tooltip.html" | url }
+] %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+
+            <!-- BEGIN Portlet -->
+            <div class="portlet">
+                <div class="portlet-header portlet-header-bordered">
+                    <h3 class="portlet-title">Tooltip examples</h3>
+                </div>
+                <div class="portlet-body">
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Basic tooltip</label>
+                        <div class="col-sm-8 col-lg-9">
+
+                            <!-- BEGIN Tooltip -->
+                            <button class="btn btn-primary" data-toggle="tooltip" title="Tooltip content">Hover me</button>
+                            <!-- END Tooltip -->
+
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Placements</label>
+                        <div class="col-sm-8 col-lg-9">
+
+                            <!-- BEGIN Tooltips -->
+                            <button class="btn btn-primary" data-toggle="tooltip" title="Top tooltip" data-placement="top">Top</button>
+                            <button class="btn btn-primary" data-toggle="tooltip" title="Bottom tooltip" data-placement="bottom">Bottom</button>
+                            <button class="btn btn-primary" data-toggle="tooltip" title="Right tooltip" data-placement="right">Right</button>
+                            <button class="btn btn-primary" data-toggle="tooltip" title="Left tooltip" data-placement="left">Left</button>
+                            <!-- END Tooltips -->
+
+                            <p class="mb-0 mt-2">Set <code>data-placement</code> attribute with <code>top|bottom|right|left</code> to change tooltip placement</p>
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">HTML Content</label>
+                        <div class="col-sm-8 col-lg-9">
+
+                            <!-- BEGIN Tooltip -->
+                            <button class="btn btn-primary" data-toggle="tooltip" data-placement="right" title="content <b>bold</b> and <em>italic</em>" data-html="true">Hover me</button>
+                            <!-- END Tooltip -->
+
+                            <p class="mb-0 mt-2">Enable tooltip html content by setting <code>data-html="true"</code></p>
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row mb-0">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Trigger on click</label>
+                        <div class="col-sm-8 col-lg-9">
+
+                            <!-- BEGIN Tooltip -->
+                            <button class="btn btn-primary" data-trigger="focus" data-toggle="tooltip" title="Tooltip content">Click me</button>
+                            <!-- END Tooltip -->
+
+                            <p class="mb-0 mt-2">Change tooltip trigger to focus</p>
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                </div>
+            </div>
+            <!-- END Portlet -->
+
+        </div>
+    </div>
+</div>
+{% endblock %}

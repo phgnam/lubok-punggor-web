@@ -1,0 +1,96 @@
+{% extends "components/dashboard1/template.njk" %}
+
+{% set direction = "ltr" %}
+{% set page_title = "Typeahead" %}
+{% set breadcrumb = [
+    { text: "Dashboard", link: "dashboard1/ltr/index.html" | url, icon: '<i data-feather="home"></i>' },
+    { text: "Form" },
+    { text: "Advanced" },
+    { text: "Typeahead", link: "dashboard1/ltr/form/advanced/typeahead.html" | url }
+] %}
+{% set js_links = [
+    "assets/app/dashboard1/form/typeahead.js" | url
+] %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+
+            <!-- BEGIN Portlet -->
+            <div class="portlet">
+                <div class="portlet-header portlet-header-bordered">
+                    <h3 class="portlet-title">Typeahead</h3>
+                </div>
+                <div class="portlet-body">
+                    <p><strong>TypeaheadJS</strong> is a flexible javascript library that provides a strong foundation for building robust typeaheads. For more info please visit the plugin's <a href="http://twitter.github.io/typeahead.js" target="_blank">homepage</a></p>
+                    <hr>
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Basic demo</label>
+                        <div class="col-sm-5 col-lg-4">
+                            <input type="text" class="form-control typeahead" id="typeahead-1" placeholder="Type here...">
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Suggestion engine (Bloodhound)</label>
+                        <div class="col-sm-5 col-lg-4">
+                            <input type="text" class="form-control typeahead" id="typeahead-2" placeholder="Type here...">
+
+                            <p class="mb-0 mt-2">Bloodhound offers advanced functionalities such as prefetching and backfilling with remote data</p>
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Remote</label>
+                        <div class="col-sm-5 col-lg-4">
+                            <input type="text" class="form-control typeahead" id="typeahead-3" placeholder="Type here...">
+
+                            <p class="mb-0 mt-2">Prefetch data is fetched and processed on initialization</p>
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Custom template</label>
+                        <div class="col-sm-5 col-lg-4">
+                            <input type="text" class="form-control typeahead" id="typeahead-4" placeholder="Type here...">
+
+                            <p class="mb-0 mt-2">Custom templates give you full control over how suggestions get rendered</p>
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Default suggestion</label>
+                        <div class="col-sm-5 col-lg-4">
+                            <input type="text" class="form-control typeahead" id="typeahead-5" placeholder="Type here...">
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row mb-0">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Multiple datasets</label>
+                        <div class="col-sm-5 col-lg-4">
+                            <input type="text" class="form-control typeahead" id="typeahead-6" placeholder="Type here...">
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                </div>
+            </div>
+            <!-- END Portlet -->
+
+        </div>
+    </div>
+</div>
+{% endblock %}

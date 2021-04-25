@@ -1,0 +1,682 @@
+{% extends "components/dashboard1/template.njk" %}
+
+{% set direction = "ltr" %}
+{% set page_title = "Bootstrap Select" %}
+{% set breadcrumb = [
+    { text: "Dashboard", link: "dashboard1/ltr/index.html" | url, icon: '<i data-feather="home"></i>' },
+    { text: "Form" },
+    { text: "Advanced" },
+    { text: "Bootstrap select", link: "dashboard1/ltr/form/advanced/bs-select.html" | url }
+] %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+
+            <!-- BEGIN Portlet -->
+            <div class="portlet">
+                <div class="portlet-header portlet-header-bordered">
+                    <h3 class="portlet-title">Bootstrap select</h3>
+                </div>
+                <div class="portlet-body">
+                    <p>The jQuery plugin appear select elements with intuitive multiselection, searching, and much more. <strong>Bootstrap-select</strong> requires jQuery, Bootstrap’s dropdown component, and Bootstrap's CSS. Check more info on <a href="http://developer.snapappointments.com/bootstrap-select" target="_blank">the page</a>.</p>
+                    <hr>
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Basic demo</label>
+                        <div class="col-sm-5 col-lg-4">
+
+                            <!-- BEGIN Select -->
+                            <select class="selectpicker">
+                                <option>Mustard</option>
+                                <option>Ketchup</option>
+                                <option>Relish</option>
+                            </select>
+                            <!-- END Select -->
+
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Option size</label>
+                        <div class="col-sm-5 col-lg-4">
+
+                            <!-- BEGIN Select -->
+                            <select class="selectpicker" data-size="4">
+                                <option>Mustard</option>
+                                <option>Ketchup</option>
+                                <option>Relish</option>
+                                <option>Tent</option>
+                                <option>Flashlight</option>
+                                <option>Potato</option>
+                            </select>
+                            <!-- END Select -->
+
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Group</label>
+                        <div class="col-sm-5 col-lg-4">
+
+                            <!-- BEGIN Select -->
+                            <select class="selectpicker">
+                                <optgroup label="Picnic">
+                                    <option>Mustard</option>
+                                    <option>Ketchup</option>
+                                    <option>Relish</option>
+                                </optgroup>
+                                <optgroup label="Camping">
+                                    <option>Tent</option>
+                                    <option>Flashlight</option>
+                                    <option>Toilet Paper</option>
+                                </optgroup>
+                            </select>
+                            <!-- END Select -->
+
+                            <p class="mb-0 mt-2">Use <code>{{ "<optgroup>" }}</code> to group select options</p>
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Checkmark</label>
+                        <div class="col-sm-5 col-lg-4">
+
+                            <!-- BEGIN Select -->
+                            <select class="selectpicker show-tick">
+                                <option>Mustard</option>
+                                <option>Ketchup</option>
+                                <option>Relish</option>
+                            </select>
+                            <!-- END Select -->
+
+                            <p class="mb-0 mt-2">Add <code>.show-tick</code> class to show checkmark on selected options</p>
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Multiple</label>
+                        <div class="col-sm-5 col-lg-4">
+
+                            <!-- BEGIN Select -->
+                            <select class="selectpicker" multiple="multiple">
+                                <option>Mustard</option>
+                                <option>Ketchup</option>
+                                <option>Relish</option>
+                            </select>
+                            <!-- END Select -->
+
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Live search</label>
+                        <div class="col-sm-5 col-lg-4">
+
+                            <!-- BEGIN Select -->
+                            <select class="selectpicker" data-live-search="true">
+                                <option data-tokens="ketchup mustard">Hot Dog, Fries and a Soda</option>
+                                <option data-tokens="mustard">Burger, Shake and a Smile</option>
+                                <option data-tokens="frosting">Sugar, Spice and all things nice</option>
+                            </select>
+                            <!-- END Select -->
+
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Limit selection</label>
+                        <div class="col-sm-5 col-lg-4">
+
+                            <!-- BEGIN Form Group -->
+                            <div class="form-group">
+
+                                <!-- BEGIN Select -->
+                                <select class="selectpicker" multiple="multiple" data-max-options="2">
+                                    <option>Mustard</option>
+                                    <option>Ketchup</option>
+                                    <option>Relish</option>
+                                </select>
+                                <!-- END Select -->
+
+                            </div>
+                            <!-- END Form Group -->
+
+                            <!-- BEGIN Form Group -->
+                            <div class="form-group mb-0">
+
+                                <!-- BEGIN Select -->
+                                <select class="selectpicker" multiple="multiple">
+                                    <optgroup label="Condiments" data-max-options="2">
+                                        <option>Mustard</option>
+                                        <option>Ketchup</option>
+                                        <option>Relish</option>
+                                    </optgroup>
+                                    <optgroup label="Breads" data-max-options="2">
+                                        <option>Plain</option>
+                                        <option>Steamed</option>
+                                        <option>Toasted</option>
+                                    </optgroup>
+                                </select>
+                                <!-- END Select -->
+
+                            </div>
+                            <!-- END Form Group -->
+
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Placeholder</label>
+                        <div class="col-sm-5 col-lg-4">
+
+                            <!-- BEGIN Select -->
+                            <select class="selectpicker" multiple="multiple" title="Choose one of the following...">
+                                <option>Mustard</option>
+                                <option>Ketchup</option>
+                                <option>Relish</option>
+                            </select>
+                            <!-- END Select -->
+
+                            <p class="mb-0 mt-2">This library will read <code>title</code> attribute for placeholder</p>
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Selected text</label>
+                        <div class="col-sm-5 col-lg-4">
+
+                            <!-- BEGIN Select -->
+                            <select class="selectpicker">
+                                <option title="Combo 1">Hot Dog, Fries and a Soda</option>
+                                <option title="Combo 2">Burger, Shake and a Smile</option>
+                                <option title="Combo 3">Sugar, Spice and all things nice</option>
+                            </select>
+                            <!-- END Select -->
+
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Count format</label>
+                        <div class="col-sm-5 col-lg-4">
+
+                            <!-- BEGIN Select -->
+                            <select class="selectpicker" multiple="multiple" data-selected-text-format="count">
+                                <option>Mustard</option>
+                                <option>Ketchup</option>
+                                <option>Relish</option>
+                            </select>
+                            <!-- END Select -->
+
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Custom style</label>
+                        <div class="col-sm-5 col-lg-4">
+
+                            <!-- BEGIN Form Group -->
+                            <div class="form-group">
+
+                                <!-- BEGIN Select -->
+                                <select class="selectpicker" data-style="btn-primary">
+                                    <option>Mustard</option>
+                                    <option>Ketchup</option>
+                                    <option>Relish</option>
+                                </select>
+                                <!-- END Select -->
+
+                            </div>
+                            <!-- END Form Group -->
+
+                            <!-- BEGIN Form Group -->
+                            <div class="form-group">
+
+                                <!-- BEGIN Select -->
+                                <select class="selectpicker" data-style="btn-outline-success">
+                                    <option>Mustard</option>
+                                    <option>Ketchup</option>
+                                    <option>Relish</option>
+                                </select>
+                                <!-- END Select -->
+
+                            </div>
+                            <!-- END Form Group -->
+
+                            <!-- BEGIN Form Group -->
+                            <div class="form-group">
+
+                                <!-- BEGIN Select -->
+                                <select class="selectpicker" data-style="btn-label-info">
+                                    <option>Mustard</option>
+                                    <option>Ketchup</option>
+                                    <option>Relish</option>
+                                </select>
+                                <!-- END Select -->
+
+                            </div>
+                            <!-- END Form Group -->
+
+                            <!-- BEGIN Form Group -->
+                            <div class="form-group mb-0">
+
+                                <!-- BEGIN Select -->
+                                <select class="selectpicker" data-style="btn-flat-danger">
+                                    <option>Mustard</option>
+                                    <option>Ketchup</option>
+                                    <option>Relish</option>
+                                </select>
+                                <!-- END Select -->
+
+                            </div>
+                            <!-- END Form Group -->
+
+                            <p class="mb-0 mt-2">You can use button color modifier classes</p>
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Width option</label>
+                        <div class="col-sm-5 col-lg-4">
+
+                            <!-- BEGIN Form Group -->
+                            <div class="form-group">
+
+                                <!-- BEGIN Select -->
+                                <select class="selectpicker" data-width="fit" title="Fit">
+                                    <option>Mustard</option>
+                                    <option>Ketchup</option>
+                                    <option>Relish</option>
+                                </select>
+                                <!-- END Select -->
+
+                            </div>
+                            <!-- END Form Group -->
+
+                            <!-- BEGIN Form Group -->
+                            <div class="form-group">
+
+                                <!-- BEGIN Select -->
+                                <select class="selectpicker" data-width="50%" title="Fixed 50%">
+                                    <option>Mustard</option>
+                                    <option>Ketchup</option>
+                                    <option>Relish</option>
+                                </select>
+                                <!-- END Select -->
+
+                            </div>
+                            <!-- END Form Group -->
+
+                            <!-- BEGIN Form Group -->
+                            <div class="form-group mb-0">
+
+                                <!-- BEGIN Select -->
+                                <select class="selectpicker" data-width="150px" title="Fixed 150px">
+                                    <option>Mustard</option>
+                                    <option>Ketchup</option>
+                                    <option>Relish</option>
+                                </select>
+                                <!-- END Select -->
+
+                            </div>
+                            <!-- END Form Group -->
+
+                            <p class="mb-0 mt-2">Set <code>data-width</code> to set select element width</p>
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Custom content</label>
+                        <div class="col-sm-5 col-lg-4">
+
+                            <!-- BEGIN Form Group -->
+                            <div class="form-group">
+
+                                <!-- BEGIN Select -->
+                                <select class="selectpicker">
+                                    <option data-content="<span class='badge badge-success'>Relish</span>">Relish</option>
+                                    <option data-content="<span class='badge badge-warning'>Ketchup</span>">Ketchup</option>
+                                    <option data-content="<span class='badge badge-primary'>Mustard</span>">Mustard</option>
+                                    <option data-content="<span class='badge badge-danger'>Tent</span>">Tent</option>
+                                </select>
+                                <!-- END Select -->
+
+                            </div>
+                            <!-- BEGIN Form Group -->
+                            <div class="form-group mb-0">
+
+                                <!-- BEGIN Select -->
+                                <select class="selectpicker" multiple="multiple">
+                                    <option data-content="<span class='badge badge-success'>Relish</span>">Relish</option>
+                                    <option data-content="<span class='badge badge-warning'>Ketchup</span>">Ketchup</option>
+                                    <option data-content="<span class='badge badge-primary'>Mustard</span>">Mustard</option>
+                                    <option data-content="<span class='badge badge-danger'>Tent</span>">Tent</option>
+                                </select>
+                                <!-- END Select -->
+
+                            </div>
+                            <!-- BEGIN Form Group -->
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Icons</label>
+                        <div class="col-sm-5 col-lg-4">
+
+                            <!-- BEGIN Select -->
+                            <select class="selectpicker">
+                                <option data-icon="fa-cog">Relish</option>
+                                <option data-icon="fa-wrench">Ketchup</option>
+                                <option data-icon="fa-calendar">Mustard</option>
+                                <option data-icon="fa-star">Tent</option>
+                            </select>
+                            <!-- END Select -->
+
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Subtext</label>
+                        <div class="col-sm-5 col-lg-4">
+
+                            <!-- BEGIN Select -->
+                            <select class="selectpicker" data-showsubtext="true">
+                                <option data-subtext="Heinz">Ketchup</option>
+                                <option data-subtext="Mayo">Mustard</option>
+                                <option>Potato</option>
+                            </select>
+                            <!-- END Select -->
+
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Helper buttons</label>
+                        <div class="col-sm-5 col-lg-4">
+
+                            <!-- BEGIN Select -->
+                            <select class="selectpicker" multiple="multiple" data-actions-box="true">
+                                <option>Mustard</option>
+                                <option>Ketchup</option>
+                                <option>Relish</option>
+                            </select>
+                            <!-- END Select -->
+
+                            <p class="mb-0 mt-2">Enable <strong>select all</strong> and <strong>deselect all</strong> helper buttons</p>
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Divider</label>
+                        <div class="col-sm-5 col-lg-4">
+
+                            <!-- BEGIN Select -->
+                            <select class="selectpicker">
+                                <option>Mustard</option>
+                                <option>Ketchup</option>
+                                <option data-divider="true"></option>
+                                <option>Relish</option>
+                            </select>
+                            <!-- END Select -->
+
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Header</label>
+                        <div class="col-sm-5 col-lg-4">
+
+                            <!-- BEGIN Select -->
+                            <select class="selectpicker" data-header="Select a condiment">
+                                <option>Mustard</option>
+                                <option>Ketchup</option>
+                                <option data-divider="true"></option>
+                                <option>Relish</option>
+                            </select>
+                            <!-- END Select -->
+
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Disabled</label>
+                        <div class="col-sm-5 col-lg-4">
+
+                            <!-- BEGIN Form Group -->
+                            <div class="form-group">
+
+                                <!-- BEGIN Select -->
+                                <select class="selectpicker" disabled="disabled" title="Element disabled">
+                                    <option>Mustard</option>
+                                    <option>Ketchup</option>
+                                    <option>Relish</option>
+                                </select>
+                                <!-- END Select -->
+
+                            </div>
+                            <!-- END Form Group -->
+
+                            <!-- BEGIN Form Group -->
+                            <div class="form-group mb-0">
+
+                                <!-- BEGIN Select -->
+                                <select class="selectpicker" title="Option disabled">
+                                    <option>Mustard</option>
+                                    <option disabled="disabled">Ketchup</option>
+                                    <option>Relish</option>
+                                </select>
+                                <!-- END Select -->
+
+                            </div>
+                            <!-- END Form Group -->
+
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Validation state</label>
+                        <div class="col-sm-5 col-lg-4">
+
+                            <!-- BEGIN Form Group -->
+                            <div class="form-group">
+
+                                <!-- BEGIN Select -->
+                                <select class="selectpicker is-invalid">
+                                    <option>Mustard</option>
+                                    <option>Ketchup</option>
+                                    <option>Relish</option>
+                                </select>
+                                <!-- END Select -->
+
+                            </div>
+                            <!-- END Form Group -->
+
+                            <!-- BEGIN Form Group -->
+                            <div class="form-group mb-0">
+
+                                <!-- BEGIN Select -->
+                                <select class="selectpicker is-valid">
+                                    <option>Mustard</option>
+                                    <option>Ketchup</option>
+                                    <option>Relish</option>
+                                </select>
+                                <!-- END Select -->
+
+                            </div>
+                            <!-- END Form Group -->
+
+                            <p class="mb-0 mt-2">Use <code>is-{valid|invalid}</code> classes for validation states</p>
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Sizing</label>
+                        <div class="col-sm-5 col-lg-4">
+
+                            <!-- BEGIN Form Group -->
+                            <div class="form-group">
+
+                                <!-- BEGIN Select -->
+                                <select class="selectpicker form-control-sm">
+                                    <option>Mustard</option>
+                                    <option>Ketchup</option>
+                                    <option>Relish</option>
+                                </select>
+                                <!-- END Select -->
+
+                            </div>
+                            <!-- END Form Group -->
+
+                            <!-- BEGIN Form Group -->
+                            <div class="form-group">
+
+                                <!-- BEGIN Select -->
+                                <select class="selectpicker">
+                                    <option>Mustard</option>
+                                    <option>Ketchup</option>
+                                    <option>Relish</option>
+                                </select>
+                                <!-- END Select -->
+
+                            </div>
+                            <!-- END Form Group -->
+
+                            <!-- BEGIN Form Group -->
+                            <div class="form-group mb-0">
+
+                                <!-- BEGIN Select -->
+                                <select class="selectpicker form-control-lg">
+                                    <option>Mustard</option>
+                                    <option>Ketchup</option>
+                                    <option>Relish</option>
+                                </select>
+                                <!-- END Select -->
+
+                            </div>
+                            <!-- END Form Group -->
+
+                            <p class="mb-0 mt-2">Resize select elements by adding <code>.form-control-{lg|sm}</code> classes</p>
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                    <!-- BEGIN Form Group -->
+                    <div class="form-group row mb-0">
+                        <label class="col-sm-4 col-lg-3 col-form-label text-muted text-sm-right">Input group</label>
+                        <div class="col-sm-5 col-lg-4">
+
+                            <!-- BEGIN Form Group -->
+                            <div class="form-group">
+
+                                <!-- BEGIN Input Group -->
+                                <div class="input-group">
+                                    <select class="form-control selectpicker">
+                                        <option>Mustard</option>
+                                        <option>Ketchup</option>
+                                        <option>Relish</option>
+                                    </select>
+                                    <div class="input-group-append">
+                                        <span class="input-group-text">append</span>
+                                    </div>
+                                </div>
+                                <!-- END Input Group -->
+
+                            </div>
+                            <!-- END Form Group -->
+
+                            <!-- BEGIN Form Group -->
+                            <div class="form-group">
+
+                                <!-- BEGIN Input Group -->
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">prepend</span>
+                                    </div>
+                                    <select class="form-control selectpicker">
+                                        <option>Mustard</option>
+                                        <option>Ketchup</option>
+                                        <option>Relish</option>
+                                    </select>
+                                </div>
+                                <!-- END Input Group -->
+
+                            </div>
+                            <!-- END Form Group -->
+
+                            <!-- BEGIN Form Group -->
+                            <div class="form-group mb-0">
+
+                                <!-- BEGIN Input Group -->
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">prepend</span>
+                                    </div>
+                                    <select class="form-control selectpicker">
+                                        <option>Mustard</option>
+                                        <option>Ketchup</option>
+                                        <option>Relish</option>
+                                    </select>
+                                    <div class="input-group-append">
+                                        <span class="input-group-text">append</span>
+                                    </div>
+                                </div>
+                                <!-- END Input Group -->
+
+                            </div>
+                            <!-- END Form Group -->
+
+                        </div>
+                    </div>
+                    <!-- END Form Group -->
+
+                </div>
+            </div>
+            <!-- END Portlet -->
+
+        </div>
+    </div>
+</div>
+{% endblock %}

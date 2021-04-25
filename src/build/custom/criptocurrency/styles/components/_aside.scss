@@ -1,0 +1,93 @@
+// Base styles
+.aside {
+	position: fixed;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	width: $aside-width;
+	top: 0;
+	left: 0;
+	z-index: $zindex-aside;
+	border-right-width: $aside-border-width;
+	border-right-style: solid;
+	@include theme-variant("light") {
+		background: $aside-bg-light;
+		border-right-color: $aside-border-color-light;
+	}
+	@include theme-variant("dark") {
+		background: $aside-bg-dark;
+		border-right-color: $aside-border-color-dark;
+	}
+}
+
+.aside-header {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: $aside-header-padding-y $aside-header-padding-x;
+}
+
+.aside-body {
+	height: 100%;
+	padding: $aside-body-padding-y $aside-body-padding-x;
+	padding-top: 0;
+	overflow-y: auto;
+}
+
+.aside-title {
+	width: 100%;
+	font-size: $aside-title-font-size;
+	font-weight: $aside-title-font-weight;
+	padding: 0 $aside-title-padding-x;
+	margin: 0;
+	@include theme-variant("light") {
+		color: $aside-title-color-light;
+	}
+	@include theme-variant("dark") {
+		color: $aside-title-color-dark;
+	}
+}
+
+.aside-addon {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	white-space: nowrap;
+}
+
+// Styling for desktop viewport
+@include media-breakpoint-up("lg") {
+	.aside-active {
+		// Adding space to wrapper, header and footer for aside element
+		.wrapper { padding-left: $aside-width; }
+		.sticky-header { left: $aside-width !important; }
+	}
+}
+
+// Styling for mobile viewport
+@include media-breakpoint-down("md") {
+	.aside {
+		left: -100%;
+		@include transition($aside-transition);
+	}
+
+	body.aside-show {
+		overflow: hidden;
+
+		.aside { left: 0; }
+	}
+
+	// Backdrop styles
+	#aside-backdrop {
+		position: fixed;
+		display: block;
+		width: 100vw;
+		height: 100vh;
+		background: $aside-backdrop-bg;
+		top: 0;
+		left: 0;
+		opacity: 0;
+		z-index: $zindex-aside-backdrop;
+	}
+}

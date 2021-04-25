@@ -1,0 +1,45 @@
+@mixin caret-transform-down { transform: rotate(90deg); }
+@mixin caret-transform-up { transform: rotate(270deg); }
+@mixin caret-transform-right { transform: rotate(0deg); }
+@mixin caret-transform-left { transform: rotate(180deg); }
+
+@mixin caret($direction: down, $element: after) {
+    @if $enable-caret {
+        &:#{$element} {
+            content: "\f105"#{'/*rtl:"\f104"*/'};
+            display: inline-block;
+            font-family: 'Font Awesome 5 Free';
+            font-style: normal;
+            font-weight: 900;
+            @include transition(transform ease-in-out 0.2s);
+
+            @if $direction == down {
+                @include caret-transform-down;
+            } @else if $direction == up {
+                @include caret-transform-up;
+            } @else if $direction == right {
+                @include caret-transform-right;
+            } @else if $direction == left {
+                @include caret-transform-left;
+            }
+
+            @content;
+        }
+    }
+}
+
+@mixin caret-transform($direction: down) {
+    @if $enable-caret {
+        &::after {
+            @if $direction == down {
+                @include caret-transform-down;
+            } @else if $direction == up {
+                @include caret-transform-up;
+            } @else if $direction == right {
+                @include caret-transform-right;
+            } @else if $direction == left {
+                @include caret-transform-left;
+            }
+        }
+    }
+}
